@@ -1,5 +1,6 @@
-/* CSS principal — couleurs pastels, mobile-first, responsive @768px */
-/* Palette : vert #a8d5ba, bleu #c7e6f0, jaune #fceaa4 */
+/* CSS principal — couleurs pastels, mobile-first, responsive @768px
+   Version adaptée : header séparé + variable dynamique --header-action-width utilisée
+*/
 
 :root{
   --brand-green: #a8d5ba;
@@ -16,8 +17,8 @@
   --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   --bg: #ffffff;
 
-  /* largeur réservée pour header-actions (ajustez si besoin) */
-  --header-action-width: 280px;
+  /* valeur par défaut (sera ajustée dynamiquement par JS si present) */
+  --header-action-width: 260px;
 }
 
 /* Reset & base */
@@ -56,12 +57,10 @@ body{
   -webkit-backdrop-filter: blur(4px);
   box-shadow: 0 2px 8px rgba(16,24,32,0.08);
   border-bottom: 1px solid rgba(0,0,0,0.05);
-  /* container pour header-inner et header-actions */
   position: relative;
 }
 
-/* header-inner : logo + nav (centré). On réserve de la place à droite via padding-right
-   pour éviter que la nav soit couverte par header-actions absolu */
+/* header-inner : logo + nav (centré). On réserve de la place à droite via padding-right */
 .header-inner{
   display: grid;
   grid-template-columns: auto 1fr;
@@ -92,7 +91,7 @@ body{
   z-index: 10002;
 }
 
-/* Menu toggle (mobile) - visible dans header-actions */
+/* Menu toggle (mobile) */
 #menu-toggle{
   background:none;
   border:none;
@@ -102,14 +101,14 @@ body{
   justify-content:center;
   padding:0.25rem 0.5rem;
   cursor:pointer;
-  /* assure que le bouton est accessible au clavier */
 }
 
 /* Navigation (au centre) */
 .main-nav{
   display:none; /* montré en desktop via media query */
-  justify-self: start; /* start car nav-list sera centré avec justify-content */
+  justify-self: start;
   box-sizing: border-box;
+  z-index: 10003; /* s'assurer que le nav est au-dessus si overlap */
 }
 .main-nav .nav-list{
   list-style:none;
@@ -130,7 +129,7 @@ body{
 }
 .main-nav a:focus, .main-nav a:hover{ outline:var(--focus-outline); }
 
-/* Lang switcher simple inside header-actions (list styling) */
+/* Lang switcher inside header-actions */
 .lang-switcher { display:flex; align-items:center; gap:0.4rem; white-space:nowrap; }
 .lang-switcher-list ul{ list-style:none; margin:0; padding:0; display:flex; gap:0.5rem; align-items:center; }
 .lang-switcher-list a {
@@ -316,13 +315,16 @@ button.btn-outline{background:transparent;border:1px solid var(--brand-green);co
     background: linear-gradient(90deg, var(--brand-blue), var(--brand-green));
     box-shadow: 0 6px 18px rgba(16,24,32,0.08);
     padding: 0.75rem 1rem;
-    display: none; /* toggled by include.js */
+    display: none; /* toggled by JS */
     z-index: 9998;
   }
   .main-nav .nav-list { flex-direction:column; gap:0.5rem; }
   .main-nav a { background: rgba(255,255,255,0.85); color: var(--text); padding: 0.5rem; border-radius: 6px; display:block; }
   .main-nav { order: 3; width:100%; }
 }
+
+/* Utility for opened mobile nav */
+.main-nav.is-open { display: block !important; }
 
 /* Accessibility focus */
 a:focus,button:focus,input:focus,textarea:focus{ outline:var(--focus-outline); }

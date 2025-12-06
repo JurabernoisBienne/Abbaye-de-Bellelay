@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Disciplines — Site culturel</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script src="../assets/include.js" defer></script>
+  <script src="../assets/main.js" defer></script>
+</head>
+<body>
+  <div id="header"></div>
+
+  <main class="container">
+    <section class="hero">
+      <img src="../assets/img/banner.svg" alt="Bannière paysage">
+      <div class="punchline">Approches transdisciplinaires pour la recherche et la pratique.</div>
+    </section>
+
+    <section class="section disciplines">
+      <aside class="sidebar" aria-label="Liste des disciplines">
+        <button data-discipline="architecture">Architecture</button>
+        <button data-discipline="amenagement">Aménagement du territoire</button>
+        <button data-discipline="histoire">Histoire</button>
+        <button data-discipline="culture">Culture / art</button>
+        <button data-discipline="circularite">Circularité</button>
+        <button data-discipline="tourisme">Tourisme durable</button>
+        <button data-discipline="social">Social</button>
+        <button data-discipline="paix">Paix & réparations</button>
+      </aside>
+
+      <div class="content">
+        <!-- content panels for each discipline (text is in HTML) -->
+        <div data-discipline-content="architecture" tabindex="0">
+          <img src="../assets/img/placeholder-large.svg" alt="Architecture">
+          <p>Études de formes, réadaptation et patrimoine bâti.</p>
+        </div>
+
+        <div data-discipline-content="amenagement" style="display:none" tabindex="0">
+          <img src="../assets/img/placeholder-large.svg" alt="Aménagement">
+          <p>Planification du territoire et intégration paysage-culture.</p>
+        </div>
+
+        <div data-discipline-content="histoire" style="display:none" tabindex="0">
+          <img src="../assets/img/placeholder-large.svg" alt="Histoire">
+          <p>Recherches historiques et archives locales.</p>
+        </div>
+
+        <div data-discipline-content="culture" style="display:none" tabindex="0">
+          <img src="../assets/img/placeholder-large.svg" alt="Culture">
+          <p>Pratiques artistiques, médiation et expositions.</p>
+        </div>
+
+        <div data-discipline-content="circularite" style="display:none" tabindex="0">
+          <img src="../assets/img/placeholder-large.svg" alt="Circularité">
+          <p>Économie circulaire appliquée aux patrimoines et aux résidences.</p>
+        </div>
+
+        <div data-discipline-content="tourisme" style="display:none" tabindex="0">
+          <img src="../assets/img/placeholder-large.svg" alt="Tourisme">
+          <p>Accueils responsables pour groupes et visiteurs.</p>
+        </div>
+
+        <div data-discipline-content="social" style="display:none" tabindex="0">
+          <img src="../assets/img/placeholder-large.svg" alt="Social">
+          <p>Initiatives socioculturelles et inclusion locale.</p>
+        </div>
+
+        <div data-discipline-content="paix" style="display:none" tabindex="0">
+          <img src="../assets/img/placeholder-large.svg" alt="Paix">
+          <p>Travaux sur mémoire, réparations et réconciliation.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="footer"></div>
+  <div id="lang-switcher"></div>
+
+  <script type="application/json" id="page-i18n">
+  {
+    "pageTitle": "Disciplines — Site culturel",
+    "nav": {
+      "programmes": "Programmes",
+      "surplace": "Sur place",
+      "disciplines": "Disciplines",
+      "tarifs": "Prix / devis",
+      "patrimoine": "Patrimoine",
+      "contact": "Contact"
+    },
+    "footer": {
+      "copy": "© 2025 Site culturel — Tous droits réservés",
+      "requestQuote": "Demande de devis",
+      "contact": "Contact"
+    }
+  }
+  </script>
+</body>
+</html>

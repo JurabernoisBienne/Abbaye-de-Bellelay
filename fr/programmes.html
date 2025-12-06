@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <!-- head partial will be fetched into head by include.js (link to css exists in partial by default), but provide minimal for fallback -->
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Programmes — Site culturel</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script src="../assets/include.js" defer></script>
+  <script src="../assets/main.js" defer></script>
+</head>
+<body>
+  <div id="header"></div>
+
+  <main>
+    <section class="hero">
+      <img src="../assets/img/banner.svg" alt="Bannière paysage">
+      <div class="punchline container">
+        Accueillir, former et produire des expériences culturelles et patrimoniales durables.
+      </div>
+    </section>
+
+    <section class="container section">
+      <h1 style="font-family: Georgia, serif;">Programmes</h1>
+      <p>Nos programmes se déclinent en plusieurs formats, adaptés aux publics académiques, professionnels et au grand public.</p>
+
+      <!-- For mobile: carousel. For desktop: grid (CSS adapts) -->
+      <div class="carousel" aria-roledescription="carousel" aria-label="Programmes">
+        <div class="carousel-track">
+          <!-- six items -->
+          <div class="carousel-item card" role="group" aria-label="Semaines immersives in-situ">
+            <img src="../assets/img/placeholder-small.svg" alt="Semaines immersives">
+            <div class="card-body">
+              <h3>Semaines immersives in-situ</h3>
+              <p>Expériences intensives sur site mêlant pratique et théorie.</p>
+            </div>
+          </div>
+
+          <div class="carousel-item card" role="group" aria-label="Summer schools">
+            <img src="../assets/img/placeholder-small.svg" alt="Summer schools">
+            <div class="card-body">
+              <h3>Summer schools</h3>
+              <p>Programmes d'été internationaux pour étudiants et professionnels.</p>
+            </div>
+          </div>
+
+          <div class="carousel-item card" role="group" aria-label="Ateliers et Projets">
+            <img src="../assets/img/placeholder-small.svg" alt="Ateliers">
+            <div class="card-body">
+              <h3>Ateliers et Projets</h3>
+              <p>Ateliers pratiques et projets collaboratifs.</p>
+            </div>
+          </div>
+
+          <div class="carousel-item card" role="group" aria-label="Séminaires et Congrès">
+            <img src="../assets/img/placeholder-small.svg" alt="Séminaires">
+            <div class="card-body">
+              <h3>Séminaires et Congrès</h3>
+              <p>Espaces pour conférences et rencontres scientifiques.</p>
+            </div>
+          </div>
+
+          <div class="carousel-item card" role="group" aria-label="Résidences">
+            <img src="../assets/img/placeholder-small.svg" alt="Résidences artistiques">
+            <div class="card-body">
+              <h3>Résidences artistiques ou scientifiques</h3>
+              <p>Séjours pour recherche et création.</p>
+            </div>
+          </div>
+
+          <div class="carousel-item card" role="group" aria-label="Expositions et Concerts">
+            <img src="../assets/img/placeholder-small.svg" alt="Expositions">
+            <div class="card-body">
+              <h3>Expositions et Concerts</h3>
+              <p>Programmation culturelle publique.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-controls" aria-hidden="false">
+          <button class="carousel-prev" aria-label="Précédent">‹</button>
+          <button class="carousel-next" aria-label="Suivant">›</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="footer"></div>
+  <div id="lang-switcher"></div>
+
+  <!-- Localized strings for header/footer and page title (text only in HTML) -->
+  <script type="application/json" id="page-i18n">
+  {
+    "pageTitle": "Programmes — Site culturel",
+    "nav": {
+      "programmes": "Programmes",
+      "surplace": "Sur place",
+      "disciplines": "Disciplines",
+      "tarifs": "Prix / devis",
+      "patrimoine": "Patrimoine",
+      "contact": "Contact"
+    },
+    "footer": {
+      "copy": "© 2025 Site culturel — Tous droits réservés",
+      "requestQuote": "Demande de devis",
+      "contact": "Contact"
+    }
+  }
+  </script>
+</body>
+</html>

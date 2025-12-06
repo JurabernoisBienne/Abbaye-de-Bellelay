@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Pricing — Request a quote</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script src="../assets/include.js" defer></script>
+  <script src="../assets/main.js" defer></script>
+</head>
+<body>
+  <div id="header"></div>
+
+  <main class="container">
+    <section class="hero"><img src="../assets/img/banner.svg" alt="Banner"><div class="punchline">From 90.- to 130.- per person/day (incl. accommodation, full board, workspaces).</div></section>
+
+    <section class="section">
+      <h1 style="font-family: Georgia, serif;">Request a quote</h1>
+      <p>Complete the form; an email will be prepared to contact@monsite.ch.</p>
+
+      <form data-mailto="contact@monsite.ch" data-mailto-subject="Quote request">
+        <div class="form-row"><label for="entite">Entity</label><input id="entite" name="entite" required></div>
+        <div class="form-row"><label for="nom">Last name</label><input id="nom" name="nom" required></div>
+        <div class="form-row"><label for="prenom">First name</label><input id="prenom" name="prenom" required></div>
+        <div class="form-row"><label for="tel">Phone</label><input id="tel" name="telephone"></div>
+        <div class="form-row"><label for="email">Email</label><input id="email" name="email" type="email" required></div>
+        <div class="form-row"><label for="dates">Dates (from - to)</label><input id="dates" name="dates" placeholder="YYYY-MM-DD → YYYY-MM-DD" required></div>
+        <div class="form-row"><label for="nb">Number of people</label><input id="nb" name="nombre_personnes" type="number" min="1" value="1" required></div>
+        <div class="form-row"><label>Rooms</label><div style="display:flex;gap:0.5rem"><input name="ch_individuelles" type="number" min="0" placeholder="Single"><input name="ch_doubles" type="number" min="0" placeholder="Double"><input name="ch_quads" type="number" min="0" placeholder="Quadruple"></div></div>
+        <div class="form-row"><label for="pension">Board</label><select id="pension" name="pension"><option value="pension_complete">Full board</option><option value="demi_pension">Half board</option><option value="repas_simple">Simple meal</option></select></div>
+        <button class="btn" type="submit">Send request</button>
+      </form>
+    </section>
+  </main>
+
+  <div id="footer"></div>
+  <div id="lang-switcher"></div>
+
+  <script type="application/json" id="page-i18n">
+  {
+    "pageTitle": "Pricing — Request a quote",
+    "nav": {
+      "programmes": "Programs",
+      "surplace": "On site",
+      "disciplines": "Disciplines",
+      "tarifs": "Pricing / quote",
+      "patrimoine": "Heritage",
+      "contact": "Contact"
+    },
+    "footer": {
+      "copy": "© 2025 Cultural Site — All rights reserved",
+      "requestQuote": "Request a quote",
+      "contact": "Contact"
+    }
+  }
+  </script>
+</body>
+</html>

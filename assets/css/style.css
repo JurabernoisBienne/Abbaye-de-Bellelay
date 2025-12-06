@@ -1,0 +1,120 @@
+/* assets/css/style.css */
+/* Palette pastels:
+   - vert #a8d5ba
+   - bleu  #c7e6f0
+   - jaune #fceaa4
+*/
+
+:root{
+  --green:#a8d5ba;
+  --blue:#c7e6f0;
+  --yellow:#fceaa4;
+  --bg:#ffffff;
+  --muted:#6b6b6b;
+  --max-width:1100px;
+  --header-height:72px;
+  --gap:1rem;
+  font-size:16px;
+  line-height:1.4;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  color:#222;
+  background:var(--bg);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  padding-top:var(--header-height); /* compensate fixed header */
+}
+
+/* Headings serif */
+h1,h2,h3,h4{font-family: Georgia, "Times New Roman", serif; margin:0 0 0.5rem 0}
+
+/* Header sticky */
+.site-header{
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  height:var(--header-height);
+  background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(255,255,255,0.95));
+  border-bottom:1px solid rgba(0,0,0,0.05);
+  z-index:1000;
+  display:flex;
+  align-items:center;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+}
+.header-inner{
+  width:100%;
+  max-width:var(--max-width);
+  margin:0 auto;
+  display:flex;
+  align-items:center;
+  gap:var(--gap);
+  padding:0 1rem;
+}
+.brand{display:flex;flex-direction:column;text-decoration:none;color:inherit}
+.brand-title{font-size:1rem}
+.brand-sub{font-size:0.75rem;color:var(--muted)}
+
+/* nav */
+.main-nav{display:none}
+.menu-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:0.25rem}
+.menu-list li a{display:block;padding:0.5rem 0.75rem;text-decoration:none;color:inherit;border-radius:4px}
+.menu-list li a:focus, .menu-list li a:hover{background:var(--blue)}
+
+/* lang select */
+.lang-select{margin-left:auto;display:flex;gap:0.5rem}
+.lang-select a{padding:0.25rem 0.5rem;border-radius:4px;text-decoration:none;color:inherit}
+.lang-select a[aria-current="true"]{font-weight:700;box-shadow:inset 0 -2px 0 var(--green)}
+
+/* nav toggle for mobile */
+.nav-toggle{background:none;border:0;padding:0.5rem;display:flex;align-items:center}
+.hamburger{display:block;width:20px;height:2px;background:#333;position:relative}
+.hamburger::before,.hamburger::after{content:"";position:absolute;left:0;right:0;height:2px;background:#333}
+.hamburger::before{top:-6px}
+.hamburger::after{top:6px}
+
+/* Footer */
+.site-footer{background:rgba(245,245,245,0.8);border-top:1px solid rgba(0,0,0,0.05);padding:1rem 0;margin-top:2rem}
+.footer-inner{max-width:var(--max-width);margin:0 auto;padding:0 1rem;display:flex;justify-content:space-between;align-items:center}
+.footer-nav ul{list-style:none;margin:0;padding:0;display:flex;gap:1rem}
+.footer-nav a{text-decoration:none;color:inherit}
+
+/* layout container */
+.container{max-width:var(--max-width);margin:0 auto;padding:1rem}
+
+/* simple card */
+.card{background:#fff;border-radius:8px;padding:1rem;box-shadow:0 1px 4px rgba(0,0,0,0.04)}
+
+/* Carousel */
+.carousel{position:relative;overflow:hidden}
+.carousel-track{display:flex;transition:transform 300ms ease}
+.carousel-item{min-width:100%;flex:0 0 100%;padding:1rem}
+.carousel-controls{position:absolute;top:50%;left:0;right:0;display:flex;justify-content:space-between;transform:translateY(-50%)}
+.carousel-controls button{background:rgba(255,255,255,0.9);border:1px solid rgba(0,0,0,0.08);padding:0.5rem;border-radius:4px}
+
+/* FAQ */
+.faq-item{border-bottom:1px solid #eee;padding:0.5rem 0}
+.faq-question{display:flex;justify-content:space-between;align-items:center;width:100%;background:none;border:0;padding:0.5rem 0;text-align:left;font-weight:600}
+.faq-answer{max-height:0;overflow:hidden;transition:max-height 250ms ease;padding-right:1rem}
+
+/* Timeline */
+.timeline{display:grid;gap:0.5rem}
+.timeline-item{padding:0.5rem;border-left:3px solid var(--blue);background:#fff;border-radius:4px}
+
+/* Modal */
+.modal-root{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,0.4);z-index:1200}
+.modal{background:#fff;padding:1rem;border-radius:8px;max-width:700px;width:90%;max-height:90%;overflow:auto}
+
+/* responsive layout */
+@media (min-width:768px){
+  .main-nav{display:block}
+  .menu-list{flex-direction:row}
+  .nav-toggle{display:none}
+  .brand{flex-direction:row;gap:0.5rem;align-items:baseline}
+  body{padding-top:var(--header-height)}
+}

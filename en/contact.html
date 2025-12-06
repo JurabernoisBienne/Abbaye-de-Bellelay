@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head></head>
+  <body>
+    <div data-include="head"></div>
+    <div data-include="header"></div>
+
+    <main class="container" role="main">
+      <h1>Contact</h1>
+      <p>Contact form — EN</p>
+
+      <section class="card">
+        <form action="#" method="post" data-validate="true" data-success="Thank you — your message was received.">
+          <label>Name (required)<br><input type="text" name="name" required></label><br>
+          <label>Phone<br><input type="tel" name="phone"></label><br>
+          <label>Email (required)<br><input type="email" name="email" required></label><br>
+          <label>Message<br><textarea name="message"></textarea></label><br>
+          <button type="submit">Send</button>
+        </form>
+      </section>
+
+    </main>
+
+    <div data-include="footer"></div>
+    <script src="/assets/js/include.js"></script>
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>

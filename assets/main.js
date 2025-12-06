@@ -1,5 +1,6 @@
 /* main.js
  - Interactions : carousels (mobile), disciplines tab switching, timeline modals, FAQ toggles, forms -> mailto:, confirmation modals
+ - Header/menu enhancements (menu toggle accessible, auto-reserve space for header-actions)
  - No localized text inside this file.
  - Uses progressive enhancement: runs after includes:ready (so header/footer exist).
 */
@@ -14,7 +15,126 @@
     });
   }
 
-  // Carousel simple implementation (mobile)
+  /* ---------------------------
+     Small utilities used by header helpers
+     --------------------------- */
+  function qs(sel, ctx) { return (ctx || document).querySelector(sel); }
+  function qsa(sel, ctx) { return Array.from((ctx || document).querySelectorAll(sel)); }
+
+  // Debounce helper
+  function debounce(fn, wait) {
+    var t;
+    return function () {
+      var args = arguments, ctx = this;
+      clearTimeout(t);
+      t = setTimeout(function () { fn.apply(ctx, args); }, wait);
+    };
+  }
+
+  /* ---------------------------
+     Header & menu helpers
+     - initMenuToggle(): accessible mobile toggle, outside-click and Escape to close
+     - updateHeaderActionWidth(): measures .header-actions and sets --header-action-width
+     - observeHeaderActions(): MutationObserver to react to dynamic injection (lang switcher)
+     - initHeaderEnhancements(): starter
+     --------------------------- */
+
+  function initMenuToggle() {
+    var toggle = qs('#menu-toggle');
+    var nav = qs('#main-nav');
+    if (!toggle || !nav) return;
+
+    // Close handlers
+    function onDocClick(e) {
+      var target = e.target;
+      if (!nav.contains(target) && !toggle.contains(target)) {
+        setOpen(false);
+      }
+    }
+    function onDocKeydown(e) {
+      if (e.key === 'Escape' || e.key === 'Esc') setOpen(false);
+    }
+
+    function setOpen(open) {
+      if (open) {
+        nav.classList.add('is-open');
+        toggle.setAttribute('aria-expanded', 'true');
+        var first = nav.querySelector('a');
+        if (first) first.focus();
+        document.addEventListener('click', onDocClick, true);
+        document.addEventListener('keydown', onDocKeydown, true);
+      } else {
+        nav.classList.remove('is-open');
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.focus();
+        document.removeEventListener('click', onDocClick, true);
+        document.removeEventListener('keydown', onDocKeydown, true);
+      }
+    }
+
+    toggle.addEventListener('click', function (ev) {
+      ev.stopPropagation();
+      var isOpen = nav.classList.toggle('is-open');
+      toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      if (isOpen) {
+        var first = nav.querySelector('a');
+        if (first) first.focus();
+        document.addEventListener('click', onDocClick, true);
+        document.addEventListener('keydown', onDocKeydown, true);
+      } else {
+        document.removeEventListener('click', onDocClick, true);
+        document.removeEventListener('keydown', onDocKeydown, true);
+      }
+    }, { passive: true });
+
+    // Close the menu when switching to desktop
+    window.addEventListener('resize', debounce(function () {
+      if (window.innerWidth >= 768 && nav.classList.contains('is-open')) {
+        nav.classList.remove('is-open');
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+    }, 150));
+  }
+
+  function updateHeaderActionWidth() {
+    var actions = qs('.header-actions');
+    var headerInner = qs('.header-inner');
+    if (!actions || !headerInner) return;
+    window.requestAnimationFrame(function () {
+      var rect = actions.getBoundingClientRect();
+      var w = Math.ceil(rect.width) + 24; // small safety gap
+      var min = 160;
+      var max = Math.max(window.innerWidth * 0.4, 320);
+      if (w < min) w = min;
+      if (w > max) w = Math.ceil(max);
+      document.documentElement.style.setProperty('--header-action-width', w + 'px');
+      // inline fallback to ensure header-inner spacing even if CSS not yet applied
+      headerInner.style.paddingRight = w + 'px';
+    });
+  }
+
+  function observeHeaderActions() {
+    var actions = qs('.header-actions');
+    if (!actions) return null;
+    var mo = new MutationObserver(debounce(function () {
+      updateHeaderActionWidth();
+    }, 80));
+    mo.observe(actions, { childList: true, subtree: true, attributes: true, characterData: true });
+    return mo;
+  }
+
+  function initHeaderEnhancements() {
+    initMenuToggle();
+    updateHeaderActionWidth();
+    observeHeaderActions();
+    window.addEventListener('load', updateHeaderActionWidth);
+    window.addEventListener('resize', debounce(updateHeaderActionWidth, 120));
+    window.addEventListener('orientationchange', debounce(updateHeaderActionWidth, 200));
+  }
+
+  /* ---------------------------
+     Carousel simple implementation (mobile)
+     --------------------------- */
   function initCarousels(){
     document.querySelectorAll('.carousel').forEach(function(carousel){
       var track = carousel.querySelector('.carousel-track');
@@ -70,7 +190,9 @@
     });
   }
 
-  // Disciplines switching: each page should include content panels with data-discipline attributes
+  /* ---------------------------
+     Disciplines switching
+     --------------------------- */
   function initDisciplines(){
     document.querySelectorAll('.disciplines').forEach(function(root){
       var sidebar = root.querySelector('.sidebar');
@@ -97,7 +219,9 @@
     });
   }
 
-  // Timeline: click on period to open modal (content present in the DOM)
+  /* ---------------------------
+     Timeline: open modal on click
+     --------------------------- */
   function initTimeline(){
     document.querySelectorAll('.timeline').forEach(function(tl){
       on(tl, 'click', '[data-period]', function(e, target){
@@ -109,7 +233,9 @@
     });
   }
 
-  // Modals: create and manage
+  /* ---------------------------
+     Modals: create and manage
+     --------------------------- */
   function openModal(html){
     var overlay = document.createElement('div');
     overlay.className = 'modal-overlay';
@@ -124,7 +250,7 @@
     var closeBtn = overlay.querySelector('.close');
     closeBtn.focus();
     function close(){
-      document.body.removeChild(overlay);
+      if (overlay.parentNode) document.body.removeChild(overlay);
       if(previouslyFocused) previouslyFocused.focus();
     }
     overlay.addEventListener('click', function(e){
@@ -136,7 +262,9 @@
     });
   }
 
-  // FAQ toggles (class .faq with items .faq-item [data-faq-question] & .faq-answer)
+  /* ---------------------------
+     FAQ toggles
+     --------------------------- */
   function initFAQ(){
     document.querySelectorAll('.faq').forEach(function(root){
       on(root, 'click', '[data-faq-question]', function(e, btn){
@@ -149,7 +277,9 @@
     });
   }
 
-  // Forms: send mailto and show confirmation (works for both pricing and contact).
+  /* ---------------------------
+     Forms: mailto & confirmation
+     --------------------------- */
   function initForms(){
     document.querySelectorAll('form[data-mailto]').forEach(function(form){
       form.addEventListener('submit', function(e){
@@ -200,13 +330,17 @@
     el.style.color = 'crimson';
   }
 
-  // Initialization after includes are ready
+  /* ---------------------------
+     Initialization after includes are ready
+     --------------------------- */
   document.addEventListener('includes:ready', function(){
     initCarousels();
     initDisciplines();
     initTimeline();
     initFAQ();
     initForms();
+    // header/menu helpers
+    initHeaderEnhancements();
   });
 
   // Also run on DOMContentLoaded in case includes already present
@@ -217,6 +351,14 @@
       initTimeline();
       initFAQ();
       initForms();
+      // header/menu helpers
+      initHeaderEnhancements();
     }, 300);
   });
-})();
+
+  /* expose small API for debugging in console if needed */
+  window.__siteMain = window.__siteMain || {};
+  window.__siteMain.initHeaderEnhancements = initHeaderEnhancements;
+  window.__siteMain.updateHeaderActionWidth = updateHeaderActionWidth;
+
+})();```

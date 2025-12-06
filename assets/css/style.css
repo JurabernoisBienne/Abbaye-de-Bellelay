@@ -15,6 +15,9 @@
   --serif: "Georgia", "Times New Roman", serif;
   --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   --bg: #ffffff;
+
+  /* largeur réservée pour header-actions (ajustez si besoin) */
+  --header-action-width: 280px;
 }
 
 /* Reset & base */
@@ -40,9 +43,7 @@ body{
 }
 
 /* ----------------------
-   Header
-   - sticky en haut
-   - grille 3 colonnes : logo | nav centré | actions (menu-toggle + lang)
+   Header (nouvelle structure)
    ---------------------- */
 .site-header{
   position: sticky;
@@ -55,18 +56,21 @@ body{
   -webkit-backdrop-filter: blur(4px);
   box-shadow: 0 2px 8px rgba(16,24,32,0.08);
   border-bottom: 1px solid rgba(0,0,0,0.05);
+  /* container pour header-inner et header-actions */
+  position: relative;
 }
 
-/* header-inner : garantir que la colonne centrale peut se réduire (minmax)
-   et réserver l'espace nécessaire à la colonne de droite */
+/* header-inner : logo + nav (centré). On réserve de la place à droite via padding-right
+   pour éviter que la nav soit couverte par header-actions absolu */
 .header-inner{
   display: grid;
-  grid-template-columns: auto minmax(0, 1fr) auto;
+  grid-template-columns: auto 1fr;
   align-items: center;
   gap:1rem;
   max-width:var(--max-width);
   margin:0 auto;
   padding:0;
+  padding-right: var(--header-action-width); /* espace pour header-actions */
   box-sizing: border-box;
 }
 
@@ -74,7 +78,21 @@ body{
 .logo img{ width:48px; height:48px; }
 .site-header .logo { justify-self: start; }
 
-/* Menu toggle (mobile) */
+/* header-actions : séparé du flux (desktop), positionné à droite */
+.header-actions{
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  display:flex;
+  align-items:center;
+  gap:0.6rem;
+  width: var(--header-action-width);
+  justify-content: flex-end;
+  z-index: 10002;
+}
+
+/* Menu toggle (mobile) - visible dans header-actions */
 #menu-toggle{
   background:none;
   border:none;
@@ -83,51 +101,37 @@ body{
   align-items:center;
   justify-content:center;
   padding:0.25rem 0.5rem;
-  cursor: pointer;
+  cursor:pointer;
+  /* assure que le bouton est accessible au clavier */
 }
 
-/* Navigation */
-/* Par défaut hidden on mobile; display:block en desktop via media query */
+/* Navigation (au centre) */
 .main-nav{
-  display: none;
-  justify-self: center;
+  display:none; /* montré en desktop via media query */
+  justify-self: start; /* start car nav-list sera centré avec justify-content */
   box-sizing: border-box;
-  max-width: calc(100% - 220px); /* laisse de la place pour le contrôle droit (ajustable) */
 }
 .main-nav .nav-list{
   list-style:none;
   margin:0;
   padding:0;
   display:flex;
-  flex-direction:column;
-  gap:0.25rem;
+  gap:0.6rem;
+  justify-content:center;
+  align-items:center;
+  flex-wrap:wrap;
 }
-.main-nav .nav-list a{
+.main-nav a{
   color:var(--text);
   text-decoration:none;
   padding:0.35rem 0.5rem;
   border-radius:6px;
   display:block;
 }
-.main-nav .nav-list a:focus,
-.main-nav .nav-list a:hover{ outline:var(--focus-outline); }
+.main-nav a:focus, .main-nav a:hover{ outline:var(--focus-outline); }
 
-/* Assurer alignement centré pour la liste de nav */
-.main-nav .nav-list { justify-content:center; align-items:center; }
-
-/* Lang switcher placeholder styling (visibilité & ergonomie) */
-.lang-switcher {
-  display:inline-flex;
-  align-items:center;
-  gap:0.4rem;
-  justify-self:end;
-  z-index:1001;
-  position:relative;
-  flex-shrink:0; /* empêche le switcher d'être compressé */
-  white-space:nowrap;
-  padding-left:0.4rem;
-  padding-right:0.2rem;
-}
+/* Lang switcher simple inside header-actions (list styling) */
+.lang-switcher { display:flex; align-items:center; gap:0.4rem; white-space:nowrap; }
 .lang-switcher-list ul{ list-style:none; margin:0; padding:0; display:flex; gap:0.5rem; align-items:center; }
 .lang-switcher-list a {
   text-decoration:none;
@@ -179,7 +183,7 @@ body{
   background:rgba(255,255,255,0.9);
   border-radius:var(--radius);
   box-shadow:0 1px 3px rgba(0,0,0,0.05);
-  text-align: center; /* centre titres et paragraphes inline */
+  text-align: center;
 }
 
 /* Cards grid for programs & sur-place (mobile: stacked) */
@@ -281,14 +285,9 @@ button.btn-outline{background:transparent;border:1px solid var(--brand-green);co
    Responsive rules
    ---------------------- */
 @media (min-width:768px){
-  /* Desktop header: hide mobile toggle, show nav horizontally and center it */
-  #menu-toggle{ display:none; }
+  /* Desktop header: show nav horizontally centered */
   .main-nav{ display:block; }
   .main-nav .nav-list{ flex-direction:row; gap:0.6rem; }
-
-  /* On desktop, ensure the nav is centered and won't be covered by the lang-switcher.
-     If the lang-switcher is wide, increase the 220px value in the .main-nav max-width above. */
-  .main-nav { justify-self: center; order: 2; }
 
   .grid-2{ grid-template-columns:repeat(2,1fr); }
   .grid-3x2{ grid-template-columns:repeat(3,1fr); grid-auto-rows:1fr; gap:0.8rem; }
@@ -298,38 +297,31 @@ button.btn-outline{background:transparent;border:1px solid var(--brand-green);co
   .hero .punchline{ font-size:1.2rem; }
   .timeline-item{ max-width:var(--max-width); }
 
-  /* Slight spacing between nav and lang switcher */
-  .site-header .lang-switcher{ margin-left: 0.6rem; }
+  /* Slight spacing between nav and header-actions */
+  .site-header .header-actions{ margin-left: 0.6rem; }
 }
 
 /* Mobile adjustments */
 @media (max-width:767px){
-  /* ensure mobile ordering: menu toggle then lang then nav (nav hidden until toggled) */
-  .site-header .logo { justify-self: start; }
+  /* mobile ordering: header-inner then header-actions; header-actions becomes relative */
+  .header-inner { padding-right: 0; }
+  .header-actions { position: relative; right: auto; top: auto; transform: none; width: auto; justify-content: flex-end; }
   #menu-toggle { order: 1; }
-  .lang-switcher { order: 2; justify-self: end; }
-
-  /* Make the mobile nav appear below the header (not overlapping the lang switcher).
-     include.js toggles display:block on the nav; when visible it will sit under the header. */
+  .lang-switcher { order: 2; }
   .main-nav {
     position: absolute;
     top: 100%;
     left: 0;
     right: 0;
-    background: linear-gradient(90deg,var(--brand-blue),var(--brand-green));
+    background: linear-gradient(90deg, var(--brand-blue), var(--brand-green));
     box-shadow: 0 6px 18px rgba(16,24,32,0.08);
     padding: 0.75rem 1rem;
-    display: none; /* toggled inline by include.js (style.display = 'block') */
-    z-index: 9998; /* below .site-header (10000) but above page content */
+    display: none; /* toggled by include.js */
+    z-index: 9998;
   }
-
-  .main-nav .nav-list { flex-direction: column; gap: 0.5rem; }
-  .main-nav a{ background: rgba(255,255,255,0.85); color: var(--text); padding: 0.5rem; border-radius: 6px; display:block; }
+  .main-nav .nav-list { flex-direction:column; gap:0.5rem; }
+  .main-nav a { background: rgba(255,255,255,0.85); color: var(--text); padding: 0.5rem; border-radius: 6px; display:block; }
   .main-nav { order: 3; width:100%; }
-
-  /* ensure lang-switcher remains in the header and visible */
-  .lang-switcher { position: relative; z-index: 10001; }
-  .main-nav .nav-list { margin: 0; padding: 0; }
 }
 
 /* Accessibility focus */

@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="fr">
+  <body>
+    <div data-include="head"></div>
+    <div data-include="header"></div>
+
+    <main id="content" class="container" tabindex="-1">
+      <h1 data-i18n="disciplines_title">Disciplines</h1>
+
+      <aside class="disciplines-sidebar" aria-label="Disciplines">
+        <ul id="disc-list">
+          <li><button data-key="architecture">Architecture</button></li>
+          <li><button data-key="amenagement">Aménagement du territoire</button></li>
+          <li><button data-key="histoire">Histoire</button></li>
+          <li><button data-key="culture">Culture / Art</button></li>
+          <li><button data-key="circularite">Circularité</button></li>
+          <li><button data-key="tourisme">Tourisme durable</button></li>
+          <li><button data-key="social">Social</button></li>
+          <li><button data-key="paix">Paix et réparations de guerre</button></li>
+        </ul>
+      </aside>
+
+      <section id="discipline-content" class="discipline-content" aria-live="polite">
+        <img src="/Abbaye-de-Bellelay/assets/img/placeholder.svg" alt="" id="discipline-image" />
+        <div id="discipline-text">
+          <h2 id="discipline-title">Sélectionnez une discipline</h2>
+          <p id="discipline-summary">Description courte apparaîtra ici.</p>
+        </div>
+      </section>
+    </main>
+
+    <div data-include="footer"></div>
+
+    <script src="/Abbaye-de-Bellelay/assets/js/include.js"></script>
+    <script src="/Abbaye-de-Bellelay/assets/js/main.js"></script>
+  </body>
+</html>

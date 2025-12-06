@@ -1,6 +1,7 @@
 /* main.js
  - Interactions : carousels (mobile), disciplines tab switching, timeline modals, FAQ toggles, forms -> mailto:, confirmation modals
  - Header/menu enhancements (menu toggle accessible, auto-reserve space for header-actions)
+ - Normalise automatiquement les href du header pour éviter les doublons de langue (/fr/fr)
  - No localized text inside this file.
  - Uses progressive enhancement: runs after includes:ready (so header/footer exist).
 */
@@ -33,10 +34,6 @@
 
   /* ---------------------------
      Header & menu helpers
-     - initMenuToggle(): accessible mobile toggle, outside-click and Escape to close
-     - updateHeaderActionWidth(): measures .header-actions and sets --header-action-width
-     - observeHeaderActions(): MutationObserver to react to dynamic injection (lang switcher)
-     - initHeaderEnhancements(): starter
      --------------------------- */
 
   function initMenuToggle() {
@@ -118,18 +115,78 @@
     if (!actions) return null;
     var mo = new MutationObserver(debounce(function () {
       updateHeaderActionWidth();
+      normalizeNavLinks(); // re-normalize if lang switcher injected/changed
     }, 80));
     mo.observe(actions, { childList: true, subtree: true, attributes: true, characterData: true });
     return mo;
+  }
+
+  // Normalize links in the header to remove duplicated consecutive path segments
+  // e.g. /fr/fr/programmes.html  -> /fr/programmes.html
+  // e.g. /repo/fr/fr/programmes -> /repo/fr/programmes
+  function normalizeNavLinks() {
+    var anchors = qsa('#main-nav a, .lang-switcher-list a');
+    if (!anchors.length) return;
+
+    anchors.forEach(function(a){
+      var original = a.getAttribute('href') || '';
+      if (!original) return;
+
+      // Create an <a> element to parse the href reliably
+      var tmp = document.createElement('a');
+      tmp.href = original;
+      var path = tmp.pathname || '';
+      // split, remove empty segments but preserve order
+      var parts = path.split('/').filter(Boolean);
+      if (parts.length === 0) return; // nothing to change
+
+      // Compress consecutive duplicate segments: e.g. ['fr','fr','programmes'] => ['fr','programmes']
+      var newParts = [];
+      for (var i = 0; i < parts.length; i++) {
+        if (i === 0 || parts[i] !== parts[i-1]) {
+          newParts.push(parts[i]);
+        }
+      }
+      // Rebuild normalized path
+      var normalizedPath = '/' + newParts.join('/');
+      // Preserve trailing slash if present in original
+      if (path.endsWith('/') && !normalizedPath.endsWith('/')) normalizedPath += '/';
+
+      // Compose final href preserving search/hash
+      var normalizedHref = normalizedPath + (tmp.search || '') + (tmp.hash || '');
+
+      // If original was relative (did not start with /), convert back to relative
+      if (!original.startsWith('/')) {
+        // remove leading slash for relative
+        normalizedHref = normalizedHref.replace(/^\/+/, '');
+      }
+
+      if (normalizedHref !== original) {
+        a.setAttribute('href', normalizedHref);
+        // for debugging you could uncomment:
+        // console.info('normalized href', original, '→', normalizedHref);
+      }
+    });
   }
 
   function initHeaderEnhancements() {
     initMenuToggle();
     updateHeaderActionWidth();
     observeHeaderActions();
-    window.addEventListener('load', updateHeaderActionWidth);
-    window.addEventListener('resize', debounce(updateHeaderActionWidth, 120));
-    window.addEventListener('orientationchange', debounce(updateHeaderActionWidth, 200));
+    normalizeNavLinks(); // run normalization once at init
+    // re-run normalization on window load/resize to catch environment changes
+    window.addEventListener('load', function(){
+      updateHeaderActionWidth();
+      normalizeNavLinks();
+    });
+    window.addEventListener('resize', debounce(function(){
+      updateHeaderActionWidth();
+      normalizeNavLinks();
+    }, 120));
+    window.addEventListener('orientationchange', debounce(function(){
+      updateHeaderActionWidth();
+      normalizeNavLinks();
+    }, 200));
   }
 
   /* ---------------------------
@@ -360,5 +417,6 @@
   window.__siteMain = window.__siteMain || {};
   window.__siteMain.initHeaderEnhancements = initHeaderEnhancements;
   window.__siteMain.updateHeaderActionWidth = updateHeaderActionWidth;
+  window.__siteMain.normalizeNavLinks = normalizeNavLinks;
 
-})();```
+})();

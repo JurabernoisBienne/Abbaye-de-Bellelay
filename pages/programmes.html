@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title data-i18n="title_programmes">Programmes</title>
+  <script>
+  (function(){
+    function detectBase() {
+      var path = location.pathname.split('/').filter(Boolean);
+      if (location.hostname.endsWith('.github.io') && path.length > 0) return '/' + path[0] + '/';
+      return '/';
+    }
+    window.BASE = detectBase();
+    // inject CSS early
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = window.BASE + 'assets/css/style.css';
+    document.head.appendChild(link);
+    // inject include.js
+    var s = document.createElement('script');
+    s.src = window.BASE + 'assets/js/include.js';
+    s.defer = true;
+    document.head.appendChild(s);
+  })();
+  </script>
+</head>
+<body>
+  <div data-include="header"></div>
+
+  <main id="main" class="container">
+    <h1 data-i18n="programmes_heading">Programmes</h1>
+
+    <section id="programmes-carousel" class="grid grid-3-2">
+      <!-- CARROUSEL / Grid items: 6 sections -->
+      <article class="card" data-i18n="prog_immersives">
+        <h2>Semaines immersives in-situ</h2>
+        <p>Courte description.</p>
+      </article>
+      <article class="card" data-i18n="prog_summers">
+        <h2>Summer schools</h2>
+        <p>Courte description.</p>
+      </article>
+      <article class="card" data-i18n="prog_ateliers">
+        <h2>Ateliers et Projets</h2>
+        <p>Courte description.</p>
+      </article>
+      <article class="card" data-i18n="prog_seminaires">
+        <h2>Séminaires et Congrès</h2>
+        <p>Courte description.</p>
+      </article>
+      <article class="card" data-i18n="prog_residences">
+        <h2>Résidences artistiques ou scientifiques</h2>
+        <p>Courte description.</p>
+      </article>
+      <article class="card" data-i18n="prog_expositions">
+        <h2>Expositions et Concerts</h2>
+        <p>Courte description.</p>
+      </article>
+    </section>
+  </main>
+
+  <div data-include="footer"></div>
+
+  <script src="../assets/js/main.js" defer></script>
+</body>
+</html>

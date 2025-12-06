@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title data-i18n="title_tarifs">Tarifs</title>
+  <script>
+  (function(){
+    function detectBase() {
+      var path = location.pathname.split('/').filter(Boolean);
+      if (location.hostname.endsWith('.github.io') && path.length > 0) return '/' + path[0] + '/';
+      return '/';
+    }
+    window.BASE = detectBase();
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = window.BASE + 'assets/css/style.css';
+    document.head.appendChild(link);
+    var s = document.createElement('script');
+    s.src = window.BASE + 'assets/js/include.js';
+    s.defer = true;
+    document.head.appendChild(s);
+  })();
+  </script>
+</head>
+<body>
+  <div data-include="header"></div>
+  <main class="container">
+    <h1 data-i18n="tarifs_heading">Tarifs - Demande de devis</h1>
+    <p class="intro">90.- à 130.- / personne / jour</p>
+
+    <form id="devis-form" class="form">
+      <label>Entité* <input name="entite" required></label>
+      <label>Nom* <input name="nom" required></label>
+      <label>Prénom <input name="prenom"></label>
+      <label>Téléphone <input name="tel"></label>
+      <label>Email* <input type="email" name="email" required></label>
+      <label>Dates <input name="dates"></label>
+      <label>Nombre de personnes <input type="number" name="nb_personnes" min="1"></label>
+      <label>Nombre de chambres <input type="number" name="nb_chambres" min="0"></label>
+      <label>Type de repas
+        <select name="repas">
+          <option value="demi">Demi-pension</option>
+          <option value="pension">Pension complète</option>
+          <option value="sans">Sans repas</option>
+        </select>
+      </label>
+      <label>Message <textarea name="message"></textarea></label>
+      <div class="form-actions">
+        <button type="submit">Envoyer la demande</button>
+      </div>
+      <div id="devis-confirm" aria-live="polite" class="visually-hidden"></div>
+    </form>
+  </main>
+  <div data-include="footer"></div>
+  <script src="../assets/js/main.js" defer></script>
+</body>
+</html>

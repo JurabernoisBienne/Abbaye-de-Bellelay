@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title data-i18n="title_disciplines">Disciplines</title>
+  <script>
+  (function(){
+    function detectBase() {
+      var path = location.pathname.split('/').filter(Boolean);
+      if (location.hostname.endsWith('.github.io') && path.length > 0) return '/' + path[0] + '/';
+      return '/';
+    }
+    window.BASE = detectBase();
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = window.BASE + 'assets/css/style.css';
+    document.head.appendChild(link);
+    var s = document.createElement('script');
+    s.src = window.BASE + 'assets/js/include.js';
+    s.defer = true;
+    document.head.appendChild(s);
+  })();
+  </script>
+</head>
+<body>
+  <div data-include="header"></div>
+  <main class="container two-column">
+    <nav class="side-menu" aria-label="Disciplines" id="disciplines-menu">
+      <ul>
+        <li><button data-discipline="architecture">Architecture</button></li>
+        <li><button data-discipline="amenagement">Aménagement du territoire</button></li>
+        <li><button data-discipline="histoire">Histoire</button></li>
+        <li><button data-discipline="culture">Culture / Art</button></li>
+        <li><button data-discipline="circularite">Circularité</button></li>
+        <li><button data-discipline="tourisme">Tourisme durable</button></li>
+        <li><button data-discipline="social">Social</button></li>
+        <li><button data-discipline="paix">Paix et réparations de guerre</button></li>
+      </ul>
+    </nav>
+    <section id="discipline-content" class="content-block" tabindex="0">
+      <h1 data-i18n="disciplines_heading">Disciplines</h1>
+      <img src="" alt="" id="discipline-img" class="responsive-img">
+      <p id="discipline-text">Sélectionnez une discipline à gauche.</p>
+    </section>
+  </main>
+  <div data-include="footer"></div>
+  <script src="../assets/js/main.js" defer></script>
+</body>
+</html>

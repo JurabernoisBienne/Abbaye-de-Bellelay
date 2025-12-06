@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title data-i18n="title_patrimoine">Patrimoine</title>
+  <script>
+  (function(){
+    function detectBase() {
+      var path = location.pathname.split('/').filter(Boolean);
+      if (location.hostname.endsWith('.github.io') && path.length > 0) return '/' + path[0] + '/';
+      return '/';
+    }
+    window.BASE = detectBase();
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = window.BASE + 'assets/css/style.css';
+    document.head.appendChild(link);
+    var s = document.createElement('script');
+    s.src = window.BASE + 'assets/js/include.js';
+    s.defer = true;
+    document.head.appendChild(s);
+  })();
+  </script>
+</head>
+<body>
+  <div data-include="header"></div>
+  <main class="container timeline-page">
+    <h1 data-i18n="patrimoine_heading">Patrimoine</h1>
+    <div class="timeline" id="timeline">
+      <!-- vertical timeline will be generated via HTML/CSS; each period is clickable to open modal -->
+      <div class="timeline-line" aria-hidden="true"></div>
+
+      <div class="timeline-item" data-period="2022" tabindex="0" aria-controls="modal-2022">
+        <span class="dot"></span>
+        <div class="period">
+          <h2>Depuis 2022</h2>
+          <p>Résumé 1–2 lignes.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item" data-period="1890-2022" tabindex="0" aria-controls="modal-1890">
+        <span class="dot"></span>
+        <div class="period">
+          <h2>1890-2022</h2>
+          <p>Résumé 1–2 lignes.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item" data-period="1797-1890" tabindex="0" aria-controls="modal-1797">
+        <span class="dot"></span>
+        <div class="period">
+          <h2>1797-1890</h2>
+          <p>Résumé 1–2 lignes.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item" data-period="1714-1797" tabindex="0" aria-controls="modal-1714">
+        <span class="dot"></span>
+        <div class="period">
+          <h2>1714-1797</h2>
+          <p>Résumé 1–2 lignes.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item" data-period="1136-1714" tabindex="0" aria-controls="modal-1136">
+        <span class="dot"></span>
+        <div class="period">
+          <h2>1136-1714</h2>
+          <p>Résumé 1–2 lignes.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Modal container (hidden by default) -->
+  <div id="modal" class="modal" role="dialog" aria-hidden="true" aria-modal="true">
+    <div class="modal-content" role="document">
+      <button class="modal-close" aria-label="Fermer">✕</button>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <div data-include="footer"></div>
+  <script src="../assets/js/main.js" defer></script>
+</body>
+</html>

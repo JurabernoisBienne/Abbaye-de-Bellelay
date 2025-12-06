@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Redirection — Site culturel</title>
+  <meta name="robots" content="noindex">
+  <style>
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:#fff;color:#111;display:flex;align-items:center;justify-content:center;height:100vh;margin:0;padding:1rem}
+    .box{max-width:640px;text-align:center}
+    a{color:#0a66c2}
+  </style>
+
+  <script>
+    (function(){
+      // Map browser language to site folders & filenames
+      var map = {
+        'fr': 'fr/programmes.html',
+        'de': 'de/programme.html',
+        'en': 'en/programs.html'
+      };
+
+      // Detect primary language (first two letters)
+      var nav = (navigator.languages && navigator.languages[0]) || navigator.language || navigator.userLanguage || 'fr';
+      var lang = (nav && nav.slice(0,2).toLowerCase()) || 'fr';
+      var target = map[lang] || 'fr/programmes.html';
+
+      // Build a relative URL so it works for user pages and project pages alike.
+      // Using "./" keeps the path relative to the current repository root.
+      var url = './' + target;
+
+      // Redirect using location.replace so the redirect does not remain in history.
+      try {
+        location.replace(url);
+      } catch (e) {
+        // If replace throws, fallback to location.href
+        location.href = url;
+      }
+    })();
+  </script>
+</head>
+<body>
+  <div class="box" role="main" aria-labelledby="redir-title">
+    <h1 id="redir-title">Redirection en cours…</h1>
+    <p>Si la redirection ne fonctionne pas automatiquement, choisissez manuellement :</p>
+    <p>
+      <a href="./fr/programmes.html">Français</a> —
+      <a href="./de/programme.html">Deutsch</a> —
+      <a href="./en/programs.html">English</a>
+    </p>
+
+    <noscript>
+      <!-- Fallback when JavaScript is disabled -->
+      <meta http-equiv="refresh" content="0; url=./fr/programmes.html">
+      <p>JavaScript est désactivé. Vous serez redirigé vers la version française. <a href="./fr/programmes.html">Accéder maintenant</a></p>
+    </noscript>
+  </div>
+</body>
+</html>

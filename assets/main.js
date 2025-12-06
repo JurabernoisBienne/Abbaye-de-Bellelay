@@ -1,7 +1,8 @@
 /* main.js
  - Interactions : carousels (mobile), disciplines tab switching, timeline modals, FAQ toggles, forms -> mailto:, confirmation modals
  - Header/menu enhancements (menu toggle accessible, auto-reserve space for header-actions)
- - IMPORTANT: aucune réécriture/normalisation d'URL (pour éviter boucles de préfixe)
+ - Fix: normalize menu link navigation on click to avoid duplicated language segment (e.g. /fr/fr/)
+ - IMPORTANT: aucune réécriture automatique des href au chargement (on n'écrit pas les href), on corrige uniquement le comportement de navigation au clic
  - Uses progressive enhancement: runs after includes:ready (so header/footer exist).
 */
 (function(){
@@ -32,11 +33,7 @@
   }
 
   /* ---------------------------
-     Header & menu helpers (SAFE: no URL rewriting)
-     - initMenuToggle(): accessible mobile toggle, outside-click and Escape to close
-     - updateHeaderActionWidth(): measures .header-actions and sets --header-action-width
-     - observeHeaderActions(): MutationObserver to react to dynamic injection (lang switcher)
-     - initHeaderEnhancements(): starter
+     Header & menu helpers (SAFE)
      --------------------------- */
 
   function initMenuToggle() {
@@ -123,10 +120,70 @@
     return mo;
   }
 
+  // Normalizer on click:
+  // - does NOT rewrite href attributes on the page
+  // - intercepts clicks on header links and navigates to a normalized URL if needed
+  // Behavior: for same-origin links only, collapse consecutive duplicate path segments (e.g. /fr/fr/ -> /fr/)
+  // Only performs navigation rewrite when such duplicate occurs, otherwise lets default behavior continue.
+  function initNavClickNormalizer() {
+    // known language codes to pay attention to (adjust if you support more)
+    var langCodes = ['fr','de','en','it','es','nl'];
+    document.addEventListener('click', function (e) {
+      var a = e.target.closest('#main-nav a, .lang-switcher-list a');
+      if (!a) return;
+      var href = a.getAttribute('href') || a.href;
+      if (!href) return;
+
+      // ignore external, mailto, tel, anchors
+      if (href.startsWith('mailto:') || href.startsWith('tel:') || href.startsWith('#') || href.trim().toLowerCase().startsWith('javascript:')) return;
+
+      // Resolve against current location
+      var resolved;
+      try {
+        resolved = new URL(href, location.href);
+      } catch (err) {
+        return; // invalid URL
+      }
+      if (resolved.origin !== location.origin) return; // external link => don't touch
+
+      // Split path into segments
+      var parts = resolved.pathname.split('/').filter(Boolean); // removes empty
+      if (parts.length < 2) return; // nothing to fix (need at least something like /fr/x)
+
+      // Detect consecutive duplicate language segments (e.g. fr, fr) or repeated identical segments
+      var hasDup = false;
+      var newParts = [];
+      for (var i = 0; i < parts.length; i++) {
+        if (i > 0 && parts[i] === parts[i-1]) {
+          // if duplicate and it's a language code OR any duplicate, we want to collapse
+          if (langCodes.indexOf(parts[i]) !== -1 || true) {
+            hasDup = true;
+            continue; // skip this duplicate
+          }
+        }
+        newParts.push(parts[i]);
+      }
+
+      if (!hasDup) return; // nothing to normalize; allow default navigation
+
+      // Rebuild normalized pathname preserving leading slash and trailing slash if originally present
+      var normalizedPath = '/' + newParts.join('/');
+      if (resolved.pathname.endsWith('/') && !normalizedPath.endsWith('/')) normalizedPath += '/';
+
+      var normalizedHref = resolved.origin + normalizedPath + (resolved.search || '') + (resolved.hash || '');
+
+      // Prevent default navigation and navigate to normalized URL
+      e.preventDefault();
+      // Use location.assign to respect history
+      window.location.assign(normalizedHref);
+    }, { passive: false });
+  }
+
   function initHeaderEnhancements() {
     initMenuToggle();
     updateHeaderActionWidth();
     observeHeaderActions();
+    initNavClickNormalizer(); // attach click normalizer (safe)
     window.addEventListener('load', updateHeaderActionWidth);
     window.addEventListener('resize', debounce(updateHeaderActionWidth, 120));
     window.addEventListener('orientationchange', debounce(updateHeaderActionWidth, 200));

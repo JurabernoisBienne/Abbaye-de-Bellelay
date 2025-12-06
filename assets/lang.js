@@ -1,8 +1,7 @@
-/* lang.js
-   - Holds translations for FR/DE/EN
-   - Applies language based on ?lang=xx or default 'fr'
-   - Rewrites textContent of elements with data-i18n attributes
-   - Updates nav links to include ?lang=xx
+/* assets/lang.js - robust URL update for language selector
+   - applique les traductions immédiatement
+   - met à jour l'URL ?lang=xx avec fallback pushState si replaceState ne suffit pas
+   - logs légers pour debug
 */
 (function(){
   const translations = {
@@ -284,109 +283,101 @@
     return ['fr','de','en'].includes(l) ? l : 'fr';
   }
 
+  function lookup(dict, key){
+    if(!key) return null;
+    const parts = key.split('.');
+    let val = dict;
+    for(const p of parts){
+      if(val && (p in val)) val = val[p];
+      else { val = null; break; }
+    }
+    return val;
+  }
+
   function applyLang(lang){
     const dict = translations[lang] || translations.fr;
 
-    // apply all elements with data-i18n attribute (full path or simple key)
     document.querySelectorAll('[data-i18n]').forEach(el=>{
       const key = el.getAttribute('data-i18n');
-      const parts = key.split('.');
-      let val = dict;
-      for(const p of parts){
-        if(val && (p in val)) val = val[p];
-        else { val = null; break; }
-      }
+      const val = lookup(dict, key);
       if(val !== null && typeof val !== 'object'){
-        // use textContent for accessibility
         el.textContent = val;
       }
     });
 
-    // apply elements with data-i18n-* (e.g. data-i18n-title) for attributes if any
-    document.querySelectorAll('[data-i18n-title]').forEach(el=>{
-      const key = el.getAttribute('data-i18n-title');
-      const val = dictProgramsLookup(dict, key);
-      if(val) el.setAttribute('title', val);
-    });
-
-    // Update document.title if available
-    const t = dict.title;
-    if(t && typeof t === 'object'){
-      const pageKey = (document.querySelector('title') && document.querySelector('title').getAttribute('data-i18n')) || '';
-      // Some pages set data-i18n on title element at load
-      // As fallback, try known mapping by URL
-      // We'll attempt to update to the closest match:
-      const path = location.pathname.split('/').pop();
-      const map = {
-        'programmes.html': 'programmes',
-        'surplace.html': 'surplace',
-        'disciplines.html': 'disciplines',
-        'tarifs.html': 'tarifs',
-        'patrimoine.html': 'patrimoine',
-        'contact.html': 'contact'
-      };
-      const key = map[path];
-      if(key && t[key]) document.title = t[key];
+    // Update document.title based on current file
+    const path = location.pathname.split('/').pop();
+    const map = {
+      'programmes.html': 'programmes',
+      'surplace.html': 'surplace',
+      'disciplines.html': 'disciplines',
+      'tarifs.html': 'tarifs',
+      'patrimoine.html': 'patrimoine',
+      'contact.html': 'contact',
+      '': 'programmes'
+    };
+    const key = map[path] || null;
+    if(key && dict.title && dict.title[key]){
+      document.title = dict.title[key];
     }
 
-    // Set lang select value
+    // set select value
     const sel = document.getElementById('lang');
     if(sel) sel.value = lang;
 
-    // Update navigation links to include ?lang=xx preserving existing queries
-    const navLinks = document.querySelectorAll('.main-nav a');
-    navLinks.forEach(a=>{
-      try{
-        const u = new URL(a.getAttribute('href'), location.href);
-        u.searchParams.set('lang', lang);
-        a.setAttribute('href', u.pathname + u.search);
-      }catch(e){}
-    });
-
-    // Update CTA links
-    document.querySelectorAll('.cta').forEach(a=>{
+    // update nav links and CTAs
+    document.querySelectorAll('.main-nav a, .cta').forEach(a=>{
       try{
         const href = a.getAttribute('href');
         if(!href) return;
         const u = new URL(href, location.href);
         u.searchParams.set('lang', lang);
-        a.setAttribute('href', u.pathname + u.search);
+        a.setAttribute('href', u.pathname + u.search + u.hash);
       }catch(e){}
     });
   }
 
-  function dictProgramsLookup(dict, key){
-    // helper fallback for keys in programs object
-    const parts = key.split('.');
-    let v = dict;
-    for(const p of parts){
-      if(v && (p in v)) v = v[p];
-      else { v = null; break; }
+  // Robust URL updater: try replaceState, validate, fallback to pushState
+  function updateUrlLangParam(newLang){
+    try{
+      const u = new URL(location.href);
+      u.searchParams.set('lang', newLang);
+      const newUrl = u.pathname + u.search + u.hash;
+      // try replaceState
+      history.replaceState(null, document.title, newUrl);
+      // verify the change took effect
+      if((new URL(location.href)).searchParams.get('lang') === newLang){
+        console.log('lang.js: URL updated via replaceState ->', newUrl);
+        return;
+      }
+      // fallback to pushState (should not reload)
+      history.pushState(null, document.title, newUrl);
+      console.warn('lang.js: replaceState did not set param; used pushState ->', newUrl);
+    }catch(e){
+      // last resort: set location.hash to force a visible URL change without reload
+      console.error('lang.js: error updating URL with history API', e);
+      const fallback = location.pathname + '?lang=' + encodeURIComponent(newLang) + location.hash;
+      try{ history.replaceState(null, document.title, fallback); console.warn('lang.js: used fallback replaceState', fallback); }
+      catch(err){ console.error('lang.js: final fallback failed', err); }
     }
-    return v;
   }
 
-  // expose small API
-  window.__abbayeLang = {
-    getLang,
-    applyLang,
-    translations
-  };
+  window.__abbayeLang = { getLang, applyLang, translations, updateUrlLangParam };
 
-  // auto-apply on DOMContentLoaded
   document.addEventListener('DOMContentLoaded', function(){
     const lang = getLang();
     applyLang(lang);
 
-    // language selector: reload page with param when changed
     const sel = document.getElementById('lang');
-    if(sel){
-      sel.addEventListener('change', function(){
-        const newLang = sel.value;
-        const url = new URL(location.href);
-        url.searchParams.set('lang', newLang);
-        location.assign(url.pathname + url.search);
-      });
-    }
+    if(!sel) return;
+    sel.addEventListener('change', function(){
+      const newLang = sel.value;
+      // Apply translations first (immediate feedback)
+      applyLang(newLang);
+      // Then robustly update URL
+      updateUrlLangParam(newLang);
+      // Note: if tu veux forcer un rechargement uncomment:
+      // location.assign(location.pathname + '?lang=' + newLang + location.hash);
+    });
   });
 })();

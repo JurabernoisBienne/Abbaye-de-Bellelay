@@ -1,18 +1,18 @@
 <header class="site-header" role="banner" aria-label="Site header">
   <!-- header-inner : logo + nav (centré) -->
   <div class="header-inner">
-    <a class="logo" aria-label="Accueil — retourner à l'accueil" href="#" data-page="home">
+    <a class="logo" aria-label="Accueil — retourner à l'accueil" href="./fr/programmes.html">
       <img src="../assets/img/logo.svg" alt="Logo du site culturel">
     </a>
 
     <nav id="main-nav" class="main-nav" role="navigation" aria-label="Principales sections">
       <ul class="nav-list">
-        <li><a href="#" data-page="programmes" data-key="nav.programmes"></a></li>
-        <li><a href="#" data-page="surplace" data-key="nav.surplace"></a></li>
-        <li><a href="#" data-page="disciplines" data-key="nav.disciplines"></a></li>
-        <li><a href="#" data-page="tarifs" data-key="nav.tarifs"></a></li>
-        <li><a href="#" data-page="patrimoine" data-key="nav.patrimoine"></a></li>
-        <li><a href="#" data-page="contact" data-key="nav.contact"></a></li>
+        <li><a href="./fr/programmes.html">Programmes</a></li>
+        <li><a href="./fr/surplace.html">Sur place</a></li>
+        <li><a href="./fr/disciplines.html">Disciplines</a></li>
+        <li><a href="./fr/tarifs.html">Tarifs</a></li>
+        <li><a href="./fr/patrimoine.html">Patrimoine</a></li>
+        <li><a href="./fr/contact.html">Contact</a></li>
       </ul>
     </nav>
   </div>
@@ -23,6 +23,15 @@
       ☰
     </button>
 
-    <div id="lang-switcher" class="lang-switcher" aria-label="Sélecteur de langue"></div>
+    <!-- Sélecteur de langue statique (plus simple, fonctionne sans injection JS) -->
+    <div id="lang-switcher" class="lang-switcher" aria-label="Sélecteur de langue">
+      <nav class="lang-switcher-list" aria-hidden="false">
+        <ul>
+          <li><a href="./fr/programmes.html" hreflang="fr" aria-current="true">FR</a></li>
+          <li><a href="./de/programme.html" hreflang="de">DE</a></li>
+          <li><a href="./en/programs.html" hreflang="en">EN</a></li>
+        </ul>
+      </nav>
+    </div>
   </div>
 </header>

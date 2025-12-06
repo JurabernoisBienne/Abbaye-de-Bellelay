@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+  <div data-include="head"></div>
+<body>
+  <div data-include="header"></div>
+
+  <main id="content" class="container" role="main" tabindex="-1">
+    <h1 data-i18n="tarifs.title">Tarifs — Demande de devis</h1>
+
+    <p class="intro" data-i18n="tarifs.intro">90.- à 130.- / personne / jour</p>
+
+    <form id="quote-form" class="form" aria-label="Formulaire demande de devis">
+      <label>Entité
+        <input type="text" name="entity" required>
+      </label>
+      <label>Nom
+        <input type="text" name="lastname" required>
+      </label>
+      <label>Prénom
+        <input type="text" name="firstname" required>
+      </label>
+      <label>Téléphone
+        <input type="tel" name="phone">
+      </label>
+      <label>Email
+        <input type="email" name="email" required>
+      </label>
+      <label>Dates prévues
+        <input type="text" name="dates">
+      </label>
+      <label>Nombre de personnes
+        <input type="number" name="people" min="1">
+      </label>
+      <label>Nombre de chambres
+        <input type="number" name="rooms" min="0">
+      </label>
+      <label>Type de repas
+        <select name="meals">
+          <option value="half">Demi-pension</option>
+          <option value="full">Pension complète</option>
+          <option value="nb">Sans repas</option>
+        </select>
+      </label>
+
+      <button type="submit" class="btn" data-i18n="tarifs.send">Demander un devis</button>
+      <div id="quote-confirm" role="status" aria-live="polite" class="sr-only"></div>
+    </form>
+  </main>
+
+  <div data-include="footer"></div>
+
+  <script src="/Abbaye-de-Bellelay/assets/js/include.js"></script>
+  <script src="/Abbaye-de-Bellelay/assets/js/main.js"></script>
+</body>
+</html>

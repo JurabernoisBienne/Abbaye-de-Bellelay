@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+  <div data-include="head"></div>
+<body>
+  <div data-include="header"></div>
+
+  <main id="content" class="container" role="main" tabindex="-1">
+    <h1 data-i18n="contact.title">Contact</h1>
+
+    <section class="contact-section">
+      <form id="contact-form" class="form" aria-label="Formulaire de contact">
+        <label>Nom
+          <input type="text" name="name" required>
+        </label>
+        <label>Email
+          <input type="email" name="email" required>
+        </label>
+        <label>Message
+          <textarea name="message" rows="5" required></textarea>
+        </label>
+        <button type="submit" class="btn" data-i18n="contact.send">Envoyer</button>
+        <div id="contact-confirm" role="status" aria-live="polite" class="sr-only"></div>
+      </form>
+
+      <div class="map" aria-label="Carte et informations d'accès">
+        <!-- Remplacez src par l'URL Google Maps appropriée si souhaité -->
+        <iframe title="Abbaye de Bellelay - plan" src="https://www.google.com/maps/embed?pb=!1m18" aria-hidden="false"></iframe>
+        <div class="access-info">
+          <h3 data-i18n="contact.access">Accès</h3>
+          <p data-i18n="contact.tp">Transport public et bus pour groupes.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div data-include="footer"></div>
+
+  <script src="/Abbaye-de-Bellelay/assets/js/include.js"></script>
+  <script src="/Abbaye-de-Bellelay/assets/js/main.js"></script>
+</body>
+</html>

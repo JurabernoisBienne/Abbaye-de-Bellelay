@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+  <div data-include="head"></div>
+<body>
+  <div data-include="header"></div>
+
+  <main id="content" class="container" role="main" tabindex="-1">
+    <h1 data-i18n="patrimoine.title">Patrimoine</h1>
+
+    <section class="timeline" aria-label="Frise historique" id="timeline">
+      <div class="timeline-center"></div>
+      <ul>
+        <li tabindex="0" class="period" data-period="2022" data-img="/Abbaye-de-Bellelay/assets/img/patrimoine-2022.jpg" data-full="Depuis 2022 — Résumé.">
+          <strong>Depuis 2022</strong>
+          <p>Développement récent.</p>
+        </li>
+        <li tabindex="0" class="period" data-period="1890-2022" data-img="/Abbaye-de-Bellelay/assets/img/patrimoine-1890.jpg" data-full="1890–2022 — Texte complet.">
+          <strong>1890–2022</strong>
+          <p>Évolution moderne.</p>
+        </li>
+        <li tabindex="0" class="period" data-period="1797-1890" data-img="/Abbaye-de-Bellelay/assets/img/patrimoine-1797.jpg" data-full="1797–1890 — Texte complet.">
+          <strong>1797–1890</strong>
+          <p>Transition historique.</p>
+        </li>
+        <li tabindex="0" class="period" data-period="1714-1797" data-img="/Abbaye-de-Bellelay/assets/img/patrimoine-1714.jpg" data-full="1714–1797 — Texte complet.">
+          <strong>1714–1797</strong>
+          <p>Période baroque et transformations.</p>
+        </li>
+        <li tabindex="0" class="period" data-period="1136-1714" data-img="/Abbaye-de-Bellelay/assets/img/patrimoine-1136.jpg" data-full="1136–1714 — Texte complet.">
+          <strong>1136–1714</strong>
+          <p>Origines et premières constructions.</p>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Modal -->
+    <div id="timeline-modal" class="modal" role="dialog" aria-modal="true" aria-hidden="true">
+      <div class="modal-inner" role="document">
+        <button class="modal-close" aria-label="Close">✕</button>
+        <h2 id="modal-title"></h2>
+        <img id="modal-img" alt="">
+        <p id="modal-text"></p>
+      </div>
+    </div>
+
+  </main>
+
+  <div data-include="footer"></div>
+
+  <script src="/Abbaye-de-Bellelay/assets/js/include.js"></script>
+  <script src="/Abbaye-de-Bellelay/assets/js/main.js"></script>
+</body>
+</html>

@@ -64,12 +64,26 @@ body{
 
 /* Banner */
 .hero{
-  width:100%;
-  display:block;
+  position:relative;
+  /* Permettre à la section d'occuper toute la largeur de la fenêtre
+     même si elle est imbriquée dans un .container */
+  width:100vw;
+  left:50%;
+  right:50%;
+  margin-left:calc(-50vw + 0px);
+  margin-right:calc(-50vw + 0px);
+  max-width:100%;
   overflow:hidden;
-  margin:0 auto;
+  display:block;
 }
-.hero img{width:100%;height:auto;display:block;object-fit:cover}
+
+.hero img{
+  display:block;
+  width:100%;
+  height:auto;
+  max-width:none; /* évite la contrainte du max-width du container parent */
+  object-fit:cover;
+}
 
 /* Punchline overlay */
 .hero .punchline{

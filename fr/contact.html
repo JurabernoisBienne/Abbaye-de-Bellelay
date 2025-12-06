@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head></head>
+  <body>
+    <div data-include="head"></div>
+    <div data-include="header"></div>
+
+    <main class="container" role="main">
+      <h1>Contact</h1>
+      <p>Formulaire de contact / demande d'offre — FR</p>
+
+      <section class="card">
+        <form action="#" method="post" data-validate="true" data-success="Merci, nous avons bien reçu votre demande.">
+          <label>Nom (requis)<br><input type="text" name="name" required></label><br>
+          <label>Téléphone<br><input type="tel" name="phone"></label><br>
+          <label>Email (requis)<br><input type="email" name="email" required></label><br>
+          <label>Message<br><textarea name="message"></textarea></label><br>
+          <button type="submit">Envoyer</button>
+        </form>
+      </section>
+
+    </main>
+
+    <div data-include="footer"></div>
+    <script>window.SITE_BASE_PATH = '/Abbaye-de-Bellelay';</script>
+    <script src="/assets/js/include.js"></script>
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>

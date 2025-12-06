@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title data-i18n="title.patrimoine">Patrimoine — Abbaye de Bellelay</title>
+  <link rel="stylesheet" href="assets/style.css" />
+  <script src="assets/lang.js" defer></script>
+  <script src="assets/main.js" defer></script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <a class="brand" href="programmes.html" data-i18n="brand">Abbaye de Bellelay</a>
+      <nav class="main-nav" role="navigation" aria-label="Main menu">
+        <a href="programmes.html" data-i18n="nav.programmes">Programmes</a>
+        <a href="surplace.html" data-i18n="nav.surplace">Sur place</a>
+        <a href="disciplines.html" data-i18n="nav.disciplines">Disciplines</a>
+        <a href="tarifs.html" data-i18n="nav.tarifs">Tarifs</a>
+        <a href="patrimoine.html" data-i18n="nav.patrimoine">Patrimoine</a>
+        <a href="contact.html" data-i18n="nav.contact">Contact</a>
+      </nav>
+      <div class="lang-select">
+        <label for="lang" class="visually-hidden" data-i18n="aria.lang">Langue</label>
+        <select id="lang" aria-label="Langue">
+          <option value="fr">FR</option>
+          <option value="de">DE</option>
+          <option value="en">EN</option>
+        </select>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <img src="assets/img/banner.svg" alt="" class="hero-img" />
+      <div class="hero-text">
+        <h1 data-i18n="patrimoine.title">Patrimoine</h1>
+        <p data-i18n="patrimoine.subtitle">Une frise de la mémoire</p>
+      </div>
+    </section>
+
+    <section class="page-content">
+      <h2 data-i18n="patrimoine.heading">Frise chronologique</h2>
+
+      <div class="timeline" id="timeline" aria-label="Frise chronologique">
+        <div class="timeline-line" aria-hidden="true"></div>
+
+        <button class="timeline-item" data-period="p1" aria-controls="modal" data-i18n="pat.p1.title">
+          <span class="dot"></span>
+          <div class="timeline-summary">
+            <strong data-i18n="pat.p1.title">Depuis 2022</strong>
+            <p data-i18n="pat.p1.summary">Nouvelle mission culturelle et ouverture publique.</p>
+          </div>
+        </button>
+
+        <button class="timeline-item" data-period="p2" aria-controls="modal" data-i18n="pat.p2.title">
+          <span class="dot"></span>
+          <div class="timeline-summary">
+            <strong data-i18n="pat.p2.title">1890–2022</strong>
+            <p data-i18n="pat.p2.summary">Période d'usage industriel et transformations.</p>
+          </div>
+        </button>
+
+        <button class="timeline-item" data-period="p3" aria-controls="modal" data-i18n="pat.p3.title">
+          <span class="dot"></span>
+          <div class="timeline-summary">
+            <strong data-i18n="pat.p3.title">1797–1890</strong>
+            <p data-i18n="pat.p3.summary">Sécularisation et reconversions.</p>
+          </div>
+        </button>
+
+        <button class="timeline-item" data-period="p4" aria-controls="modal" data-i18n="pat.p4.title">
+          <span class="dot"></span>
+          <div class="timeline-summary">
+            <strong data-i18n="pat.p4.title">1714–1797</strong>
+            <p data-i18n="pat.p4.summary">Apogée monastique et développement.</p>
+          </div>
+        </button>
+
+        <button class="timeline-item" data-period="p5" aria-controls="modal" data-i18n="pat.p5.title">
+          <span class="dot"></span>
+          <div class="timeline-summary">
+            <strong data-i18n="pat.p5.title">1136–1714</strong>
+            <p data-i18n="pat.p5.summary">Fondation et longue histoire médiévale.</p>
+          </div>
+        </button>
+      </div>
+
+      <div id="modal" class="modal" role="dialog" aria-modal="true" aria-hidden="true">
+        <div class="modal-inner">
+          <button class="modal-close" aria-label="Fermer">✕</button>
+          <figure>
+            <img id="modal-img" src="assets/img/timeline1.svg" alt="" />
+            <figcaption id="modal-caption"></figcaption>
+          </figure>
+          <div id="modal-text"></div>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <a class="cta" href="tarifs.html" id="devis-link-5" data-i18n="cta.devis">Demander un devis</a>
+      <p>© Abbaye de Bellelay</p>
+    </div>
+  </footer>
+</body>
+</html>

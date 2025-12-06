@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title data-i18n="title.programmes">Programmes — Abbaye de Bellelay</title>
+  <link rel="stylesheet" href="assets/style.css" />
+  <script src="assets/lang.js" defer></script>
+  <script src="assets/main.js" defer></script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <a class="brand" href="programmes.html" data-i18n="brand">Abbaye de Bellelay</a>
+      <nav class="main-nav" role="navigation" aria-label="Main menu">
+        <a href="programmes.html" data-i18n="nav.programmes">Programmes</a>
+        <a href="surplace.html" data-i18n="nav.surplace">Sur place</a>
+        <a href="disciplines.html" data-i18n="nav.disciplines">Disciplines</a>
+        <a href="tarifs.html" data-i18n="nav.tarifs">Tarifs</a>
+        <a href="patrimoine.html" data-i18n="nav.patrimoine">Patrimoine</a>
+        <a href="contact.html" data-i18n="nav.contact">Contact</a>
+      </nav>
+      <div class="lang-select">
+        <label for="lang" class="visually-hidden" data-i18n="aria.lang">Langue</label>
+        <select id="lang" aria-label="Langue">
+          <option value="fr">FR</option>
+          <option value="de">DE</option>
+          <option value="en">EN</option>
+        </select>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" aria-hidden="false">
+      <img src="assets/img/banner.svg" alt="" class="hero-img" />
+      <div class="hero-text">
+        <h1 data-i18n="hero.title">Un lieu pour penser, créer et se rencontrer</h1>
+        <p data-i18n="hero.subtitle">Programmes culturels, résidences, formations et événements.</p>
+      </div>
+    </section>
+
+    <section class="page-content">
+      <h2 data-i18n="programmes.heading">Nos programmes</h2>
+
+      <!-- Grid for desktop, horizontal scroll + buttons for mobile -->
+      <div class="programs-wrap">
+        <button class="carousel-btn prev" aria-label="Précédent" data-action="prev">‹</button>
+        <div class="programs-list" tabindex="0" aria-label="Carrousel des programmes">
+          <article class="program" data-i18n-title="programs.immersive">
+            <img src="assets/img/placeholder1.svg" alt="" />
+            <h3 data-i18n="programs.immersive">Semaines immersives in-situ</h3>
+            <p data-i18n="programs.immersive.text">Séjours thématiques avec ateliers et visites.</p>
+          </article>
+          <article class="program" data-i18n-title="programs.summer">
+            <img src="assets/img/placeholder2.svg" alt="" />
+            <h3 data-i18n="programs.summer">Summer schools</h3>
+            <p data-i18n="programs.summer.text">Formations intensives d'une à deux semaines.</p>
+          </article>
+          <article class="program" data-i18n-title="programs.ateliers">
+            <img src="assets/img/placeholder3.svg" alt="" />
+            <h3 data-i18n="programs.ateliers">Ateliers et Projets</h3>
+            <p data-i18n="programs.ateliers.text">Projets participatifs et ateliers pratiques.</p>
+          </article>
+          <article class="program" data-i18n-title="programs.seminars">
+            <img src="assets/img/placeholder4.svg" alt="" />
+            <h3 data-i18n="programs.seminars">Séminaires et Congrès</h3>
+            <p data-i18n="programs.seminars.text">Espaces pour conférences et rencontres professionnelles.</p>
+          </article>
+          <article class="program" data-i18n-title="programs.residences">
+            <img src="assets/img/placeholder5.svg" alt="" />
+            <h3 data-i18n="programs.residences">Résidences artistiques ou scientifiques</h3>
+            <p data-i18n="programs.residences.text">Hébergement et ateliers pour résident·e·s.</p>
+          </article>
+          <article class="program" data-i18n-title="programs.expositions">
+            <img src="assets/img/placeholder6.svg" alt="" />
+            <h3 data-i18n="programs.expositions">Expositions et Concerts</h3>
+            <p data-i18n="programs.expositions.text">Événements publics et soirées culturelles.</p>
+          </article>
+        </div>
+        <button class="carousel-btn next" aria-label="Suivant" data-action="next">›</button>
+      </div>
+
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <a class="cta" href="tarifs.html" id="devis-link" data-i18n="cta.devis">Demander un devis</a>
+      <p class="copyright">© Abbaye de Bellelay</p>
+    </div>
+  </footer>
+</body>
+</html>

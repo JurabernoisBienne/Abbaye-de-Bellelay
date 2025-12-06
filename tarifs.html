@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title data-i18n="title.tarifs">Tarifs — Abbaye de Bellelay</title>
+  <link rel="stylesheet" href="assets/style.css" />
+  <script src="assets/lang.js" defer></script>
+  <script src="assets/main.js" defer></script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <a class="brand" href="programmes.html" data-i18n="brand">Abbaye de Bellelay</a>
+      <nav class="main-nav" role="navigation" aria-label="Main menu">
+        <a href="programmes.html" data-i18n="nav.programmes">Programmes</a>
+        <a href="surplace.html" data-i18n="nav.surplace">Sur place</a>
+        <a href="disciplines.html" data-i18n="nav.disciplines">Disciplines</a>
+        <a href="tarifs.html" data-i18n="nav.tarifs">Tarifs</a>
+        <a href="patrimoine.html" data-i18n="nav.patrimoine">Patrimoine</a>
+        <a href="contact.html" data-i18n="nav.contact">Contact</a>
+      </nav>
+      <div class="lang-select">
+        <label for="lang" class="visually-hidden" data-i18n="aria.lang">Langue</label>
+        <select id="lang" aria-label="Langue">
+          <option value="fr">FR</option>
+          <option value="de">DE</option>
+          <option value="en">EN</option>
+        </select>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <img src="assets/img/banner.svg" alt="" class="hero-img" />
+      <div class="hero-text">
+        <h1 data-i18n="tarifs.title">Tarifs & Demande de devis</h1>
+        <p data-i18n="tarifs.subtitle">90.- à 130.- / personne / jour (ex. standard)</p>
+      </div>
+    </section>
+
+    <section class="page-content">
+      <h2 data-i18n="tarifs.heading">Demande de devis</h2>
+
+      <form id="quote-form" class="form" novalidate>
+        <label for="entite" data-i18n="form.entite">Entité</label>
+        <input id="entite" name="entite" required />
+
+        <label for="nom" data-i18n="form.nom">Nom</label>
+        <input id="nom" name="nom" required />
+
+        <label for="prenom" data-i18n="form.prenom">Prénom</label>
+        <input id="prenom" name="prenom" required />
+
+        <label for="tel" data-i18n="form.tel">Téléphone</label>
+        <input id="tel" name="tel" type="tel" />
+
+        <label for="email" data-i18n="form.email">Email</label>
+        <input id="email" name="email" type="email" required />
+
+        <label for="dates" data-i18n="form.dates">Dates</label>
+        <input id="dates" name="dates" type="text" placeholder="YYYY-MM-DD → YYYY-MM-DD" />
+
+        <label for="nbr" data-i18n="form.nbpersonnes">Nombre de personnes</label>
+        <input id="nbr" name="nbr" type="number" min="1" value="1" />
+
+        <label for="chambres" data-i18n="form.nbchambres">Nombre de chambres</label>
+        <input id="chambres" name="chambres" type="number" min="0" value="0" />
+
+        <label for="repas" data-i18n="form.typeRepas">Type de repas</label>
+        <select id="repas" name="repas">
+          <option value="standard" data-i18n="form.repas.standard">Standard</option>
+          <option value="vegetarian" data-i18n="form.repas.veg">Végétarien</option>
+          <option value="vegan" data-i18n="form.repas.vegan">Vegan</option>
+        </select>
+
+        <button type="submit" class="btn" data-i18n="form.submit">Envoyer la demande</button>
+      </form>
+
+      <div id="quote-msg" role="status" aria-live="polite" class="form-msg" hidden></div>
+
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <a class="cta" href="tarifs.html" id="devis-link-4" data-i18n="cta.devis">Demander un devis</a>
+      <p>© Abbaye de Bellelay</p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title data-i18n="title.disciplines">Disciplines — Abbaye de Bellelay</title>
+  <link rel="stylesheet" href="assets/style.css" />
+  <script src="assets/lang.js" defer></script>
+  <script src="assets/main.js" defer></script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <a class="brand" href="programmes.html" data-i18n="brand">Abbaye de Bellelay</a>
+      <nav class="main-nav" role="navigation" aria-label="Main menu">
+        <a href="programmes.html" data-i18n="nav.programmes">Programmes</a>
+        <a href="surplace.html" data-i18n="nav.surplace">Sur place</a>
+        <a href="disciplines.html" data-i18n="nav.disciplines">Disciplines</a>
+        <a href="tarifs.html" data-i18n="nav.tarifs">Tarifs</a>
+        <a href="patrimoine.html" data-i18n="nav.patrimoine">Patrimoine</a>
+        <a href="contact.html" data-i18n="nav.contact">Contact</a>
+      </nav>
+      <div class="lang-select">
+        <label for="lang" class="visually-hidden" data-i18n="aria.lang">Langue</label>
+        <select id="lang" aria-label="Langue">
+          <option value="fr">FR</option>
+          <option value="de">DE</option>
+          <option value="en">EN</option>
+        </select>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <img src="assets/img/banner.svg" alt="" class="hero-img" />
+      <div class="hero-text">
+        <h1 data-i18n="disciplines.title">Disciplines</h1>
+        <p data-i18n="disciplines.subtitle">Exploration par champs disciplinaires.</p>
+      </div>
+    </section>
+
+    <section class="page-content disciplines-page">
+      <aside class="side-menu" role="navigation" aria-label="Disciplines">
+        <ul id="disc-menu">
+          <li><button data-discipline="architecture" class="disc-item">architecture</button></li>
+          <li><button data-discipline="amenagement" class="disc-item">aménagement du territoire</button></li>
+          <li><button data-discipline="histoire" class="disc-item">histoire</button></li>
+          <li><button data-discipline="culture" class="disc-item">culture / art</button></li>
+          <li><button data-discipline="circularite" class="disc-item">circularité</button></li>
+          <li><button data-discipline="tourisme" class="disc-item">tourisme durable</button></li>
+          <li><button data-discipline="social" class="disc-item">social</button></li>
+          <li><button data-discipline="paix" class="disc-item">paix et réparations de guerre</button></li>
+        </ul>
+      </aside>
+
+      <section class="disc-content" id="disc-content" tabindex="0" aria-live="polite">
+        <img id="disc-image" src="assets/img/placeholder1.svg" alt="" />
+        <h2 id="disc-title" data-i18n="disc.architecture.title">architecture</h2>
+        <p id="disc-text" data-i18n="disc.architecture.text">Étude des formes, matériaux et conservation du bâti.</p>
+      </section>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <a class="cta" href="tarifs.html" id="devis-link-3" data-i18n="cta.devis">Demander un devis</a>
+      <p>© Abbaye de Bellelay</p>
+    </div>
+  </footer>
+</body>
+</html>

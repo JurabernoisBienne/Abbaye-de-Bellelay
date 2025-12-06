@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Abbaye de Bellelay — Accueil</title>
+  <link rel="stylesheet" href="assets/style.css" />
+  <script src="assets/lang.js" defer></script>
+  <script>
+    // simple redirect to default language programmes
+    (function() {
+      const params = new URLSearchParams(location.search);
+      const lang = params.get('lang') || 'fr';
+      location.replace('programmes.html?lang=' + encodeURIComponent(lang));
+    })();
+  </script>
+</head>
+<body>
+  <!-- Empty: redirect handled by inline script above -->
+</body>
+</html>

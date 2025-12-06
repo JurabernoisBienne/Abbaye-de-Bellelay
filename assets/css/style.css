@@ -65,24 +65,22 @@ body{
 /* Banner */
 .hero{
   position:relative;
-  /* Permettre à la section d'occuper toute la largeur de la fenêtre
-     même si elle est imbriquée dans un .container */
   width:100vw;
-  left:50%;
-  right:50%;
-  margin-left:calc(-50vw + 0px);
-  margin-right:calc(-50vw + 0px);
-  max-width:100%;
+  margin-left:calc(50% - 50vw);
+  margin-right:calc(50% - 50vw);
+  max-width:100vw;
   overflow:hidden;
+  left:0;
   display:block;
+  box-sizing:border-box;
 }
-
 .hero img{
   display:block;
   width:100%;
   height:auto;
-  max-width:none; /* évite la contrainte du max-width du container parent */
+  min-width:100%;
   object-fit:cover;
+  -o-object-fit:cover;
 }
 
 /* Punchline overlay */

@@ -1,12 +1,9 @@
 <header class="site-header" role="banner" aria-label="Site header">
+  <!-- header-inner : logo + nav (centré) -->
   <div class="header-inner">
-    <a class="logo" aria-label="Accueil" href="#" data-page="home">
-      <img src="../assets/img/logo.svg" alt="">
+    <a class="logo" aria-label="Accueil — retourner à l'accueil" href="#" data-page="home">
+      <img src="../assets/img/logo.svg" alt="Logo du site culturel">
     </a>
-
-    <button id="menu-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Ouvrir le menu">
-      ☰
-    </button>
 
     <nav id="main-nav" class="main-nav" role="navigation" aria-label="Principales sections">
       <ul class="nav-list">
@@ -18,6 +15,13 @@
         <li><a href="#" data-page="contact" data-key="nav.contact"></a></li>
       </ul>
     </nav>
+  </div>
+
+  <!-- header-actions : séparé, contient le bouton menu (mobile) et le sélecteur de langue -->
+  <div class="header-actions" aria-hidden="false">
+    <button id="menu-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Ouvrir le menu">
+      ☰
+    </button>
 
     <div id="lang-switcher" class="lang-switcher" aria-label="Sélecteur de langue"></div>
   </div>

@@ -121,9 +121,7 @@
     return mo;
   }
 
-  // Normalize links in the header to remove duplicated consecutive path segments
-  // e.g. /fr/fr/programmes.html  -> /fr/programmes.html
-  // e.g. /repo/fr/fr/programmes -> /repo/fr/programmes
+  // Robust normalize: skip externals and protocols, use new URL(..., location.href), and always write an absolute href
   function normalizeNavLinks() {
     var anchors = qsa('#main-nav a, .lang-switcher-list a');
     if (!anchors.length) return;
@@ -132,39 +130,39 @@
       var original = a.getAttribute('href') || '';
       if (!original) return;
 
-      // Create an <a> element to parse the href reliably
-      var tmp = document.createElement('a');
-      tmp.href = original;
-      var path = tmp.pathname || '';
-      // split, remove empty segments but preserve order
-      var parts = path.split('/').filter(Boolean);
-      if (parts.length === 0) return; // nothing to change
+      // skip anchors that are anchors only
+      if (original === '#' || original.startsWith('mailto:') || original.startsWith('tel:') || original.trim().startsWith('javascript:')) return;
 
-      // Compress consecutive duplicate segments: e.g. ['fr','fr','programmes'] => ['fr','programmes']
-      var newParts = [];
-      for (var i = 0; i < parts.length; i++) {
-        if (i === 0 || parts[i] !== parts[i-1]) {
-          newParts.push(parts[i]);
+      try {
+        // resolve relative against current page
+        var resolved = new URL(original, location.href);
+
+        // Only normalize same-origin links (don't touch external links)
+        if (resolved.origin !== location.origin) return;
+
+        // Split pathname into segments and compress consecutive duplicates
+        var parts = resolved.pathname.split('/').filter(Boolean); // removes empty segments
+        if (parts.length === 0) return;
+
+        var newParts = [];
+        for (var i = 0; i < parts.length; i++) {
+          if (i === 0 || parts[i] !== parts[i-1]) {
+            newParts.push(parts[i]);
+          }
         }
-      }
-      // Rebuild normalized path
-      var normalizedPath = '/' + newParts.join('/');
-      // Preserve trailing slash if present in original
-      if (path.endsWith('/') && !normalizedPath.endsWith('/')) normalizedPath += '/';
 
-      // Compose final href preserving search/hash
-      var normalizedHref = normalizedPath + (tmp.search || '') + (tmp.hash || '');
+        var normalizedPath = '/' + newParts.join('/');
+        if (resolved.pathname.endsWith('/') && !normalizedPath.endsWith('/')) normalizedPath += '/';
 
-      // If original was relative (did not start with /), convert back to relative
-      if (!original.startsWith('/')) {
-        // remove leading slash for relative
-        normalizedHref = normalizedHref.replace(/^\/+/, '');
-      }
+        var normalizedHref = resolved.origin + normalizedPath + (resolved.search || '') + (resolved.hash || '');
 
-      if (normalizedHref !== original) {
-        a.setAttribute('href', normalizedHref);
-        // for debugging you could uncomment:
-        // console.info('normalized href', original, '→', normalizedHref);
+        // Only update if different (avoid infinite loops / unnecessary writes)
+        if (normalizedHref !== resolved.href) {
+          a.setAttribute('href', normalizedHref);
+        }
+      } catch (err) {
+        // invalid URL — skip
+        return;
       }
     });
   }

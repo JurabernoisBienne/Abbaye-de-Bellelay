@@ -1,8 +1,7 @@
 /* main.js
  - Interactions : carousels (mobile), disciplines tab switching, timeline modals, FAQ toggles, forms -> mailto:, confirmation modals
  - Header/menu enhancements (menu toggle accessible, auto-reserve space for header-actions)
- - Normalise automatiquement les href du header pour éviter les doublons de langue (/fr/fr)
- - No localized text inside this file.
+ - IMPORTANT: aucune réécriture/normalisation d'URL (pour éviter boucles de préfixe)
  - Uses progressive enhancement: runs after includes:ready (so header/footer exist).
 */
 (function(){
@@ -17,7 +16,7 @@
   }
 
   /* ---------------------------
-     Small utilities used by header helpers
+     Small utilities used by header helpers and rest
      --------------------------- */
   function qs(sel, ctx) { return (ctx || document).querySelector(sel); }
   function qsa(sel, ctx) { return Array.from((ctx || document).querySelectorAll(sel)); }
@@ -33,7 +32,11 @@
   }
 
   /* ---------------------------
-     Header & menu helpers
+     Header & menu helpers (SAFE: no URL rewriting)
+     - initMenuToggle(): accessible mobile toggle, outside-click and Escape to close
+     - updateHeaderActionWidth(): measures .header-actions and sets --header-action-width
+     - observeHeaderActions(): MutationObserver to react to dynamic injection (lang switcher)
+     - initHeaderEnhancements(): starter
      --------------------------- */
 
   function initMenuToggle() {
@@ -115,76 +118,18 @@
     if (!actions) return null;
     var mo = new MutationObserver(debounce(function () {
       updateHeaderActionWidth();
-      normalizeNavLinks(); // re-normalize if lang switcher injected/changed
     }, 80));
     mo.observe(actions, { childList: true, subtree: true, attributes: true, characterData: true });
     return mo;
-  }
-
-  // Robust normalize: skip externals and protocols, use new URL(..., location.href), and always write an absolute href
-  function normalizeNavLinks() {
-    var anchors = qsa('#main-nav a, .lang-switcher-list a');
-    if (!anchors.length) return;
-
-    anchors.forEach(function(a){
-      var original = a.getAttribute('href') || '';
-      if (!original) return;
-
-      // skip anchors that are anchors only
-      if (original === '#' || original.startsWith('mailto:') || original.startsWith('tel:') || original.trim().startsWith('javascript:')) return;
-
-      try {
-        // resolve relative against current page
-        var resolved = new URL(original, location.href);
-
-        // Only normalize same-origin links (don't touch external links)
-        if (resolved.origin !== location.origin) return;
-
-        // Split pathname into segments and compress consecutive duplicates
-        var parts = resolved.pathname.split('/').filter(Boolean); // removes empty segments
-        if (parts.length === 0) return;
-
-        var newParts = [];
-        for (var i = 0; i < parts.length; i++) {
-          if (i === 0 || parts[i] !== parts[i-1]) {
-            newParts.push(parts[i]);
-          }
-        }
-
-        var normalizedPath = '/' + newParts.join('/');
-        if (resolved.pathname.endsWith('/') && !normalizedPath.endsWith('/')) normalizedPath += '/';
-
-        var normalizedHref = resolved.origin + normalizedPath + (resolved.search || '') + (resolved.hash || '');
-
-        // Only update if different (avoid infinite loops / unnecessary writes)
-        if (normalizedHref !== resolved.href) {
-          a.setAttribute('href', normalizedHref);
-        }
-      } catch (err) {
-        // invalid URL — skip
-        return;
-      }
-    });
   }
 
   function initHeaderEnhancements() {
     initMenuToggle();
     updateHeaderActionWidth();
     observeHeaderActions();
-    normalizeNavLinks(); // run normalization once at init
-    // re-run normalization on window load/resize to catch environment changes
-    window.addEventListener('load', function(){
-      updateHeaderActionWidth();
-      normalizeNavLinks();
-    });
-    window.addEventListener('resize', debounce(function(){
-      updateHeaderActionWidth();
-      normalizeNavLinks();
-    }, 120));
-    window.addEventListener('orientationchange', debounce(function(){
-      updateHeaderActionWidth();
-      normalizeNavLinks();
-    }, 200));
+    window.addEventListener('load', updateHeaderActionWidth);
+    window.addEventListener('resize', debounce(updateHeaderActionWidth, 120));
+    window.addEventListener('orientationchange', debounce(updateHeaderActionWidth, 200));
   }
 
   /* ---------------------------
@@ -415,6 +360,5 @@
   window.__siteMain = window.__siteMain || {};
   window.__siteMain.initHeaderEnhancements = initHeaderEnhancements;
   window.__siteMain.updateHeaderActionWidth = updateHeaderActionWidth;
-  window.__siteMain.normalizeNavLinks = normalizeNavLinks;
 
 })();

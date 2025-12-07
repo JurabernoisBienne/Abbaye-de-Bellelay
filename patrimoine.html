@@ -43,58 +43,60 @@
     <section class="page-content">
       <h2 data-i18n="patrimoine.heading">Frise chronologique</h2>
 
-      <div class="timeline" id="timeline" aria-label="Frise chronologique">
+      <div class="timeline" id="timeline" aria-label="Frise chronologique principale" role="list">
         <div class="timeline-line" aria-hidden="true"></div>
 
-        <button class="timeline-item" data-period="p1" aria-controls="modal" data-i18n="pat.p1.title">
-          <span class="dot"></span>
-          <div class="timeline-summary">
-            <strong data-i18n="pat.p1.title">Depuis 2022</strong>
-            <p data-i18n="pat.p1.summary">Nouvelle mission culturelle et ouverture publique.</p>
+        <button class="timeline-item" data-period="p1" role="listitem" aria-controls="modal" aria-expanded="false">
+          <div class="timeline-year" data-i18n="pat.p1.years">Depuis 2022</div>
+          <div class="timeline-card">
+            <strong class="timeline-title" data-i18n="pat.p1.title">Depuis 2022</strong>
+            <p class="timeline-brief" data-i18n="pat.p1.brief">Réouverture et nouvelle mission culturelle, accueil public et réaffectation des espaces.</p>
           </div>
         </button>
 
-        <button class="timeline-item" data-period="p2" aria-controls="modal" data-i18n="pat.p2.title">
-          <span class="dot"></span>
-          <div class="timeline-summary">
-            <strong data-i18n="pat.p2.title">1890–2022</strong>
-            <p data-i18n="pat.p2.summary">Période d'usage industriel et transformations.</p>
+        <button class="timeline-item" data-period="p2" role="listitem" aria-controls="modal" aria-expanded="false">
+          <div class="timeline-year" data-i18n="pat.p2.years">1890–2022</div>
+          <div class="timeline-card">
+            <strong class="timeline-title" data-i18n="pat.p2.title">Période industrielle</strong>
+            <p class="timeline-brief" data-i18n="pat.p2.brief">Utilisation industrielle du site, modifications structurelles et changements d’affectation.</p>
           </div>
         </button>
 
-        <button class="timeline-item" data-period="p3" aria-controls="modal" data-i18n="pat.p3.title">
-          <span class="dot"></span>
-          <div class="timeline-summary">
-            <strong data-i18n="pat.p3.title">1797–1890</strong>
-            <p data-i18n="pat.p3.summary">Sécularisation et reconversions.</p>
+        <button class="timeline-item" data-period="p3" role="listitem" aria-controls="modal" aria-expanded="false">
+          <div class="timeline-year" data-i18n="pat.p3.years">1797–1890</div>
+          <div class="timeline-card">
+            <strong class="timeline-title" data-i18n="pat.p3.title">Sécularisation et reconversion</strong>
+            <p class="timeline-brief" data-i18n="pat.p3.brief">Après la Révolution, l’abbaye perd son statut monastique et voit des usages civils et privés.</p>
           </div>
         </button>
 
-        <button class="timeline-item" data-period="p4" aria-controls="modal" data-i18n="pat.p4.title">
-          <span class="dot"></span>
-          <div class="timeline-summary">
-            <strong data-i18n="pat.p4.title">1714–1797</strong>
-            <p data-i18n="pat.p4.summary">Apogée monastique et développement.</p>
+        <button class="timeline-item" data-period="p4" role="listitem" aria-controls="modal" aria-expanded="false">
+          <div class="timeline-year" data-i18n="pat.p4.years">1714–1797</div>
+          <div class="timeline-card">
+            <strong class="timeline-title" data-i18n="pat.p4.title">Apogée monastique</strong>
+            <p class="timeline-brief" data-i18n="pat.p4.brief">Développement architectural et influence religieuse, extensions et embellissements du bâti.</p>
           </div>
         </button>
 
-        <button class="timeline-item" data-period="p5" aria-controls="modal" data-i18n="pat.p5.title">
-          <span class="dot"></span>
-          <div class="timeline-summary">
-            <strong data-i18n="pat.p5.title">1136–1714</strong>
-            <p data-i18n="pat.p5.summary">Fondation et longue histoire médiévale.</p>
+        <button class="timeline-item" data-period="p5" role="listitem" aria-controls="modal" aria-expanded="false">
+          <div class="timeline-year" data-i18n="pat.p5.years">1136–1714</div>
+          <div class="timeline-card">
+            <strong class="timeline-title" data-i18n="pat.p5.title">Fondation et période médiévale</strong>
+            <p class="timeline-brief" data-i18n="pat.p5.brief">Fondation de l’abbaye, rôle central dans la région, construction des noyaux historiques.</p>
           </div>
         </button>
+
       </div>
 
-      <div id="modal" class="modal" role="dialog" aria-modal="true" aria-hidden="true">
+      <div id="modal" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modal-title">
         <div class="modal-inner">
           <button class="modal-close" aria-label="Fermer">✕</button>
+          <h3 id="modal-title"></h3>
           <figure>
             <img id="modal-img" src="assets/img/timeline1.svg" alt="" />
             <figcaption id="modal-caption"></figcaption>
           </figure>
-          <div id="modal-text"></div>
+          <div id="modal-text" class="modal-text"></div>
         </div>
       </div>
 

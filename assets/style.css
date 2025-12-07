@@ -167,9 +167,10 @@ body{
 .timeline-item{
   position:relative;
   display:grid;
-  grid-template-columns: 120px 1fr;
+  grid-template-columns: var(--timeline-first-col) var(--timeline-date-col) 1fr;
   gap:18px;
-  align-items:start;
+  /* center the date and the card vertically on the same line as the dot */
+  align-items:center;
   background:transparent;
   border:0;
   padding:8px 12px;
@@ -184,25 +185,13 @@ body{
   border-radius:8px;
 }
 
-/* Years column (right aligned) */
-.timeline-year{
-  width:120px;
-  font-weight:700;
-  color:#123;
-  font-family:var(--serif);
-  font-size:1rem;
-  text-align:right;
-  padding-right:12px;
-  position:relative;
-  z-index:2;
-}
-
-/* Dot: center it on the line (use --timeline-left) */
+/* Dot: center it on the vertical line */
 .timeline-item::before{
   content: "";
   position:absolute;
-  left: calc(var(--timeline-left) - (var(--timeline-dot-size) / 2) );
-  top: 22px; /* tuned to vertically align with card header */
+  left: calc(var(--timeline-padding-left) + (var(--timeline-first-col) / 2) - (var(--timeline-dot-size) / 2));
+  top: 50%;
+  transform: translateY(-50%);
   width:var(--timeline-dot-size);
   height:var(--timeline-dot-size);
   border-radius:50%;
@@ -212,8 +201,23 @@ body{
   z-index:3;
 }
 
+/* Years column (right aligned) */
+.timeline-year{
+  grid-column: 2;
+  align-self:center;
+  font-weight:700;
+  color:#123;
+  font-family:var(--serif);
+  font-size:1rem;
+  text-align:left;
+  padding-left:10px; /* spacing between line and date */
+  z-index:2;
+}
+
+
 /* Card styling */
 .timeline-card{
+  grid-column: 3;
   background:#fff;
   border-radius:8px;
   padding:12px 14px;

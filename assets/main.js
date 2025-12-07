@@ -54,62 +54,140 @@
 
   /* DISCIPLINES */
   function initDisciplines(){
-    const menu = qs('#disc-menu');
-    const content = qs('#disc-content');
-    if(!menu || !content) return;
+  const menu = qs('#disc-list') || qs('#disc-menu');
+  const img = qs('#disc-image') || document.getElementById('disc-image');
+  const titleEl = qs('#disc-title') || document.getElementById('disc-title');
+  const textEl = qs('#disc-text') || document.getElementById('disc-text');
+  if(!menu){
+    console.warn('initDisciplines: no #disc-list or #disc-menu found in DOM');
+    return;
+  }
+  if(!img || !titleEl || !textEl){
+    console.warn('initDisciplines: missing content area elements (#disc-image, #disc-title, #disc-text)');
+    return;
+  }
 
-    function activate(button){
-      const key = button.getAttribute('data-discipline');
-      // swap image and text by mapping key to placeholder images and i18n keys
-      const img = qs('#disc-image');
-      const title = qs('#disc-title');
-      const text = qs('#disc-text');
+  // helper to get current language from shared lang module
+  function currentLang(){
+    return (window.__abbayeLang && typeof window.__abbayeLang.getLang === 'function')
+      ? window.__abbayeLang.getLang()
+      : (document.getElementById('lang') ? document.getElementById('lang').value : 'fr');
+  }
 
-      // set image based on key
-      img.src = 'assets/img/placeholder-' + (key || '1') + '.svg';
-      // set i18n keys if available
-      const translations = window.__abbayeLang && window.__abbayeLang.translations;
-      const lang = window.__abbayeLang.getLang();
-      if(translations && translations[lang] && translations[lang].disc && translations[lang].disc[key]){
-        const d = translations[lang].disc[key];
-        title.textContent = d.title || key;
-        text.textContent = d.text || '';
-      } else {
-        // fallback to button label
-        title.textContent = button.textContent;
-        text.textContent = '';
-      }
+  // read translation entry for a discipline key from lang.js translations
+  function getEntryForKey(key){
+    const lang = currentLang();
+    const translations = window.__abbayeLang && window.__abbayeLang.translations;
+    if(!translations) return null;
+    const dict = translations[lang] || translations['fr'];
+    if(!dict) return null;
+    // support both possible namespaces: "disciplines" (preferred) or legacy "disc"
+    return (dict.disciplines && dict.disciplines[key]) || (dict.disc && dict.disc[key]) || null;
+  }
 
-      // focus state / aria
-      menu.querySelectorAll('.disc-item').forEach(b=>b.setAttribute('aria-pressed','false'));
-      button.setAttribute('aria-pressed','true');
-      button.focus();
+  function renderKey(key){
+    const entry = getEntryForKey(key);
+    if(!entry){
+      // fallback: use the button label
+      const button = menu.querySelector(`.disc-item[data-key="${key}"]`);
+      const label = button ? button.textContent.trim() : key;
+      console.info(`renderKey: no translation entry for "${key}" in current language; falling back to label "${label}"`);
+      img.src = img.src || ''; // keep existing or empty
+      img.alt = label;
+      titleEl.textContent = label;
+      textEl.innerHTML = '';
+      return;
     }
 
-    // initial activation
-    const first = menu.querySelector('.disc-item');
-    if(first) activate(first);
+    // image (allow entry.img or entry.image)
+    if(entry.img) img.src = entry.img;
+    else if(entry.image) img.src = entry.image;
+    else img.src = '';
 
-    menu.addEventListener('click', (ev)=>{
-      const button = ev.target.closest('.disc-item');
-      if(button) activate(button);
-    });
+    img.alt = entry.title || '';
 
-    // keyboard navigation
-    menu.addEventListener('keydown', (ev)=>{
-      const items = Array.from(menu.querySelectorAll('.disc-item'));
-      const idx = items.indexOf(document.activeElement);
-      if(ev.key === 'ArrowDown' || ev.key === 'ArrowRight'){
-        ev.preventDefault();
-        const next = items[(idx+1)%items.length];
-        if(next) activate(next);
-      } else if(ev.key === 'ArrowUp' || ev.key === 'ArrowLeft'){
-        ev.preventDefault();
-        const prev = items[(idx-1+items.length)%items.length];
-        if(prev) activate(prev);
-      }
-    });
+    // title
+    titleEl.textContent = entry.title || '';
+
+    // paragraphs (array expected)
+    textEl.innerHTML = '';
+    if(Array.isArray(entry.paragraphs)){
+      entry.paragraphs.forEach(p=>{
+        const pEl = document.createElement('p');
+        pEl.textContent = p;
+        textEl.appendChild(pEl);
+      });
+    } else if(typeof entry.paragraphs === 'string'){
+      const pEl = document.createElement('p');
+      pEl.textContent = entry.paragraphs;
+      textEl.appendChild(pEl);
+    } else if(entry.text){ // legacy support
+      const pEl = document.createElement('p');
+      pEl.textContent = entry.text;
+      textEl.appendChild(pEl);
+    }
   }
+
+  function activateButton(btn, focusIt = true){
+    if(!btn) return;
+    menu.querySelectorAll('.disc-item').forEach(b=>{
+      b.classList.remove('active');
+      b.setAttribute('aria-pressed','false');
+    });
+    btn.classList.add('active');
+    btn.setAttribute('aria-pressed','true');
+    if(focusIt) btn.focus();
+    const key = btn.getAttribute('data-key') || btn.getAttribute('data-discipline');
+    if(key) renderKey(key);
+    else console.warn('activateButton: clicked button has no data-key/data-discipline attribute', btn);
+  }
+
+  // delegated click handler
+  menu.addEventListener('click', (ev)=>{
+    const btn = ev.target.closest('.disc-item');
+    if(!btn) return;
+    activateButton(btn, false);
+  });
+
+  // keyboard navigation: move focus with arrows, activate with Enter/Space
+  menu.addEventListener('keydown', (ev)=>{
+    const items = Array.from(menu.querySelectorAll('.disc-item'));
+    if(!items.length) return;
+    const focusedIndex = items.indexOf(document.activeElement);
+    if(ev.key === 'ArrowDown' || ev.key === 'ArrowRight'){
+      ev.preventDefault();
+      const nextIndex = (focusedIndex + 1) % items.length;
+      items[nextIndex].focus();
+    } else if(ev.key === 'ArrowUp' || ev.key === 'ArrowLeft'){
+      ev.preventDefault();
+      const prevIndex = (focusedIndex <= 0) ? items.length - 1 : focusedIndex - 1;
+      items[prevIndex].focus();
+    } else if(ev.key === 'Enter' || ev.key === ' '){
+      ev.preventDefault();
+      const focused = document.activeElement;
+      if(focused && focused.classList.contains('disc-item')){
+        activateButton(focused, false);
+      }
+    }
+  });
+
+  // on language change, re-render the currently active item (lang.js dispatches 'abbaye:langChanged')
+  document.addEventListener('abbaye:langChanged', (ev)=>{
+    const active = menu.querySelector('.disc-item.active') || menu.querySelector('.disc-item');
+    if(active){
+      renderKey(active.getAttribute('data-key') || active.getAttribute('data-discipline'));
+    }
+  });
+
+  // initialize: activate first menu item if any
+  const first = menu.querySelector('.disc-item');
+  if(first){
+    // small delay to ensure lang.js has populated translations when both scripts are deferred
+    setTimeout(()=> activateButton(first, false), 0);
+  } else {
+    console.warn('initDisciplines: no .disc-item elements found inside', menu);
+  }
+}
 
   /* TIMELINE & MODAL */
   function initTimeline(){

@@ -386,6 +386,42 @@ body{
   .timeline-card{grid-column:2}
 }
 
+/* MODAL TIMELINE close button: hidden when modal closed, styled when open */
+.modal .modal-close{
+  display:none;
+  opacity:0;
+  pointer-events:none;
+  transition:opacity .12s ease, transform .12s ease;
+}
+
+/* MODAL TIMELINE show and style close button when modal is visible */
+.modal[aria-hidden="false"] .modal-close{
+  display:block;
+  opacity:1;
+  pointer-events:auto;
+  position:absolute;
+  right:12px;
+  top:12px;
+  background:#fff;
+  border:1px solid rgba(0,0,0,0.06);
+  color:#222;
+  padding:6px 8px;
+  border-radius:6px;
+  box-shadow:0 6px 18px rgba(16,24,40,0.06);
+  font-size:0.95rem;
+  line-height:1;
+  transform:translateY(0);
+}
+
+/* MODAL TIMELINE optional: hover/focus subtle effect */
+.modal[aria-hidden="false"] .modal-close:hover,
+.modal[aria-hidden="false"] .modal-close:focus{
+  transform:translateY(-2px);
+  outline:none;
+  box-shadow:0 10px 24px rgba(16,24,40,0.08);
+}
+
+
 
 /* Forms */
 .form{display:grid;gap:10px;max-width:600px;margin-bottom:28px}

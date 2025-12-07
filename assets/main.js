@@ -1,4 +1,4 @@
-(function(){/* main.js
+/* main.js
    - Carousel scrolling on mobile (prev/next)
    - Disciplines menu interaction (keyboard & click)
    - Timeline modal logic

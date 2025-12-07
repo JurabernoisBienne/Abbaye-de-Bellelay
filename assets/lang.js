@@ -125,6 +125,9 @@
       cta: { devis: "Demander un devis" }
     },
 
+/*DEUTSCH*/
+
+     
     de: {
       brand: "Abbaye de Bellelay",
       aria: { lang: "Sprache" },
@@ -148,71 +151,7 @@
 
 
 
-      /*disciplines fr et de*/
-      amenagement: {
-        title: "Aménagement du territoire",
-        img: "assets/img/discipline-amenagement.svg",
-        paragraphs: [
-          "L’aménagement interroge les liens entre territoire, ressources et usages : cartographies, plans et stratégies locales.",
-          "Projets participatifs réunissant acteurs locaux, chercheurs et praticiens pour co-construire propositions territoriales.",
-          "Études de mobilité, accessibilité et scénarios de paysage intégrant enjeux sociaux et écologiques."
-        ]
-      },
-      histoire: {
-        title: "Histoire",
-        img: "assets/img/discipline-history.svg",
-        paragraphs: [
-          "Recherche historique et travail d'archives autour de l'abbaye : sources, mutations et récits locaux.",
-          "Séminaires et projets éditoriaux pour restituer les résultats au public et questionner les narrations régionales.",
-          "Approches critiques mettant en lumière continuités, ruptures et usages politiques du patrimoine."
-        ]
-      },
-      culture_art: {
-        title: "Culture et art",
-        img: "assets/img/discipline-art.svg",
-        paragraphs: [
-          "Programmes artistiques : création in-situ, expositions et dialogues interdisciplinaires.",
-          "Résidences favorisant collaborations entre artistes et chercheurs, aboutissant à œuvres contextuelles.",
-          "Actions publiques (vernissages, performances, ateliers) permettent la médiation et l'engagement local."
-        ]
-      },
-      circularity: {
-        title: "Circularité",
-        img: "assets/img/discipline-circularity.svg",
-        paragraphs: [
-          "Approches de circularité appliquées au bâtiment et aux pratiques : réemploi, cycles de matériaux et économie locale.",
-          "Ateliers pratiques sur récupération, réutilisation et fabrication locale en contexte patrimonial.",
-          "Propositions concrètes visant à réduire les déchets et imaginer modèles économiques résilients."
-        ]
-      },
-      tourisme: {
-        title: "Tourisme durable",
-        img: "assets/img/discipline-tourisme.svg",
-        paragraphs: [
-          "Stratégies de tourisme durable : mobilité douce, gestion des capacités et respect des écosystèmes.",
-          "Expériences de visite responsable, circuits locaux et retombées pour l'économie régionale.",
-          "Outils pour piloter les flux de visiteurs et articuler tourisme avec préservation du patrimoine."
-        ]
-      },
-      social: {
-        title: "Social",
-        img: "assets/img/discipline-social.svg",
-        paragraphs: [
-          "Initiatives d'inclusion et participation, dispositifs favorisant engagements et cohabitation locale.",
-          "Programmes soutenant les projets communautaires, médiation et formats participatifs sur site.",
-          "Axes de travail : accessibilité, accueil de publics divers et partenariats intersectoriels."
-        ]
-      },
-      paix: {
-        title: "Paix & réparations de guerre",
-        img: "assets/img/discipline-paix.svg",
-        paragraphs: [
-          "Thématiques de mémoire, réconciliation et pratiques de réparation liées aux conflits historiques et contemporains.",
-          "Ateliers et séminaires sur commémoration, justice transitionnelle et construction de récits partagés.",
-          "Projets favorisant l'écoute, la mémoire et l'instauration d'espaces de dialogue et réparation."
-        ]
-      }
-
+      /*disciplines de*/
        
       disciplines: {
         architecture: {
@@ -300,6 +239,9 @@
       cta: { devis: "Angebot anfragen" }
     },
 
+/*ENGLISH*/
+
+     
     en: {
       brand: "Abbaye de Bellelay",
       aria: { lang: "Language" },

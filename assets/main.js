@@ -113,50 +113,79 @@
 
   /* TIMELINE & MODAL */
   function initTimeline(){
-    const timeline = qs('#timeline');
-    if(!timeline) return;
-    const modal = qs('#modal');
-    const modalImg = qs('#modal-img');
-    const modalText = qs('#modal-text');
-    const modalCaption = qs('#modal-caption');
-    const closeBtn = qs('.modal-close');
+  const timeline = document.getElementById('timeline');
+  const modal = document.getElementById('modal');
+  const modalImg = document.getElementById('modal-img');
+  const modalText = document.getElementById('modal-text');
+  const modalTitle = document.getElementById('modal-title');
+  const closeBtn = modal && modal.querySelector('.modal-close');
+  if(!timeline || !modal) return;
 
-    timeline.addEventListener('click', (ev)=>{
-      const btn = ev.target.closest('.timeline-item');
-      if(!btn) return;
-      const period = btn.getAttribute('data-period');
-      openModalFor(period);
-    });
+  let lastTrigger = null;
 
-    timeline.addEventListener('keydown', (ev)=>{
-      if(ev.key === 'Enter' || ev.key === ' '){
-        const btn = ev.target.closest('.timeline-item');
-        if(btn) openModalFor(btn.getAttribute('data-period'));
-      }
-    });
-
-    closeBtn && closeBtn.addEventListener('click', closeModal);
-    modal && modal.addEventListener('click', (ev)=>{ if(ev.target === modal) closeModal(); });
-    document.addEventListener('keydown', (ev)=>{ if(ev.key === 'Escape') closeModal(); });
-
-    function openModalFor(period){
-      const lang = window.__abbayeLang.getLang();
-      const dict = window.__abbayeLang.translations[lang];
-      if(!dict) return;
-      const data = dict.pat && dict.pat[period.replace('p','p')];
-      modalImg.src = 'assets/img/timeline' + period.replace('p','') + '.svg';
-      modalCaption.textContent = (data && data.title) ? data.title : '';
-      modalText.textContent = (data && data.text) ? data.text : '';
-      modal.setAttribute('aria-hidden','false');
-      // focus trap: move focus to close button
-      closeBtn && closeBtn.focus();
+  function openModalFor(period, triggerBtn){
+    const lang = window.__abbayeLang.getLang();
+    const dict = window.__abbayeLang.translations[lang] || window.__abbayeLang.translations.fr;
+    const data = (dict.pat && dict.pat[period]) || null;
+    // set aria-expanded on trigger
+    if(triggerBtn){
+      // collapse any previously expanded
+      timeline.querySelectorAll('.timeline-item').forEach(it => it.setAttribute('aria-expanded', 'false'));
+      triggerBtn.setAttribute('aria-expanded', 'true');
+      lastTrigger = triggerBtn;
     }
+    // populate modal content
+    modalTitle.textContent = data && data.title ? data.title : '';
+    modalImg.src = `assets/img/timeline${period.replace('p','')}.svg`;
+    modalImg.alt = data && data.title ? data.title : '';
+    modalText.textContent = data && data.text ? data.text : '';
+    modal.setAttribute('aria-hidden', 'false');
+    // set focus to close button
+    if(closeBtn) closeBtn.focus();
+    // trap focus a simple way: listen for Tab on modal (basic)
+    document.addEventListener('focus', onDocFocus, true);
+  }
 
-    function closeModal(){
-      if(!modal) return;
-      modal.setAttribute('aria-hidden','true');
+  function closeModal(){
+    modal.setAttribute('aria-hidden', 'true');
+    // reset aria-expanded
+    timeline.querySelectorAll('.timeline-item').forEach(it => it.setAttribute('aria-expanded', 'false'));
+    // return focus to trigger
+    if(lastTrigger) lastTrigger.focus();
+    document.removeEventListener('focus', onDocFocus, true);
+  }
+
+  function onDocFocus(e){
+    if(modal.getAttribute('aria-hidden') === 'false' && !modal.contains(e.target)){
+      e.stopPropagation();
+      modal.querySelector('.modal-close').focus();
     }
   }
+
+  // click handler
+  timeline.addEventListener('click', (ev)=>{
+    const btn = ev.target.closest('.timeline-item');
+    if(!btn) return;
+    const period = btn.getAttribute('data-period');
+    openModalFor(period, btn);
+  });
+
+  // keyboard support: Enter / Space
+  timeline.addEventListener('keydown', (ev)=>{
+    const target = ev.target.closest('.timeline-item') || document.activeElement.closest && document.activeElement.closest('.timeline-item');
+    if(!target) return;
+    if(ev.key === 'Enter' || ev.key === ' '){
+      ev.preventDefault();
+      const period = target.getAttribute('data-period');
+      openModalFor(period, target);
+    }
+  });
+
+  // close handlers
+  closeBtn && closeBtn.addEventListener('click', closeModal);
+  modal.addEventListener('click', (ev)=>{ if(ev.target === modal) closeModal(); });
+  document.addEventListener('keydown', (ev)=>{ if(ev.key === 'Escape') closeModal(); });
+}
 
   /* FORMS: build mailto links and show confirmation
      - For tarifs (quote form): send mailto to a fixed address (placeholder)

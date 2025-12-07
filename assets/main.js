@@ -233,12 +233,28 @@
     document.removeEventListener('focus', onDocFocus, true);
   }
 
-  function onDocFocus(e){
-    if(modal.getAttribute('aria-hidden') === 'false' && !modal.contains(e.target)){
-      e.stopPropagation();
-      modal.querySelector('.modal-close').focus();
-    }
+function onDocFocus(e){
+  // only active when modal is shown
+  if(!modal || modal.getAttribute('aria-hidden') !== 'false') return;
+
+  const target = e.target;
+
+  // if focus moved inside the modal, allow it
+  if(modal.contains(target)) return;
+
+  // If user is focusing a navigation link (header / main-nav) or an <a href="...">, allow it.
+  // This permits clicking header links to navigate away even while modal is open.
+  if(target.closest && (target.closest('.main-nav') || target.closest('header') || (target.tagName === 'A' && target.getAttribute('href')))){
+    // remove the focus trap listener to avoid fighting native navigation
+    document.removeEventListener('focus', onDocFocus, true);
+    return;
   }
+
+  // Prevent focus leaving modal for other elements (keep focus inside)
+  e.stopPropagation();
+  const close = modal.querySelector('.modal-close');
+  if(close) close.focus();
+}
 
   // click handler
   timeline.addEventListener('click', (ev)=>{

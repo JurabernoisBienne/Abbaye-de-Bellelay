@@ -1,6 +1,6 @@
 /* assets/lang.js
    - Same robust lookup and URL update as before
-   - Added .text2 keys for the six programs to support 2 paragraphs
+   - Added tarif intro text keys (tarifs.intro.p1 / p2) in FR/DE/EN
 */
 (function(){
   const translations = {
@@ -50,21 +50,23 @@
         heading: "Sur place",
         hebergement: "hébergement",
         "hebergement.text": "Chambres simples et doubles, dortoirs et hébergements collectifs.",
+        "hebergement.text2": "Possibilités d'aménagements spéciaux pour groupes, accès wifi et salles communes pour travail collectif.",
         restauration: "restauration",
         "restauration.text": "Cuisine locale pour groupes et menus adaptés aux besoins.",
+        "restauration.text2": "Options végétariennes et véganes, service pour événements, et possibilités de repas flexibles selon planning.",
         espaces: "espaces de formation",
         "espaces.text": "Salles modulables équipées pour ateliers et conférences.",
+        "espaces.text2": "Équipements audio/vidéo, mobilier adaptable, connexion internet et assistance logistique pour vos événements.",
         alentours: "alentours",
-        "alentours.text": "Paysage, randonnées et patrimoine aux alentours."
-      },
-      disciplines: { title: "Disciplines", subtitle: "Exploration par champs disciplinaires." },
-      disc: {
-        architecture: { title: "architecture", text: "Étude des formes, matériaux et conservation du bâti." }
+        "alentours.text": "Paysage, randonnées et patrimoine aux alentours.",
+        "alentours.text2": "Itinéraires recommandés, points d'intérêt historiques, et services pour excursions de groupe."
       },
       tarifs: {
         title: "Tarifs & Demande de devis",
         subtitle: "90.- à 130.- / personne / jour (ex. standard)",
-        heading: "Demande de devis"
+        heading: "Demande de devis",
+        "intro.p1": "Les tarifs varient selon le type de chambre et le choix des menus. Les prix indiqués (90.- à 130.-) représentent une fourchette indicative par personne et par jour, tout compris.",
+        "intro.p2": "Ils comprennent l'hébergement, les repas (matin, midi et soir) et l'utilisation des salles de formation en plénum. Pour un devis précis, utilisez le formulaire ci‑dessous."
       },
       form: {
         entite: "Entité",
@@ -146,21 +148,23 @@
         heading: "Vor Ort",
         hebergement: "Unterkunft",
         "hebergement.text": "Einzel-/Doppelzimmer, Schlafsäle und Gruppenunterkünfte.",
+        "hebergement.text2": "Mögliche Sonderausstattungen für Gruppen, WLAN-Zugang und Gemeinschaftsräume für gemeinsame Arbeit.",
         restauration: "Verpflegung",
         "restauration.text": "Regionale Küche für Gruppen und angepasste Menüs.",
+        "restauration.text2": "Vegetarische und vegane Optionen, Catering für Veranstaltungen und flexible Essenszeiten.",
         espaces: "Schulungsräume",
         "espaces.text": "Modulare Räume ausgestattet für Workshops und Konferenzen.",
+        "espaces.text2": "Audio-/Videoausstattung, anpassbare Möbel, Internetverbindung und logistische Unterstützung.",
         alentours: "Umgebung",
-        "alentours.text": "Landschaft, Wanderungen und historisches Erbe."
-      },
-      disciplines: { title: "Disziplinen", subtitle: "Erkundung der Fachbereiche." },
-      disc: {
-        architecture: { title: "Architektur", text: "Studium von Formen, Materialien und Baudenkmalpflege." }
+        "alentours.text": "Landschaft, Wanderungen und historisches Erbe.",
+        "alentours.text2": "Empfohlene Routen, historische Sehenswürdigkeiten und Services für Gruppenexkursionen."
       },
       tarifs: {
         title: "Preise & Angebotsanfrage",
         subtitle: "90.- bis 130.- / Person / Tag (z.B. Standard)",
-        heading: "Anfrage für ein Angebot"
+        heading: "Anfrage für ein Angebot",
+        "intro.p1": "Die Preise variieren je nach Zimmerkategorie und Menüwahl. Die angegebenen Preise (90.– bis 130.–) sind eine Richtspanne pro Person und Tag, inklusive aller Leistungen.",
+        "intro.p2": "Diese beinhalten Unterkunft, Verpflegung (Morgen, Mittag und Abend) und die Nutzung der Plenarsäle. Für ein genaues Angebot nutzen Sie bitte das nachstehende Formular."
       },
       form: {
         entite: "Einrichtung",
@@ -242,21 +246,23 @@
         heading: "On-site",
         hebergement: "accommodation",
         "hebergement.text": "Single and double rooms, dormitories and group lodging.",
+        "hebergement.text2": "Special arrangements for groups, wifi access and common rooms for collaborative work.",
         restauration: "catering",
         "restauration.text": "Local cuisine for groups and tailored menus.",
+        "restauration.text2": "Vegetarian and vegan options, event catering and flexible meal times.",
         espaces: "training spaces",
         "espaces.text": "Modular rooms equipped for workshops and conferences.",
+        "espaces.text2": "Audio/video equipment, adaptable furniture, internet connection and logistical support.",
         alentours: "surroundings",
-        "alentours.text": "Landscape, hikes and local heritage."
-      },
-      disciplines: { title: "Disciplines", subtitle: "Exploration by disciplinary fields." },
-      disc: {
-        architecture: { title: "architecture", text: "Study of forms, materials and conservation of buildings." }
+        "alentours.text": "Landscape, hikes and local heritage.",
+        "alentours.text2": "Recommended routes, historical sites and services for group excursions."
       },
       tarifs: {
         title: "Rates & Quote request",
         subtitle: "90.- to 130.- / person / day (ex. standard)",
-        heading: "Request a quote"
+        heading: "Request a quote",
+        "intro.p1": "Prices vary depending on room type and menu choices. The listed range (90.- to 130.-) is an indicative price per person per day, all-inclusive.",
+        "intro.p2": "This includes accommodation, meals (morning, noon and evening) and use of plenary training rooms. For an accurate quote, please use the form below."
       },
       form: {
         entite: "Entity",

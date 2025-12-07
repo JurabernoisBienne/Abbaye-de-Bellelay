@@ -56,10 +56,20 @@
         <button type="submit" class="btn" data-i18n="form.send">Envoyer</button>
       </form>
 
-      <div class="map-and-access">
-        <div class="map">
-          <!-- Static embedded map iframe (no API key) - center on Bellelay approx -->
-          <iframe title="Carte Abbaye de Bellelay" src="https://www.openstreetmap.org/export/embed.html?bbox=7.039%2C47.129%2C7.059%2C47.139&amp;layer=mapnik" style="border:0;width:100%;height:300px;"></iframe>
+      <!-- Added spacing between button and map by ensuring .form has bottom margin in CSS -->
+      <div class="map-and-access" role="region" aria-label="Carte et accès">
+        <div class="map" aria-hidden="false">
+          <!-- Centered on Bellelay village (marker). You can tweak the marker coordinates if you want a different center. -->
+          <iframe
+            title="Carte Abbaye de Bellelay"
+            src="https://www.openstreetmap.org/export/embed.html?bbox=7.0000%2C47.1100%2C7.0300%2C47.1300&layer=mapnik&marker=47.1200%2C7.0150"
+            style="border:0;width:100%;height:360px;"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+          <p style="font-size:0.85rem;color:var(--muted);margin-top:8px;">
+            <a href="https://www.openstreetmap.org/?mlat=47.1200&amp;mlon=7.0150#map=14/47.1200/7.0150" target="_blank" rel="noopener">Voir la carte en grand</a>
+          </p>
         </div>
 
         <div class="access">

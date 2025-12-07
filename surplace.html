@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title data-i18n="title.surplace">Sur place — Abbaye de Bellelay</title>
+  <title data-i18n="surplace.title">Sur place — Abbaye de Bellelay</title>
   <link rel="stylesheet" href="assets/style.css" />
   <script src="assets/lang.js" defer></script>
   <script src="assets/main.js" defer></script>
@@ -43,7 +43,8 @@
     <section class="page-content">
       <h2 data-i18n="surplace.heading">Sur place</h2>
 
-      <div class="grid-2x2 cards-grid" role="list">
+      <!-- 2x2 grid: each card has full-width photo, title and substantial text -->
+      <div class="grid-2x2" role="list" aria-label="Informations sur place">
         <article class="card" role="listitem" aria-labelledby="h-hebergement">
           <figure class="card-figure">
             <img src="assets/img/surplace-hebergement.svg" alt="" class="card-img" />
@@ -51,7 +52,7 @@
           <div class="card-body">
             <h3 id="h-hebergement" data-i18n="surplace.hebergement">hébergement</h3>
             <p data-i18n="surplace.hebergement.text">Chambres simples et doubles, dortoirs et hébergements collectifs.</p>
-            <p data-i18n="surplace.hebergement.text2">Possibilités d'aménagements spéciaux pour groupes, accès wifi et salles communes pour travail collectif.</p>
+            <p data-i18n="surplace.hebergement.text2">Possibilités d'aménagements spéciaux pour groupes, connexion wifi dans les espaces communs, et salles dédiées aux travaux de groupe. Les configurations peuvent être adaptées en fonction des besoins (chambres individuelles, partagées, dortoirs) et des capacités d'accueil.</p>
           </div>
         </article>
 
@@ -62,7 +63,7 @@
           <div class="card-body">
             <h3 id="h-restauration" data-i18n="surplace.restauration">restauration</h3>
             <p data-i18n="surplace.restauration.text">Cuisine locale pour groupes et menus adaptés aux besoins.</p>
-            <p data-i18n="surplace.restauration.text2">Options végétariennes et véganes, service pour événements, et possibilités de repas flexibles selon planning.</p>
+            <p data-i18n="surplace.restauration.text2">Menus sur mesure (standard, végétarien, végan), options pour régimes particuliers, et organisation de buffets ou repas servis. Le service peut s'adapter aux contraintes d'horaires des événements : pauses café, pauses déjeuner sur place et service du dîner en soirée.</p>
           </div>
         </article>
 
@@ -73,7 +74,7 @@
           <div class="card-body">
             <h3 id="h-espaces" data-i18n="surplace.espaces">espaces de formation</h3>
             <p data-i18n="surplace.espaces.text">Salles modulables équipées pour ateliers et conférences.</p>
-            <p data-i18n="surplace.espaces.text2">Équipements audio/vidéo, mobilier adaptable, connexion internet et assistance logistique pour vos événements.</p>
+            <p data-i18n="surplace.espaces.text2">Salles de plénum, ateliers plus petits et espaces informels pour travail en groupe. Équipements audiovisuels disponibles, mobilier modulable, et possibilité d’aménagements techniques sur demande (sonorisation, projection, connexions réseaux). Support logistique proposé pour les installations.</p>
           </div>
         </article>
 
@@ -84,7 +85,7 @@
           <div class="card-body">
             <h3 id="h-alentours" data-i18n="surplace.alentours">alentours</h3>
             <p data-i18n="surplace.alentours.text">Paysage, randonnées et patrimoine aux alentours.</p>
-            <p data-i18n="surplace.alentours.text2">Itinéraires recommandés, points d'intérêt historiques, et services pour excursions de groupe.</p>
+            <p data-i18n="surplace.alentours.text2">Itinéraires recommandés pour randonnées, points d’intérêt historiques et suggestions d’excursions à la journée. Possibilités de visites guidées, activités de team-building en extérieur, et informations logistiques pour les transferts et parking des groupes.</p>
           </div>
         </article>
       </div>
@@ -94,7 +95,7 @@
 
   <footer class="site-footer" role="contentinfo">
     <div class="footer-inner">
-      <a class="cta" href="tarifs.html" id="devis-link-2" data-i18n="cta.devis">Demander un devis</a>
+      <a class="cta" href="tarifs.html" id="devis-link" data-i18n="cta.devis">Demander un devis</a>
       <p>© Abbaye de Bellelay</p>
     </div>
   </footer>

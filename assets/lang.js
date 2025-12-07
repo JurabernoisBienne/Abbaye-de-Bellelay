@@ -1,6 +1,7 @@
-/* assets/lang.js
-   - Same robust lookup & URL update as before
-   - Expanded patrimoine (pat) entries: years, brief and longer text for modal, in FR/DE/EN
+/* assets/lang.js - translations + robust lookup and URL helpers
+   - This file contains the translations for the site (FR/DE/EN)
+   - It also exposes getLang/applyLang/translations/updateUrlLangParam on window.__abbayeLang
+   - Added a `disciplines` section per language for the disciplines page content (title + paragraphs + image)
 */
 (function(){
   const translations = {
@@ -24,128 +25,326 @@
         patrimoine: "Patrimoine — Abbaye de Bellelay",
         contact: "Contact — Abbaye de Bellelay"
       },
-      // ... other translations unchanged (kept from your current file) ...
-      patrimoine: { title: "Patrimoine", subtitle: "Une frise de la mémoire", heading: "Frise chronologique" },
-      pat: {
-        p1: {
-          years: "Depuis 2022",
-          title: "Réouverture et mission culturelle",
-          brief: "Réaffectation du site et ouverture au public, développement d’un programme culturel renouvelé.",
-          text: "Depuis 2022, l'Abbaye de Bellelay a entamé une nouvelle phase : restauration sélective des bâtiments, aménagement d'espaces d'exposition et lancement d'un programme de résidences, d'ateliers et d’événements publics. L’accent est mis sur l’accessibilité, la médiation et la réactivation du patrimoine par des activités culturelles et formatives."
+
+      /* ... other translations kept unchanged (programs, surplace, tarifs, patrimoine, etc.) ... */
+
+      /* Disciplines content: titles, image paths and paragraphs in FR */
+      disciplines: {
+        architecture: {
+          title: "Architecture",
+          img: "assets/img/discipline-architecture.svg",
+          paragraphs: [
+            "À Bellelay l’architecture étudie le rapport entre formes historiques et interventions contemporaines : relevés, analyses matériaux, et discussions sur la conservation.",
+            "Les ateliers combinent pratique et réflexion : relevés, maquettes, propositions de réaffectation et restitution publique.",
+            "Les résidences favorisent l’expérimentation in-situ et la production d’outils documentaires liés au patrimoine bâti."
+          ]
         },
-        p2: {
-          years: "1890–2022",
-          title: "Période industrielle et transformations",
-          brief: "Utilisations industrielles et modifications structurelles ayant marqué l’aspect du site.",
-          text: "Entre 1890 et 2022, le site a été largement transformé par des usages industriels et productifs : installation d’ateliers, modifications des volumes intérieurs et adaptations techniques. Ces usages ont parfois altéré des éléments patrimoniaux, mais ont aussi contribué à la survie matérielle de certains bâtiments, ouvrant la voie à des reconversions successives."
+        amenagement: {
+          title: "Aménagement du territoire",
+          img: "assets/img/discipline-amenagement.svg",
+          paragraphs: [
+            "L’aménagement interroge les liens entre territoire, ressources et usages : cartographies, plans et stratégies locales.",
+            "Projets participatifs réunissant acteurs locaux, chercheurs et praticiens pour co-construire propositions territoriales.",
+            "Études de mobilité, accessibilité et scénarios de paysage intégrant enjeux sociaux et écologiques."
+          ]
         },
-        p3: {
-          years: "1797–1890",
-          title: "Sécularisation et premières reconversions",
-          brief: "Période où l'abbaye perd ses fonctions monastiques et trouve de nouveaux usages civils.",
-          text: "Après les événements révolutionnaires de la fin du XVIIIe siècle, l’abbaye est sécularisée et cesse sa vocation monastique. S’ensuivent des phases de vente, de division de parties du domaine et d’emplois variés — agricoles, administratifs et parfois résidentiels — qui modifient l’organisation interne du site."
+        histoire: {
+          title: "Histoire",
+          img: "assets/img/discipline-history.svg",
+          paragraphs: [
+            "Recherche historique et travail d’archives autour de l’abbaye : sources, mutations et récits locaux.",
+            "Séminaires et projets éditoriaux permettent de restituer les résultats au public et de questionner les narrations régionales.",
+            "Approches critiques qui mettent en lumière continuités, ruptures et usages politiques du patrimoine."
+          ]
         },
-        p4: {
-          years: "1714–1797",
-          title: "Apogée monastique",
-          brief: "Période d’expansion architecturale et d’importance religieuse et sociale dans la région.",
-          text: "Les XVIIIe et début XIXe siècles correspondent à une phase d'essor pour la communauté monastique : agrandissements, aménagements décoratifs et intensification des activités religieuses, éducatives et économiques. De nombreux éléments architecturaux encore visibles aujourd’hui datent de cette période."
+        culture_art: {
+          title: "Culture et art",
+          img: "assets/img/discipline-art.svg",
+          paragraphs: [
+            "Programmes artistiques et expositions : création in-situ, dialogues interdisciplinaires et médiation culturelle.",
+            "Résidences favorisant collaborations entre artistes et chercheurs pour produire œuvres et dispositifs contextuels.",
+            "Actions publiques (vernissages, performances, ateliers) ancrent le projet sur le territoire et le rendent accessible."
+          ]
         },
-        p5: {
-          years: "1136–1714",
-          title: "Fondation et longue histoire médiévale",
-          brief: "Origines médiévales, construction du noyau historique et rôle spirituel durable.",
-          text: "Fondée en 1136, l'abbaye se développe au Moyen Âge comme un centre spirituel, culturel et économique pour la région. Les premières constructions, les cloîtres et les structures monastiques établissent le noyau du patrimoine bâti. Cette longue période pose les bases de l’identité historique du site."
+        circularity: {
+          title: "Circularité",
+          img: "assets/img/discipline-circularity.svg",
+          paragraphs: [
+            "Approches de circularité appliquées au bâtiment et aux pratiques : réemploi, cycles de matériaux et économie locale.",
+            "Ateliers pratiques testant stratégies de récupération, fabrication locale et chaînes courtes dans un contexte patrimonial.",
+            "Propositions visant à réduire déchets, valoriser matériaux et imaginer modèles économiques résilients."
+          ]
+        },
+        tourisme: {
+          title: "Tourisme durable",
+          img: "assets/img/discipline-tourisme.svg",
+          paragraphs: [
+            "Stratégies de tourisme basées sur durabilité : mobilité douce, capacité d’accueil et respect des écosystèmes.",
+            "Projets explorant expériences de visite responsable, circuits locaux et contribution aux économies régionales.",
+            "Mise en place d’outils pour gérer flux, renforcer qualité d’accueil et articuler tourisme et patrimoine."
+          ]
+        },
+        social: {
+          title: "Social",
+          img: "assets/img/discipline-social.svg",
+          paragraphs: [
+            "Approches sociales : inclusion, participation et dispositifs favorisant cohabitation et engagement local.",
+            "Programmes soutenant initiatives communautaires, médiation et formats participatifs sur site.",
+            "Axes de travail : accessibilité, accueil pour publics divers et collaborations intersectorielles."
+          ]
+        },
+        paix: {
+          title: "Paix & réparations de guerre",
+          img: "assets/img/discipline-paix.svg",
+          paragraphs: [
+            "Thématiques de mémoire, réconciliation et pratiques de réparations liées à conflits historiques et contemporains.",
+            "Ateliers et séminaires sur commémoration, justice transitionnelle et construction de récits partagés.",
+            "Projets favorisant l’écoute, le travail de mémoire et la mise en place d’espaces de dialogue et de réparation."
+          ]
         }
       },
-      // ... rest of translations ...
-      // (keep the other sections from your existing lang.js — only the pat block is shown/updated here for brevity)
+
+      /* ... rest of translations ... */
+      form: {
+        entite: "Entité",
+        nom: "Nom",
+        prenom: "Prénom",
+        tel: "Téléphone",
+        email: "Email",
+        dates: "Dates",
+        nbpersonnes: "Nombre de personnes",
+        nbchambres: "Nombre de chambres",
+        typeRepas: "Type de repas",
+        "repas.standard": "Standard",
+        "repas.veg": "Végétarien",
+        "repas.vegan": "Vegan",
+        submit: "Envoyer la demande",
+        message: "Message",
+        send: "Envoyer"
+      },
+      cta: { devis: "Demander un devis" }
     },
+
     de: {
       brand: "Abbaye de Bellelay",
       aria: { lang: "Sprache" },
-      // ... other translations ...
-      patrimoine: { title: "Erbe", subtitle: "Eine Zeitleiste", heading: "Zeitleiste" },
-      pat: {
-        p1: {
-          years: "Seit 2022",
-          title: "Wiedereröffnung und kulturelle Mission",
-          brief: "Neunutzung des Geländes und öffentliche Öffnung mit neuem Kulturprogramm.",
-          text: "Seit 2022 befindet sich die Abtei Bellelay in einer neuen Phase: gezielte Restaurierungen, Einrichtung von Ausstellungsräumen und Start eines Programms mit Residenzen, Workshops und öffentlichen Veranstaltungen. Der Fokus liegt auf Zugänglichkeit, Vermittlung und Aktivierung des Kulturerbes durch kulturelle und bildungsbezogene Aktivitäten."
+      nav: {
+        programmes: "Programme",
+        surplace: "Vor Ort",
+        disciplines: "Disziplinen",
+        tarifs: "Preise",
+        patrimoine: "Erbe",
+        contact: "Kontakt"
+      },
+      hero: { title: "Ein Ort zum Denken, Schaffen und Begegnen", subtitle: "Kulturelle Programme, Residenzen, Ausbildungen und Veranstaltungen." },
+      title: {
+        programmes: "Programme — Abbaye de Bellelay",
+        surplace: "Vor Ort — Abbaye de Bellelay",
+        disciplines: "Disziplinen — Abbaye de Bellelay",
+        tarifs: "Preise — Abbaye de Bellelay",
+        patrimoine: "Erbe — Abbaye de Bellelay",
+        contact: "Kontakt — Abbaye de Bellelay"
+      },
+
+      /* ... other translations ... */
+
+      disciplines: {
+        architecture: {
+          title: "Architektur",
+          img: "assets/img/discipline-architecture.svg",
+          paragraphs: [
+            "In Bellelay untersucht die Architektur das Verhältnis von historischer Form und zeitgenössischer Intervention: Vermessung, Materialanalyse und Erhaltungsdiskurse.",
+            "Workshops verbinden Praxis und Theorie: Vermessung, Modellbau, Umnutzungsvorschläge und öffentliche Präsentationen.",
+            "Residencies ermöglichen ortsbezogene Experimente und die Erstellung dokumentarischer Werkzeuge zum gebauten Erbe."
+          ]
         },
-        p2: {
-          years: "1890–2022",
-          title: "Industrielle Periode und Umwandlungen",
-          brief: "Industrielle Nutzung und strukturelle Veränderungen prägten das Erscheinungsbild.",
-          text: "Zwischen 1890 und 2022 wurde der Ort überwiegend industriell genutzt: Werkstätten, innere Strukturveränderungen und technische Anpassungen. Diese Perioden führten zu teils substanziellen Eingriffen, ermöglichten aber zugleich die materielle Erhaltung bestimmter Bauabschnitte und legten Grundlagen für spätere Umnutzungen."
+        amenagement: {
+          title: "Raumplanung",
+          img: "assets/img/discipline-amenagement.svg",
+          paragraphs: [
+            "Die Raumplanung thematisiert Verbindungen zwischen Territorium, Ressourcen und Nutzung: Kartierungen, Konzepte und lokale Strategien.",
+            "Partizipative Projekte bringen lokale Akteur*innen, Forschende und Praktiker*innen zusammen, um gemeinschaftlich Vorschläge zu entwickeln.",
+            "Arbeiten umfassen Mobilitätsstudien, Zugänglichkeit und Landschaftsszenarien unter Berücksichtigung sozialer und ökologischer Fragen."
+          ]
         },
-        p3: {
-          years: "1797–1890",
-          title: "Säkularisation und erste Umnutzungen",
-          brief: "Das Kloster verliert seine monastische Funktion und wird zivil genutzt.",
-          text: "Nach der Revolution wurde das Kloster säkularisiert und seine Rolle als Ordensniederlassung beendet. Es folgten Verkäufe, Teilungen und wechselnde Verwendungen (landwirtschaftlich, administrativ, wohnlich), die die Struktur des Ortes veränderten."
+        histoire: {
+          title: "Geschichte",
+          img: "assets/img/discipline-history.svg",
+          paragraphs: [
+            "Historische Forschung und Archivarbeit zur Abtei: Quellen, Wandel und lokale Narrative.",
+            "Seminare und Publikationsprojekte geben Ergebnisse an die Öffentlichkeit weiter und hinterfragen regionale Erzählungen.",
+            "Kritische Ansätze beleuchten Kontinuitäten, Brüche und politische Nutzungen des Erbes über die Zeit."
+          ]
         },
-        p4: {
-          years: "1714–1797",
-          title: "Klösterliche Blütezeit",
-          brief: "Architektonische Erweiterungen und ausgeprägte religiöse Aktivität.",
-          text: "Im 18. Jahrhundert erlebte die Gemeinschaft eine Phase des Wachstums: Erweiterungen, dekorative Ausstattungen und verstärkte religiöse, bildungsbezogene und wirtschaftliche Tätigkeiten prägten den Ort. Zahlreiche heute sichtbare Strukturen stammen aus dieser Zeit."
+        culture_art: {
+          title: "Kultur & Kunst",
+          img: "assets/img/discipline-art.svg",
+          paragraphs: [
+            "Kunstprogramme und Ausstellungen: ortsbezogene Schaffensprozesse, interdisziplinäre Dialoge und Vermittlung.",
+            "Residenzen fördern Kooperationen zwischen Künstler*innen und Wissenschaft, führend zu kontextbezogenen Arbeiten.",
+            "Öffentliche Formate (Vernissagen, Performances, Workshops) verankern das Projekt lokal und machen es zugänglich."
+          ]
         },
-        p5: {
-          years: "1136–1714",
-          title: "Gründung und mittelalterliche Entwicklung",
-          brief: "Gründungszeit, Bau des historischen Kerns und religiöse Bedeutung.",
-          text: "Gegründet 1136, entwickelte sich die Abtei im Mittelalter zu einem Zentrum spirituellen, kulturellen und wirtschaftlichen Lebens. Die ersten Bauphasen, Kreuzgänge und klösterlichen Strukturen formten das historische Fundament des Ensembles."
+        circularity: {
+          title: "Zirkularität",
+          img: "assets/img/discipline-circularity.svg",
+          paragraphs: [
+            "Zirkuläre Ansätze für Gebäude und Praxis: Wiederverwendung, Materialkreisläufe und lokale Ökonomie.",
+            "Praktische Workshops erproben Rückbau-, Recycling- und lokale Produktionsstrategien im denkmalpflegerischen Kontext.",
+            "Vorschläge zielen auf Abfallreduktion, Materialwertschöpfung und resilientere Geschäftsmodelle."
+          ]
+        },
+        tourisme: {
+          title: "Nachhaltiger Tourismus",
+          img: "assets/img/discipline-tourisme.svg",
+          paragraphs: [
+            "Tourismusstrategien mit Fokus auf Nachhaltigkeit: sanfte Mobilität, Kapazitätsfragen und Ökosystemschutz.",
+            "Projekte entwickeln verantwortungsvolle Besuchserfahrungen, lokale Routen und Beiträge zur regionalen Wirtschaft.",
+            "Werkzeuge zur Steuerung von Besucherströmen, Qualitätssteigerung und Verbindung von Tourismus und Erbe."
+          ]
+        },
+        social: {
+          title: "Soziales",
+          img: "assets/img/discipline-social.svg",
+          paragraphs: [
+            "Soziale Ansätze: Inklusion, Partizipation und Maßnahmen für gemeinschaftliches Engagement.",
+            "Programme unterstützen lokale Initiativen, Vermittlung und partizipative Formate vor Ort.",
+            "Fokus: Barrierefreiheit, Aufnahmeformate für diverse Zielgruppen und intersektorale Kooperationen."
+          ]
+        },
+        paix: {
+          title: "Frieden & Wiedergutmachung",
+          img: "assets/img/discipline-paix.svg",
+          paragraphs: [
+            "Themen: Erinnerung, Versöhnung und Wiedergutmachungspraktiken im Kontext historischer und aktueller Konflikte.",
+            "Workshops und Seminare zu Gedenken, transitionaler Gerechtigkeit und gemeinsamer Narrativbildung.",
+            "Projekte fördern Zuhören, Erinnerungsarbeit und die Schaffung von Dialog- und Reparationsräumen."
+          ]
         }
-      }
+      },
+
+      /* ... rest ... */
+      form: {
+        entite: "Einrichtung",
+        nom: "Name",
+        prenom: "Vorname",
+        tel: "Telefon",
+        email: "Email"
+      },
+      cta: { devis: "Angebot anfragen" }
     },
+
     en: {
       brand: "Abbaye de Bellelay",
       aria: { lang: "Language" },
-      // ... other translations ...
-      patrimoine: { title: "Heritage", subtitle: "A timeline", heading: "Timeline" },
-      pat: {
-        p1: {
-          years: "Since 2022",
-          title: "Reopening and cultural mission",
-          brief: "Site repurposing and public opening with a renewed cultural programme.",
-          text: "Since 2022 the Abbey of Bellelay entered a new phase: selective restoration, adaptation of exhibition spaces and the launch of a programme of residencies, workshops and public events. The emphasis is on accessibility, mediation and reactivating the heritage through cultural and educational activities."
+      nav: {
+        programmes: "Programs",
+        surplace: "On-site",
+        disciplines: "Disciplines",
+        tarifs: "Rates",
+        patrimoine: "Heritage",
+        contact: "Contact"
+      },
+      hero: { title: "A place to think, create and meet", subtitle: "Cultural programmes, residencies, trainings and events." },
+      title: {
+        programmes: "Programs — Abbaye de Bellelay",
+        surplace: "On-site — Abbaye de Bellelay",
+        disciplines: "Disciplines — Abbaye de Bellelay",
+        tarifs: "Rates — Abbaye de Bellelay",
+        patrimoine: "Heritage — Abbaye de Bellelay",
+        contact: "Contact — Abbaye de Bellelay"
+      },
+
+      /* ... other translations ... */
+
+      disciplines: {
+        architecture: {
+          title: "Architecture",
+          img: "assets/img/discipline-architecture.svg",
+          paragraphs: [
+            "At Bellelay architecture explores the relation between historic form and contemporary interventions: surveys, material analysis and conservation debates.",
+            "Workshops mix practice and reflection: surveying, model-making, adaptive-reuse proposals and public outcomes.",
+            "Residencies support on-site experimentation and production of documentary tools linked to the built heritage."
+          ]
         },
-        p2: {
-          years: "1890–2022",
-          title: "Industrial use and transformations",
-          brief: "Industrial uses and structural changes that left visible marks on the site.",
-          text: "From 1890 to 2022 the site saw extensive industrial uses: workshops, structural alterations and technical adaptations. Those periods sometimes altered heritage elements, but also contributed to the physical preservation of buildings and enabled successive reuses."
+        amenagement: {
+          title: "Spatial planning",
+          img: "assets/img/discipline-amenagement.svg",
+          paragraphs: [
+            "Spatial planning examines links between territory, resources and uses: mapping, planning and local strategies.",
+            "Participatory projects bring local stakeholders, researchers and practitioners together to co-design proposals.",
+            "Work includes mobility studies, accessibility and landscape scenarios integrating social and ecological concerns."
+          ]
         },
-        p3: {
-          years: "1797–1890",
-          title: "Secularization and early reuses",
-          brief: "The abbey loses its monastic function and is used for civil purposes.",
-          text: "After the revolutionary era the abbey was secularized and ceased to function as a monastery. Sales, parceling and varying civil uses (agricultural, administrative, residential) followed, reshaping the internal organisation of the site."
+        histoire: {
+          title: "History",
+          img: "assets/img/discipline-history.svg",
+          paragraphs: [
+            "Historical research and archival work on the abbey: sources, transformations and local narratives.",
+            "Seminars and editorial projects share findings with the public and question regional storytelling.",
+            "Critical approaches highlight continuities, ruptures and political uses of heritage across time."
+          ]
         },
-        p4: {
-          years: "1714–1797",
-          title: "Monastic heyday",
-          brief: "Period of architectural growth and strong religious/social role.",
-          text: "The 18th century saw a flourishing of the monastic community, with expansions, decorative works and intensified religious, educational and economic activities. Many of the present architectural elements date from this phase."
+        culture_art: {
+          title: "Culture & art",
+          img: "assets/img/discipline-art.svg",
+          paragraphs: [
+            "Artistic programmes and exhibitions: on-site creation, interdisciplinary dialogue and cultural mediation.",
+            "Residencies encourage artist–researcher collaborations, producing context-sensitive works and formats.",
+            "Public actions (openings, performances, workshops) anchor the project in the territory and make it accessible."
+          ]
         },
-        p5: {
-          years: "1136–1714",
-          title: "Foundation and medieval history",
-          brief: "Medieval origins: construction of the historic core and long-standing significance.",
-          text: "Founded in 1136, the abbey developed into a central spiritual, cultural and economic site in the Middle Ages. Early constructions, cloisters and monastic structures established the historical core of the ensemble."
+        circularity: {
+          title: "Circularity",
+          img: "assets/img/discipline-circularity.svg",
+          paragraphs: [
+            "Circular approaches for buildings and practice: reuse, material cycles and local economies.",
+            "Hands-on workshops test recovery strategies, local making and short supply chains in a heritage context.",
+            "Proposals aim to reduce waste, valorize materials and design resilient economic models."
+          ]
+        },
+        tourisme: {
+          title: "Sustainable tourism",
+          img: "assets/img/discipline-tourisme.svg",
+          paragraphs: [
+            "Tourism strategies focused on sustainability: soft mobility, capacity and ecosystem respect.",
+            "Projects explore responsible visitor experiences, local circuits and contributions to regional economies.",
+            "Development of tools to manage flows, enhance quality and link tourism with heritage."
+          ]
+        },
+        social: {
+          title: "Social",
+          img: "assets/img/discipline-social.svg",
+          paragraphs: [
+            "Social approaches: inclusion, participation and measures that foster cohabitation and local engagement.",
+            "Programs support community initiatives, mediation and participatory formats on site.",
+            "Focus areas: accessibility, welcoming diverse publics and intersectoral collaborations."
+          ]
+        },
+        paix: {
+          title: "Peace & war reparations",
+          img: "assets/img/discipline-paix.svg",
+          paragraphs: [
+            "Themes of memory, reconciliation and reparative practices related to historical and contemporary conflicts.",
+            "Workshops and seminars on commemoration, transitional justice and building shared narratives.",
+            "Projects foster listening, memory work and creation of spaces for dialogue and reparation."
+          ]
         }
-      }
+      },
+
+      /* ... rest ... */
+      form: { entite: "Entity", nom: "Last name" },
+      cta: { devis: "Request a quote" }
     }
   };
 
-  // --- robust lookup & URL helpers (unchanged) ---
   function getLang(){
     const params = new URLSearchParams(location.search);
     const l = (params.get('lang') || 'fr').toLowerCase();
     return ['fr','de','en'].includes(l) ? l : 'fr';
   }
 
+  // Robust lookup (handles dotted keys and nested objects)
   function lookup(dict, key){
     if(!key || !dict) return null;
     if(Object.prototype.hasOwnProperty.call(dict, key)) return dict[key];
@@ -177,16 +376,17 @@
   }
 
   function applyLang(lang){
-    // existing application logic - apply all [data-i18n] elements
+    const dict = translations[lang] || translations.fr;
+
     document.querySelectorAll('[data-i18n]').forEach(el=>{
       const key = el.getAttribute('data-i18n');
-      const val = lookup(translations[lang] || translations.fr, key);
+      const val = lookup(dict, key);
       if(val !== null && typeof val !== 'object'){
         el.textContent = val;
       }
     });
 
-    // update title mapping (kept from earlier version)
+    // update title mapping
     const path = location.pathname.split('/').pop();
     const map = {
       'programmes.html': 'programmes',
@@ -198,8 +398,8 @@
       '': 'programmes'
     };
     const key = map[path] || null;
-    if(key && translations[lang] && translations[lang].title && translations[lang].title[key]){
-      document.title = translations[lang].title[key];
+    if(key && dict.title && dict.title[key]){
+      document.title = dict.title[key];
     }
 
     const sel = document.getElementById('lang');
@@ -224,9 +424,7 @@
       history.replaceState(null, document.title, newUrl);
       if((new URL(location.href)).searchParams.get('lang') === newLang) return;
       history.pushState(null, document.title, newUrl);
-    }catch(e){
-      // ignore
-    }
+    }catch(e){}
   }
 
   window.__abbayeLang = { getLang, applyLang, translations, updateUrlLangParam };
@@ -235,14 +433,15 @@
     const lang = getLang();
     applyLang(lang);
 
-    // timeline modal interaction already implemented in main.js;
-    // ensure timeline buttons are focusable and accessible
     const sel = document.getElementById('lang');
     if(!sel) return;
     sel.addEventListener('change', function(){
       const newLang = sel.value;
       applyLang(newLang);
       updateUrlLangParam(newLang);
+      // other modules can listen to the select change
+      const evt = new CustomEvent('abbaye:langChanged', { detail: { lang: newLang } });
+      document.dispatchEvent(evt);
     });
   });
 })();

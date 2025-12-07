@@ -136,41 +136,46 @@ body{
 .program p{margin:0;color:var(--muted);font-size:0.95rem}
 
 /* timeline (kept) */
-:root {
-  --timeline-left: 84px; /* distance depuis le bord gauche vers la ligne verticale */
+/* --- Timeline strict : line and dots vertically aligned --- */
+
+:root{
+  --timeline-line-col: 48px;   /* total width reserved for the vertical line column */
   --timeline-dot-size: 18px;
+  --timeline-date-col: 160px;  /* adjust distance between line and card (date column width) */
 }
 
+/* Container: no left padding so first column starts at container left */
 .timeline{
   position:relative;
   max-width:880px;
   margin:24px auto;
-  padding:30px 20px;
+  padding:30px 20px; /* top/right/bottom/left = 30/20/30/20 */
   display:flex;
   flex-direction:column;
   gap:18px;
 }
 
+/* Vertical line: centered inside the first column */
 .timeline-line{
   position:absolute;
-  left:var(--timeline-left);
+  left: calc((20px) + (var(--timeline-line-col) / 2)); /* 20px = timeline padding-left */
   top:30px;
   bottom:30px;
-  width:6px;
+  width:4px;
   background:linear-gradient(180deg,var(--blue),var(--green));
   border-radius:4px;
-  box-shadow:0 0 0 4px rgba(167,212,190,0.08);
+  box-shadow:0 0 0 4px rgba(167,212,190,0.06);
   z-index:0;
 }
 
-/* Each item is a two-column layout: year (fixed width) + card (fluid) */
+/* Each item uses a strict 3-column grid:
+   [ first column = line col ] [ date column ] [ card column ] */
 .timeline-item{
   position:relative;
   display:grid;
-  grid-template-columns: var(--timeline-first-col) var(--timeline-date-col) 1fr;
+  grid-template-columns: var(--timeline-line-col) var(--timeline-date-col) 1fr;
   gap:18px;
-  /* center the date and the card vertically on the same line as the dot */
-  align-items:center;
+  align-items:center; /* center date & card vertically with the dot */
   background:transparent;
   border:0;
   padding:8px 12px;
@@ -185,11 +190,12 @@ body{
   border-radius:8px;
 }
 
-/* Dot: center it on the vertical line */
+/* Dot: centered inside the first column, vertically centered relative to the item */
 .timeline-item::before{
   content: "";
   position:absolute;
-  left: calc(var(--timeline-padding-left) + (var(--timeline-first-col) / 2) - (var(--timeline-dot-size) / 2));
+  /* left = padding-left (20px) + half of line-col - half dot */
+  left: calc(20px + (var(--timeline-line-col) / 2) - (var(--timeline-dot-size) / 2));
   top: 50%;
   transform: translateY(-50%);
   width:var(--timeline-dot-size);
@@ -201,7 +207,7 @@ body{
   z-index:3;
 }
 
-/* Years column (right aligned) */
+/* Dates (second column) aligned vertically with dot; slightly indented to the right */
 .timeline-year{
   grid-column: 2;
   align-self:center;
@@ -210,12 +216,11 @@ body{
   font-family:var(--serif);
   font-size:1rem;
   text-align:left;
-  padding-left:10px; /* spacing between line and date */
+  padding-left:8px; /* spacing between line and the date text */
   z-index:2;
 }
 
-
-/* Card styling */
+/* Card (third column) */
 .timeline-card{
   grid-column: 3;
   background:#fff;
@@ -228,27 +233,27 @@ body{
   z-index:2;
 }
 
-.timeline-title{
-  display:block;
-  margin-bottom:6px;
-  font-family:var(--serif);
-  font-size:1.05rem;
-}
-.timeline-brief{margin:0;color:var(--muted);line-height:1.5;font-size:0.95rem}
-
-/* Modal adjustments for timeline detail */
-.modal-inner{max-width:1000px}
-.modal img{width:100%;height:auto;border-radius:6px;margin-bottom:12px}
-.modal-text{margin-top:12px;color:var(--muted);line-height:1.6}
-
-/* Responsive: on small screens stack year above card and reposition line/dot */
+/* Responsive: reduce widths and stack date+card under small screens */
 @media (max-width:720px){
-  :root { --timeline-left: 24px; }
-  .timeline-line{left:var(--timeline-left)}
-  .timeline-item{grid-template-columns: 1fr; gap:10px; padding-left:36px}
-  .timeline-year{text-align:left;padding-right:0}
-  .timeline-item::before{left: calc(var(--timeline-left) - (var(--timeline-dot-size) / 2)); top: 12px}
-  .timeline-card{width:100%}
+  :root{
+    --timeline-line-col: 36px;
+    --timeline-date-col: 1fr;
+  }
+  .timeline-line{
+    left: calc((16px) + (var(--timeline-line-col) / 2));
+  }
+  .timeline-item{
+    grid-template-columns: var(--timeline-line-col) 1fr;
+    gap:12px;
+    padding-left: 12px;
+  }
+  .timeline-year{grid-column:2;text-align:left;padding-left:6px}
+  .timeline-item::before{
+    left: calc(16px + (var(--timeline-line-col) / 2) - (var(--timeline-dot-size) / 2));
+    top: 12px;
+    transform: none;
+  }
+  .timeline-card{grid-column:2}
 }
 
 

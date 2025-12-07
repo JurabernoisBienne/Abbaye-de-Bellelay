@@ -1,6 +1,6 @@
 /* assets/lang.js
-   - Correction du lookup pour éviter l'utilisation de 'in' sur des primitives
-   - Conserve la mise à jour robuste de l'URL et l'application immédiate des traductions
+   - Fix lookup to avoid using 'in' on primitives and to support keys stored both as dotted literals and as nested objects
+   - Keeps robust URL update and immediate translation application
 */
 (function(){
   const translations = {
@@ -282,13 +282,43 @@
     return ['fr','de','en'].includes(l) ? l : 'fr';
   }
 
+  // Robust lookup:
+  // - if full key exists at current object, return it
+  // - else traverse parts, but only access properties on objects
+  // - if we encounter a primitive while parts remain, try the composed key at the parent level
   function lookup(dict, key){
-    if(!key) return null;
+    if(!key || !dict) return null;
+    // direct literal key (handles "immersive.text" stored as a single property)
+    if(Object.prototype.hasOwnProperty.call(dict, key)) return dict[key];
+
     const parts = key.split('.');
     let val = dict;
-    for(const p of parts){
-      if(val && (p in val)) val = val[p];
-      else { val = null; break; }
+    for(let i = 0; i < parts.length; i++){
+      const p = parts[i];
+      // if current value is an object and has the property, proceed
+      if(typeof val === 'object' && val !== null && Object.prototype.hasOwnProperty.call(val, p)){
+        const parent = val; // keep parent ref
+        val = val[p];
+        // if val is primitive but there are remaining segments,
+        // check if parent has a composed key like "p.rest.of.parts"
+        if((typeof val !== 'object' || val === null) && i < parts.length - 1){
+          const restKey = parts.slice(i + 1).join('.');
+          const compound = p + '.' + restKey;
+          if(Object.prototype.hasOwnProperty.call(parent, compound)){
+            return parent[compound];
+          }
+          // cannot go deeper
+          return null;
+        }
+      } else {
+        // current val is not an object or doesn't have the property;
+        // maybe remaining parts form a literal key at this level
+        const restKey = parts.slice(i).join('.');
+        if(typeof val === 'object' && val !== null && Object.prototype.hasOwnProperty.call(val, restKey)){
+          return val[restKey];
+        }
+        return null;
+      }
     }
     return val;
   }

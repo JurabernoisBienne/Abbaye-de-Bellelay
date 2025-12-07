@@ -1,7 +1,6 @@
-/* assets/lang.js - robust URL update for language selector
-   - applique les traductions immédiatement
-   - met à jour l'URL ?lang=xx avec fallback pushState si replaceState ne suffit pas
-   - logs légers pour debug
+/* assets/lang.js
+   - Correction du lookup pour éviter l'utilisation de 'in' sur des primitives
+   - Conserve la mise à jour robuste de l'URL et l'application immédiate des traductions
 */
 (function(){
   const translations = {

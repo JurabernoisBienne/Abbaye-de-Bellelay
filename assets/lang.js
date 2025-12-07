@@ -1,6 +1,6 @@
 /* assets/lang.js
-   - Fix lookup to avoid using 'in' on primitives and to support keys stored both as dotted literals and as nested objects
-   - Keeps robust URL update and immediate translation application
+   - Same robust lookup and URL update as before
+   - Added .text2 keys for the six programs to support 2 paragraphs
 */
 (function(){
   const translations = {
@@ -27,16 +27,22 @@
       programs: {
         immersive: "Semaines immersives in-situ",
         "immersive.text": "Séjours thématiques avec ateliers et visites.",
+        "immersive.text2": "Approfondissements pratiques, discussions et restitutions publiques en fin de séjour.",
         summer: "Summer schools",
         "summer.text": "Formations intensives d'une à deux semaines.",
+        "summer.text2": "Modules pratiques, intervenant·e·s invité·e·s et sessions de travail collaboratives.",
         ateliers: "Ateliers et Projets",
         "ateliers.text": "Projets participatifs et ateliers pratiques.",
+        "ateliers.text2": "Accompagnement des idées, prototypage et expérimentations in situ.",
         seminars: "Séminaires et Congrès",
         "seminars.text": "Espaces pour conférences et rencontres professionnelles.",
+        "seminars.text2": "Organisation complète, logistique et services pour les participant·e·s.",
         residences: "Résidences artistiques ou scientifiques",
         "residences.text": "Hébergement et ateliers pour résident·e·s.",
+        "residences.text2": "Temps de recherche, partage et présentation des travaux en fin de résidence.",
         expositions: "Expositions et Concerts",
-        "expositions.text": "Événements publics et soirées culturelles."
+        "expositions.text": "Événements publics et soirées culturelles.",
+        "expositions.text2": "Vernissages, rencontres et médiations publiques tout au long de l'année."
       },
       surplace: {
         title: "Sur place",
@@ -117,16 +123,22 @@
       programs: {
         immersive: "Vor-Ort-Intensivwochen",
         "immersive.text": "Themenaufenthalte mit Workshops und Besichtigungen.",
+        "immersive.text2": "Praktische Vertiefungen, Diskussionen und öffentliche Präsentationen am Ende des Aufenthalts.",
         summer: "Summer schools",
         "summer.text": "Intensive Kurse von ein bis zwei Wochen.",
+        "summer.text2": "Praktische Module, eingeladene Referent·innen und kollaborative Arbeitsphasen.",
         ateliers: "Workshops und Projekte",
         "ateliers.text": "Partizipative Projekte und praktische Workshops.",
+        "ateliers.text2": "Begleitung von Ideen, Prototyping und Experimente vor Ort.",
         seminars: "Seminare und Kongresse",
         "seminars.text": "Räume für Konferenzen und berufliche Treffen.",
+        "seminars.text2": "Komplette Organisation, Logistik und Services für Teilnehmer·innen.",
         residences: "Künstlerische oder wissenschaftliche Residenzen",
         "residences.text": "Unterkunft und Arbeitsräume für Residente.",
+        "residences.text2": "Forschungszeit, Austausch und Abschlusspräsentationen.",
         expositions: "Ausstellungen und Konzerte",
-        "expositions.text": "Öffentliche Veranstaltungen und Kulturabende."
+        "expositions.text": "Öffentliche Veranstaltungen und Kulturabende.",
+        "expositions.text2": "Vernissagen, Begegnungen und Vermittlung während des Jahres."
       },
       surplace: {
         title: "Vor Ort",
@@ -207,16 +219,22 @@
       programs: {
         immersive: "Immersive on-site weeks",
         "immersive.text": "Thematic stays with workshops and visits.",
+        "immersive.text2": "Practical deep-dives, discussions and public presentations at the end of the stay.",
         summer: "Summer schools",
         "summer.text": "Intensive trainings of one to two weeks.",
+        "summer.text2": "Practical modules, guest lecturers and collaborative working sessions.",
         ateliers: "Workshops and Projects",
         "ateliers.text": "Participatory projects and practical workshops.",
+        "ateliers.text2": "Idea support, prototyping and in-situ experimentation.",
         seminars: "Seminars and Congresses",
         "seminars.text": "Spaces for conferences and professional meetings.",
+        "seminars.text2": "Full organisation, logistics and participant services.",
         residences: "Artistic or scientific residencies",
         "residences.text": "Accommodation and studios for residents.",
+        "residences.text2": "Research time, exchange and final presentations.",
         expositions: "Exhibitions and Concerts",
-        "expositions.text": "Public events and cultural evenings."
+        "expositions.text": "Public events and cultural evenings.",
+        "expositions.text2": "Openings, encounters and mediation throughout the year."
       },
       surplace: {
         title: "On-site",
@@ -282,37 +300,27 @@
     return ['fr','de','en'].includes(l) ? l : 'fr';
   }
 
-  // Robust lookup:
-  // - if full key exists at current object, return it
-  // - else traverse parts, but only access properties on objects
-  // - if we encounter a primitive while parts remain, try the composed key at the parent level
+  // Robust lookup (same as previously deployed)
   function lookup(dict, key){
     if(!key || !dict) return null;
-    // direct literal key (handles "immersive.text" stored as a single property)
     if(Object.prototype.hasOwnProperty.call(dict, key)) return dict[key];
 
     const parts = key.split('.');
     let val = dict;
     for(let i = 0; i < parts.length; i++){
       const p = parts[i];
-      // if current value is an object and has the property, proceed
       if(typeof val === 'object' && val !== null && Object.prototype.hasOwnProperty.call(val, p)){
-        const parent = val; // keep parent ref
+        const parent = val;
         val = val[p];
-        // if val is primitive but there are remaining segments,
-        // check if parent has a composed key like "p.rest.of.parts"
         if((typeof val !== 'object' || val === null) && i < parts.length - 1){
           const restKey = parts.slice(i + 1).join('.');
           const compound = p + '.' + restKey;
           if(Object.prototype.hasOwnProperty.call(parent, compound)){
             return parent[compound];
           }
-          // cannot go deeper
           return null;
         }
       } else {
-        // current val is not an object or doesn't have the property;
-        // maybe remaining parts form a literal key at this level
         const restKey = parts.slice(i).join('.');
         if(typeof val === 'object' && val !== null && Object.prototype.hasOwnProperty.call(val, restKey)){
           return val[restKey];
@@ -334,7 +342,6 @@
       }
     });
 
-    // Update document.title based on current file
     const path = location.pathname.split('/').pop();
     const map = {
       'programmes.html': 'programmes',
@@ -350,11 +357,9 @@
       document.title = dict.title[key];
     }
 
-    // set select value
     const sel = document.getElementById('lang');
     if(sel) sel.value = lang;
 
-    // update nav links and CTAs
     document.querySelectorAll('.main-nav a, .cta').forEach(a=>{
       try{
         const href = a.getAttribute('href');
@@ -366,24 +371,20 @@
     });
   }
 
-  // Robust URL updater: try replaceState, validate, fallback to pushState
+  // Robust URL updater
   function updateUrlLangParam(newLang){
     try{
       const u = new URL(location.href);
       u.searchParams.set('lang', newLang);
       const newUrl = u.pathname + u.search + u.hash;
-      // try replaceState
       history.replaceState(null, document.title, newUrl);
-      // verify the change took effect
       if((new URL(location.href)).searchParams.get('lang') === newLang){
         console.log('lang.js: URL updated via replaceState ->', newUrl);
         return;
       }
-      // fallback to pushState (should not reload)
       history.pushState(null, document.title, newUrl);
       console.warn('lang.js: replaceState did not set param; used pushState ->', newUrl);
     }catch(e){
-      // last resort: set location.hash to force a visible URL change without reload
       console.error('lang.js: error updating URL with history API', e);
       const fallback = location.pathname + '?lang=' + encodeURIComponent(newLang) + location.hash;
       try{ history.replaceState(null, document.title, fallback); console.warn('lang.js: used fallback replaceState', fallback); }
@@ -401,12 +402,8 @@
     if(!sel) return;
     sel.addEventListener('change', function(){
       const newLang = sel.value;
-      // Apply translations first (immediate feedback)
       applyLang(newLang);
-      // Then robustly update URL
       updateUrlLangParam(newLang);
-      // Note: if tu veux forcer un rechargement uncomment:
-      // location.assign(location.pathname + '?lang=' + newLang + location.hash);
     });
   });
 })();

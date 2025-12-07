@@ -136,27 +136,114 @@ body{
 .program p{margin:0;color:var(--muted);font-size:0.95rem}
 
 /* timeline (kept) */
-.timeline{position:relative;max-width:880px;margin:24px auto;padding:30px 20px;display:flex;flex-direction:column;gap:18px}
-.timeline-line{position:absolute;left:56px;top:30px;bottom:30px;width:6px;background:linear-gradient(180deg,var(--blue),var(--green));border-radius:4px;box-shadow:0 0 0 4px rgba(167,212,190,0.08);z-index:0}
-.timeline-item{position:relative;display:flex;gap:18px;align-items:flex-start;background:transparent;border:0;padding:8px 12px;z-index:1;text-align:left;cursor:pointer}
+:root {
+  --timeline-left: 84px; /* distance depuis le bord gauche vers la ligne verticale */
+  --timeline-dot-size: 18px;
+}
+
+.timeline{
+  position:relative;
+  max-width:880px;
+  margin:24px auto;
+  padding:30px 20px;
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+}
+
+.timeline-line{
+  position:absolute;
+  left:var(--timeline-left);
+  top:30px;
+  bottom:30px;
+  width:6px;
+  background:linear-gradient(180deg,var(--blue),var(--green));
+  border-radius:4px;
+  box-shadow:0 0 0 4px rgba(167,212,190,0.08);
+  z-index:0;
+}
+
+/* Each item is a two-column layout: year (fixed width) + card (fluid) */
+.timeline-item{
+  position:relative;
+  display:grid;
+  grid-template-columns: 120px 1fr;
+  gap:18px;
+  align-items:start;
+  background:transparent;
+  border:0;
+  padding:8px 12px;
+  z-index:1;
+  text-align:left;
+  cursor:pointer;
+}
 .timeline-item:focus,
-.timeline-item:hover{outline: none;background: rgba(199,230,240,0.06);border-radius:8px}
-.timeline-year{min-width:96px;font-weight:700;color:#123;font-family:var(--serif);font-size:1rem;text-align:right;padding-right:12px;position:relative}
-/* round dot overlapping the central line */
-.timeline-item::before{content: "";position:absolute;left:46px;top:18px;width:18px;height:18px;border-radius:50%;background:var(--yellow);border:3px solid #fff;box-shadow:0 2px 6px rgba(0,0,0,0.08);z-index:2}
-.timeline-card{background:#fff;border-radius:8px;padding:12px 14px;box-shadow: 0 2px 8px rgba(0,0,0,0.04);border:1px solid rgba(0,0,0,0.03);flex:1;min-height:68px}
-.timeline-title{display:block;margin-bottom:6px;font-family:var(--serif);font-size:1.05rem}
+.timeline-item:hover{
+  outline: none;
+  background: rgba(199,230,240,0.06);
+  border-radius:8px;
+}
+
+/* Years column (right aligned) */
+.timeline-year{
+  width:120px;
+  font-weight:700;
+  color:#123;
+  font-family:var(--serif);
+  font-size:1rem;
+  text-align:right;
+  padding-right:12px;
+  position:relative;
+  z-index:2;
+}
+
+/* Dot: center it on the line (use --timeline-left) */
+.timeline-item::before{
+  content: "";
+  position:absolute;
+  left: calc(var(--timeline-left) - (var(--timeline-dot-size) / 2) );
+  top: 22px; /* tuned to vertically align with card header */
+  width:var(--timeline-dot-size);
+  height:var(--timeline-dot-size);
+  border-radius:50%;
+  background:var(--yellow);
+  border:3px solid #fff;
+  box-shadow:0 2px 6px rgba(0,0,0,0.08);
+  z-index:3;
+}
+
+/* Card styling */
+.timeline-card{
+  background:#fff;
+  border-radius:8px;
+  padding:12px 14px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  border:1px solid rgba(0,0,0,0.03);
+  flex:1;
+  min-height:80px;
+  z-index:2;
+}
+
+.timeline-title{
+  display:block;
+  margin-bottom:6px;
+  font-family:var(--serif);
+  font-size:1.05rem;
+}
 .timeline-brief{margin:0;color:var(--muted);line-height:1.5;font-size:0.95rem}
+
 /* Modal adjustments for timeline detail */
 .modal-inner{max-width:1000px}
 .modal img{width:100%;height:auto;border-radius:6px;margin-bottom:12px}
 .modal-text{margin-top:12px;color:var(--muted);line-height:1.6}
-/* Responsive: stack year above card on small screens */
+
+/* Responsive: on small screens stack year above card and reposition line/dot */
 @media (max-width:720px){
-  .timeline-line{left:20px}
-  .timeline-item{flex-direction:column;gap:10px;padding-left:36px}
+  :root { --timeline-left: 24px; }
+  .timeline-line{left:var(--timeline-left)}
+  .timeline-item{grid-template-columns: 1fr; gap:10px; padding-left:36px}
   .timeline-year{text-align:left;padding-right:0}
-  .timeline-item::before{left:12px;top:12px}
+  .timeline-item::before{left: calc(var(--timeline-left) - (var(--timeline-dot-size) / 2)); top: 12px}
   .timeline-card{width:100%}
 }
 

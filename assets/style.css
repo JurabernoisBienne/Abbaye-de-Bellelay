@@ -112,6 +112,7 @@ body{
 }
 
 /* Programs grid & carousel */
+/* layout adjusted: larger cards, image full-width above title + text */
 .programs-wrap{
   display:flex;
   align-items:center;
@@ -119,27 +120,44 @@ body{
 }
 .programs-list{
   display:grid;
-  gap:14px;
+  gap:20px;
   flex:1;
   grid-template-columns:repeat(3,1fr);
-  grid-auto-rows:minmax(120px,auto);
+  grid-auto-rows:auto;
   align-items:start;
   scroll-behavior:smooth;
   padding:8px;
   overflow-x:hidden;
 }
 
+/* Card */
 .program{
-  background:linear-gradient(180deg,var(--green), #fff);
+  background:#fff;
   border-radius:10px;
-  padding:12px;
+  padding:0;
   display:flex;
-  gap:12px;
-  align-items:center;
+  flex-direction:column;
+  overflow:hidden;
+  min-height:320px; /* increased height */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  border:1px solid rgba(0,0,0,0.03);
 }
-.program img{width:84px;height:64px;object-fit:cover;border-radius:6px}
-.program h3{margin:0;font-family:var(--serif);font-size:1rem}
-.program p{margin:6px 0 0;color:var(--muted);font-size:0.95rem}
+.program-figure{margin:0}
+.program-img{
+  width:100%;
+  height:220px; /* image height */
+  object-fit:cover;
+  display:block;
+}
+.program-body{
+  padding:14px;
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+  flex:1;
+}
+.program h3{margin:0;font-family:var(--serif);font-size:1.05rem}
+.program p{margin:0;color:var(--muted);font-size:0.95rem}
 
 /* Buttons for mobile carousel */
 .carousel-btn{
@@ -149,6 +167,12 @@ body{
 }
 .carousel-btn:focus{outline:3px solid var(--blue)}
 
+@media (max-width:1000px){
+  .programs-list{
+    grid-template-columns:repeat(2,1fr);
+  }
+  .program-img{height:200px}
+}
 @media (max-width:800px){
   .programs-list{
     grid-template-columns:repeat(6, minmax(80%, 320px));
@@ -156,7 +180,8 @@ body{
     overflow-x:auto;
     scroll-snap-type:x mandatory;
   }
-  .program{min-width:80%; scroll-snap-align:center}
+  .program{min-width:80%; scroll-snap-align:center; min-height:340px}
+  .program-img{height:240px}
   .carousel-btn{display:block}
   .main-nav{display:none}
 }

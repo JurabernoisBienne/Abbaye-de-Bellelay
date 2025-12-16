@@ -150,6 +150,41 @@
       },
 
 
+      /*programmes de*/
+       
+   programs: {
+      immersive: {
+        title: "Immersive Wochen vor Ort",
+        text: "Themenaufenthalte mit Workshops und Besichtigungen.",
+        text2: "Praktische Vertiefungen durch die Untersuchung ortsbezogener Attribute mit öffentlichen Präsentationen am Ende des Aufenthalts.",
+      },
+      summer: {
+        title: "Sommerkurse",
+        text: "Intensivkurse von ein bis drei Wochen.",
+        text2: "Praxisorientierte Module, externe Referenten oder kollaborative Arbeitssitzungen. Mit Möglichkeiten für Outdoor-Aktivitäten und Sightseeing.",
+      },
+      ateliers: {
+        title: "Workshops und Projekte",
+        text: "Partizipative Projekte und praktische Workshops.",
+        text2: "Prototyping, Experimente oder Schulungen in speziellen Handwerkswerkstätten.",
+      },
+      seminars: {
+        title: "Seminare und Tagungen",
+        text: "Räumlichkeiten für Konferenzen, Seminare, Kongresse oder Preisverleihungen.",
+        text2: "Vollständige Organisation, einschließlich Logistik und Dienstleistungen für die Teilnehmer.",
+      },
+      residences: {
+        title: "Künstlerische oder Wissenschaftliche Residenzen",
+        text: "Langzeitunterkunft in ruhiger und einzigartiger Umgebung, die kreative Entwicklung fördert.",
+        text2: "Möglichkeiten zur Ausstellung von Arbeiten am Ende des Aufenthalts.",
+      },
+      expositions: {
+        title: "Ausstellungen und Konzerte",
+        text: "Öffentliche Veranstaltungen und kulturelle Abende, sowohl drinnen als auch draußen.",
+        text2: "Vernissagen, Konzerte, Ausstellungen, Treffen und öffentliche Vermittlungen das ganze Jahr über.",
+      },
+    },
+       
 
       /*disciplines de*/
        
@@ -263,7 +298,43 @@
         contact: "Contact — Abbaye de Bellelay"
       },
 
-      /* ... other translations ... */
+       /* programmes.en */      
+    programs: {
+      immersive: {
+        title: "Immersive in-situ weeks",
+        text: "Thematic stays with workshops and visits.",
+        text2: "Practical deep dives through the study of site-related attributes, with public presentations at the end of the stay.",
+      },
+      summer: {
+        title: "Summer schools",
+        text: "Intensive courses from one to three weeks.",
+        text2: "Practice modules, external speakers, or collaborative work sessions. With opportunities for outdoor activities and sightseeing.",
+      },
+      ateliers: {
+        title: "Workshops and Projects",
+        text: "Participatory projects and practical workshops.",
+        text2: "Prototyping, experimentation, or training in dedicated artisan workshops.",
+      },
+      seminars: {
+        title: "Seminars and Conferences",
+        text: "Spaces for conferences, seminars, congresses, or award ceremonies.",
+        text2: "Full organization, including logistics and services for participants.",
+      },
+      residences: {
+        title: "Artistic or Scientific Residencies",
+        text: "Long-term accommodation in a calm and unique setting conducive to creative development.",
+        text2: "Opportunities to exhibit works at the end of the residency.",
+      },
+      expositions: {
+        title: "Exhibitions and Concerts",
+        text: "Public events and cultural evenings, both indoors and outdoors.",
+        text2: "Openings, concerts, exhibitions, meetings, and public mediations throughout the year.",
+      },
+    },       
+       
+       
+       
+       /* disciplines.en */
 
       disciplines: {
         architecture: {

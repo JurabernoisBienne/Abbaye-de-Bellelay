@@ -7,6 +7,44 @@
   <link rel="stylesheet" href="assets/style.css" />
   <script src="assets/lang.js" defer></script>
   <script src="assets/main.js" defer></script>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      min-height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .form label {
+      margin: 10px 0 5px;
+    }
+
+    .form input, .form select, .form button {
+      margin-bottom: 15px;
+      padding: 8px;
+      font-size: 16px;
+      width: 100%;
+      max-width: 300px;
+      box-sizing: border-box;
+    }
+
+    .form button {
+      cursor: pointer;
+    }
+
+    .form h2 {
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
   <header class="site-header" role="banner">
@@ -45,8 +83,8 @@
 
       <!-- Intro block added as requested -->
       <div class="intro-block" role="region" aria-label="Informations tarifs">
-        <p data-i18n="tarifs.intro.p1">Les tarifs varient selon le type de chambre et le choix des menus. Les prix indiqués (90.- à 130.-) représentent une fourchette indicative par personne et par jour, tout compris.</p>
-        <p data-i18n="tarifs.intro.p2">Ils comprennent l'hébergement, les repas (matin, midi et soir) et l'utilisation des salles de formation en plénum. Pour un devis précis, utilisez le formulaire ci‑dessous.</p>
+        <p data-i18n="tarifs.intro.p1">Les tarifs varient selon le type de chambre et le choix des menus. Les prix indiqués (90.- à 130.-) représentent une fourchette indicative par personne et par jour.</p>
+        <p data-i18n="tarifs.intro.p2">Ils comprennent l'hébergement, les repas (matin, midi et soir) et l'utilisation des salles de formation en plénum. Pour un devis précis, utilisez le formulaire ci-dessous.</p>
       </div>
 
       <form id="quote-form" class="form" novalidate>
@@ -68,17 +106,20 @@
         <label for="dates" data-i18n="form.dates">Dates</label>
         <input id="dates" name="dates" type="text" placeholder="YYYY-MM-DD → YYYY-MM-DD" />
 
-        <label for="nbr" data-i18n="form.nbpersonnes">Nombre de personnes</label>
-        <input id="nbr" name="nbr" type="number" min="1" value="1" />
+        <label for="chambre-indiv" data-i18n="form.chambre-indiv">Chambre individuelle avec salle de bain privative</label>
+        <input id="chambre-indiv" name="chambre-indiv" type="number" min="0" value="0" />
 
-        <label for="chambres" data-i18n="form.nbchambres">Nombre de chambres</label>
-        <input id="chambres" name="chambres" type="number" min="0" value="0" />
+        <label for="chambre-double" data-i18n="form.chambre-double">Chambre double</label>
+        <input id="chambre-double" name="chambre-double" type="number" min="0" value="0" />
+
+        <label for="chambre-quadruple" data-i18n="form.chambre-quadruple">Chambre quadruple</label>
+        <input id="chambre-quadruple" name="chambre-quadruple" type="number" min="0" value="0" />
 
         <label for="repas" data-i18n="form.typeRepas">Type de repas</label>
         <select id="repas" name="repas">
-          <option value="standard" data-i18n="form.repas.standard">Standard</option>
-          <option value="vegetarian" data-i18n="form.repas.veg">Végétarien</option>
-          <option value="vegan" data-i18n="form.repas.vegan">Vegan</option>
+          <option value="pension-complete" data-i18n="form.repas.pension-complete">Pension complète (matin, midi, soir)</option>
+          <option value="demi-pension" data-i18n="form.repas.demi-pension">Demi-pension (matin et soir)</option>
+          <option value="repas-unique" data-i18n="form.repas.repas-unique">Repas unique</option>
         </select>
 
         <button type="submit" class="btn" data-i18n="form.submit">Envoyer la demande</button>

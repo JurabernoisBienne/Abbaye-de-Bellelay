@@ -32,7 +32,7 @@
       disciplines: {
         architecture: {
           title: "Architecture",
-          img: "assets/img/discipline-architecture.svg",
+          img: "assets/img/discipline-architecture.jpg",
           paragraphs: [
             "À Bellelay l’architecture étudie le rapport entre formes historiques et interventions contemporaines : relevés, analyses matériaux, et discussions sur la conservation.",
             "Les ateliers combinent pratique et réflexion : relevés, maquettes, propositions de réaffectation et restitution publique.",
@@ -41,7 +41,7 @@
         },
         amenagement: {
           title: "Aménagement du territoire",
-          img: "assets/img/discipline-amenagement.svg",
+          img: "assets/img/discipline-amenagement.jpg",
           paragraphs: [
             "L’aménagement interroge les liens entre territoire, ressources et usages : cartographies, plans et stratégies locales.",
             "Projets participatifs réunissant acteurs locaux, chercheurs et praticiens pour co-construire propositions territoriales.",
@@ -50,7 +50,7 @@
         },
         histoire: {
           title: "Histoire",
-          img: "assets/img/discipline-history.svg",
+          img: "assets/img/discipline-history.jpg",
           paragraphs: [
             "Recherche historique et travail d’archives autour de l’abbaye : sources, mutations et récits locaux.",
             "Séminaires et projets éditoriaux permettent de restituer les résultats au public et de questionner les narrations régionales.",
@@ -59,7 +59,7 @@
         },
         culture_art: {
           title: "Culture et art",
-          img: "assets/img/discipline-art.svg",
+          img: "assets/img/discipline-art.jpg",
           paragraphs: [
             "Programmes artistiques et expositions : création in-situ, dialogues interdisciplinaires et médiation culturelle.",
             "Résidences favorisant collaborations entre artistes et chercheurs pour produire œuvres et dispositifs contextuels.",
@@ -68,7 +68,7 @@
         },
         circularity: {
           title: "Circularité",
-          img: "assets/img/discipline-circularity.svg",
+          img: "assets/img/discipline-circularity.jpg",
           paragraphs: [
             "Approches de circularité appliquées au bâtiment et aux pratiques : réemploi, cycles de matériaux et économie locale.",
             "Ateliers pratiques testant stratégies de récupération, fabrication locale et chaînes courtes dans un contexte patrimonial.",
@@ -77,7 +77,7 @@
         },
         tourisme: {
           title: "Tourisme durable",
-          img: "assets/img/discipline-tourisme.svg",
+          img: "assets/img/discipline-tourisme.jpg",
           paragraphs: [
             "Stratégies de tourisme basées sur durabilité : mobilité douce, capacité d’accueil et respect des écosystèmes.",
             "Projets explorant expériences de visite responsable, circuits locaux et contribution aux économies régionales.",
@@ -86,7 +86,7 @@
         },
         social: {
           title: "Social",
-          img: "assets/img/discipline-social.svg",
+          img: "assets/img/discipline-social.jpg",
           paragraphs: [
             "Approches sociales : inclusion, participation et dispositifs favorisant cohabitation et engagement local.",
             "Programmes soutenant initiatives communautaires, médiation et formats participatifs sur site.",
@@ -95,7 +95,7 @@
         },
         paix: {
           title: "Paix & réparations de guerre",
-          img: "assets/img/discipline-paix.svg",
+          img: "assets/img/discipline-paix.jpg",
           paragraphs: [
             "Thématiques de mémoire, réconciliation et pratiques de réparations liées à conflits historiques et contemporains.",
             "Ateliers et séminaires sur commémoration, justice transitionnelle et construction de récits partagés.",
@@ -156,7 +156,7 @@
       disciplines: {
         architecture: {
           title: "Architektur",
-          img: "assets/img/discipline-architecture.svg",
+          img: "assets/img/discipline-architecture.jpg",
           paragraphs: [
             "In Bellelay untersucht die Architektur das Verhältnis von historischer Form und zeitgenössischer Intervention: Vermessung, Materialanalyse und Erhaltungsdiskurse.",
             "Workshops verbinden Praxis und Theorie: Vermessung, Modellbau, Umnutzungsvorschläge und öffentliche Präsentationen.",
@@ -165,7 +165,7 @@
         },
         amenagement: {
           title: "Raumplanung",
-          img: "assets/img/discipline-amenagement.svg",
+          img: "assets/img/discipline-amenagement.jpg",
           paragraphs: [
             "Die Raumplanung thematisiert Verbindungen zwischen Territorium, Ressourcen und Nutzung: Kartierungen, Konzepte und lokale Strategien.",
             "Partizipative Projekte bringen lokale Akteur*innen, Forschende und Praktiker*innen zusammen, um gemeinschaftlich Vorschläge zu entwickeln.",
@@ -174,7 +174,7 @@
         },
         histoire: {
           title: "Geschichte",
-          img: "assets/img/discipline-history.svg",
+          img: "assets/img/discipline-history.jpg",
           paragraphs: [
             "Historische Forschung und Archivarbeit zur Abtei: Quellen, Wandel und lokale Narrative.",
             "Seminare und Publikationsprojekte geben Ergebnisse an die Öffentlichkeit weiter und hinterfragen regionale Erzählungen.",
@@ -183,7 +183,7 @@
         },
         culture_art: {
           title: "Kultur & Kunst",
-          img: "assets/img/discipline-art.svg",
+          img: "assets/img/discipline-art.jpg",
           paragraphs: [
             "Kunstprogramme und Ausstellungen: ortsbezogene Schaffensprozesse, interdisziplinäre Dialoge und Vermittlung.",
             "Residenzen fördern Kooperationen zwischen Künstler*innen und Wissenschaft, führend zu kontextbezogenen Arbeiten.",
@@ -192,7 +192,7 @@
         },
         circularity: {
           title: "Zirkularität",
-          img: "assets/img/discipline-circularity.svg",
+          img: "assets/img/discipline-circularity.jpg",
           paragraphs: [
             "Zirkuläre Ansätze für Gebäude und Praxis: Wiederverwendung, Materialkreisläufe und lokale Ökonomie.",
             "Praktische Workshops erproben Rückbau-, Recycling- und lokale Produktionsstrategien im denkmalpflegerischen Kontext.",
@@ -201,7 +201,7 @@
         },
         tourisme: {
           title: "Nachhaltiger Tourismus",
-          img: "assets/img/discipline-tourisme.svg",
+          img: "assets/img/discipline-tourisme.jpg",
           paragraphs: [
             "Tourismusstrategien mit Fokus auf Nachhaltigkeit: sanfte Mobilität, Kapazitätsfragen und Ökosystemschutz.",
             "Projekte entwickeln verantwortungsvolle Besuchserfahrungen, lokale Routen und Beiträge zur regionalen Wirtschaft.",
@@ -210,7 +210,7 @@
         },
         social: {
           title: "Soziales",
-          img: "assets/img/discipline-social.svg",
+          img: "assets/img/discipline-social.jpg",
           paragraphs: [
             "Soziale Ansätze: Inklusion, Partizipation und Maßnahmen für gemeinschaftliches Engagement.",
             "Programme unterstützen lokale Initiativen, Vermittlung und partizipative Formate vor Ort.",
@@ -219,7 +219,7 @@
         },
         paix: {
           title: "Frieden & Wiedergutmachung",
-          img: "assets/img/discipline-paix.svg",
+          img: "assets/img/discipline-paix.jpg",
           paragraphs: [
             "Themen: Erinnerung, Versöhnung und Wiedergutmachungspraktiken im Kontext historischer und aktueller Konflikte.",
             "Workshops und Seminare zu Gedenken, transitionaler Gerechtigkeit und gemeinsamer Narrativbildung.",
@@ -268,7 +268,7 @@
       disciplines: {
         architecture: {
           title: "Architecture",
-          img: "assets/img/discipline-architecture.svg",
+          img: "assets/img/discipline-architecture.jpg",
           paragraphs: [
             "At Bellelay architecture explores the relation between historic form and contemporary interventions: surveys, material analysis and conservation debates.",
             "Workshops mix practice and reflection: surveying, model-making, adaptive-reuse proposals and public outcomes.",
@@ -277,7 +277,7 @@
         },
         amenagement: {
           title: "Spatial planning",
-          img: "assets/img/discipline-amenagement.svg",
+          img: "assets/img/discipline-amenagement.jpg",
           paragraphs: [
             "Spatial planning examines links between territory, resources and uses: mapping, planning and local strategies.",
             "Participatory projects bring local stakeholders, researchers and practitioners together to co-design proposals.",
@@ -286,7 +286,7 @@
         },
         histoire: {
           title: "History",
-          img: "assets/img/discipline-history.svg",
+          img: "assets/img/discipline-history.jpg",
           paragraphs: [
             "Historical research and archival work on the abbey: sources, transformations and local narratives.",
             "Seminars and editorial projects share findings with the public and question regional storytelling.",
@@ -295,7 +295,7 @@
         },
         culture_art: {
           title: "Culture & art",
-          img: "assets/img/discipline-art.svg",
+          img: "assets/img/discipline-art.jpg",
           paragraphs: [
             "Artistic programmes and exhibitions: on-site creation, interdisciplinary dialogue and cultural mediation.",
             "Residencies encourage artist–researcher collaborations, producing context-sensitive works and formats.",
@@ -304,7 +304,7 @@
         },
         circularity: {
           title: "Circularity",
-          img: "assets/img/discipline-circularity.svg",
+          img: "assets/img/discipline-circularity.jpg",
           paragraphs: [
             "Circular approaches for buildings and practice: reuse, material cycles and local economies.",
             "Hands-on workshops test recovery strategies, local making and short supply chains in a heritage context.",
@@ -313,7 +313,7 @@
         },
         tourisme: {
           title: "Sustainable tourism",
-          img: "assets/img/discipline-tourisme.svg",
+          img: "assets/img/discipline-tourisme.jpg",
           paragraphs: [
             "Tourism strategies focused on sustainability: soft mobility, capacity and ecosystem respect.",
             "Projects explore responsible visitor experiences, local circuits and contributions to regional economies.",
@@ -322,7 +322,7 @@
         },
         social: {
           title: "Social",
-          img: "assets/img/discipline-social.svg",
+          img: "assets/img/discipline-social.jpg",
           paragraphs: [
             "Social approaches: inclusion, participation and measures that foster cohabitation and local engagement.",
             "Programs support community initiatives, mediation and participatory formats on site.",
@@ -331,7 +331,7 @@
         },
         paix: {
           title: "Peace & war reparations",
-          img: "assets/img/discipline-paix.svg",
+          img: "assets/img/discipline-paix.jpg",
           paragraphs: [
             "Themes of memory, reconciliation and reparative practices related to historical and contemporary conflicts.",
             "Workshops and seminars on commemoration, transitional justice and building shared narratives.",

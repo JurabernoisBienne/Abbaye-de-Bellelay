@@ -71,14 +71,24 @@
         <label for="nbr" data-i18n="form.nbpersonnes">Nombre de personnes</label>
         <input id="nbr" name="nbr" type="number" min="1" value="1" />
 
-        <label for="chambres" data-i18n="form.nbchambres">Nombre de chambres</label>
-        <input id="chambres" name="chambres" type="number" min="0" value="0" />
+        <fieldset>
+          <legend data-i18n="form.chambres">Nombre de chambres</legend>
+
+          <label for="chambres-indiv">Chambre individuelle avec salle de bain privative</label>
+          <input id="chambres-indiv" name="chambres_indiv" type="number" min="0" value="0" />
+
+          <label for="chambres-double">Chambre double</label>
+          <input id="chambres-double" name="chambres_double" type="number" min="0" value="0" />
+
+          <label for="chambres-quad">Chambre quadruple</label>
+          <input id="chambres-quad" name="chambres_quad" type="number" min="0" value="0" />
+        </fieldset>
 
         <label for="repas" data-i18n="form.typeRepas">Type de repas</label>
         <select id="repas" name="repas">
-          <option value="standard" data-i18n="form.repas.standard">Standard</option>
-          <option value="vegetarian" data-i18n="form.repas.veg">Végétarien</option>
-          <option value="vegan" data-i18n="form.repas.vegan">Vegan</option>
+          <option value="pension-complete" data-i18n="form.repas.complete">Pension complète (matin, midi, soir)</option>
+          <option value="demi-pension" data-i18n="form.repas.demi">Demi-pension (matin et soir)</option>
+          <option value="repas-unique" data-i18n="form.repas.unique">Repas unique</option>
         </select>
 
         <button type="submit" class="btn" data-i18n="form.submit">Envoyer la demande</button>

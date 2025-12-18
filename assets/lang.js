@@ -189,13 +189,10 @@
        
 
       /*surplace de*/
-     title: {
-       surplace: "Vor Ort — Abbaye de Bellelay"
-     },
-       
+     
       surplace: {
        title: "Alles für Ihren Aufenthalt",
-       subtitle: "Unterkunft, Verpflegung, Schulungsräume und Natur."
+       subtitle: "Unterkunft, Verpflegung, Schulungsräume und Natur.",
        heading: "Vor Ort",
        hebergement: "Unterkunft",
        hebergement: {
@@ -219,6 +216,10 @@
        },
       },
 
+
+      title: {
+       surplace: "Vor Ort — Abbaye de Bellelay"
+     },
        
       /*disciplines de*/
        

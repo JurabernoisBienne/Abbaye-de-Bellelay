@@ -526,16 +526,23 @@
     return val;
   }
 
-  function applyLang(lang){
-    const dict = translations[lang] || translations.fr;
+   
+function applyLang(lang) {
+  const dict = translations[lang] || translations.fr;
 
-    document.querySelectorAll('[data-i18n]').forEach(el=>{
-      const key = el.getAttribute('data-i18n');
-      const val = lookup(dict, key);
-      if(val !== null && typeof val !== 'object'){
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    const val = lookup(dict, key);
+
+    if (val !== null && typeof val === 'string') {
+      // Si la valeur contient des balises HTML, on utilise innerHTML
+      if (val.includes('<br>') || val.includes('</')) {
+        el.innerHTML = val;
+      } else {
         el.textContent = val;
       }
-    });
+    }
+  });
 
     // update title mapping
     const path = location.pathname.split('/').pop();

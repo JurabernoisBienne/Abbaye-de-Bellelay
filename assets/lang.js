@@ -135,10 +135,22 @@
           title: "Tourisme durable",
           img: "assets/img/discipline-tourisme.jpg",
           paragraphs: [
-            "Stratégies de tourisme basées sur durabilité : mobilité douce, capacité d’accueil et respect des écosystèmes.",
-            "Projets explorant expériences de visite responsable, circuits locaux et contribution aux économies régionales.",
-            "Mise en place d’outils pour gérer flux, renforcer qualité d’accueil et articuler tourisme et patrimoine."
-          ]
+"INTRODUCTION\nÀ Bellelay, le tourisme durable s’appuie sur une situation géographique et paysagère particulièrement favorable, au cœur de l’Arc jurassien. Le site permet de conjuguer découverte culturelle, immersion dans la nature, mobilité douce et sensibilisation, dans un territoire qui valorise déjà des pratiques respectueuses : rythmes lents, saisonnalité, attention aux milieux, et ancrage dans les savoir-faire locaux. L’enjeu est de développer une hospitalité à faible impact, fondée sur l’expérience du lieu et la qualité des parcours plutôt que sur la surfréquentation.",
+
+  "UN TERRITOIRE PROPICE AU TOURISME DURABLE DANS L’ARC JURASSIEN\nL’Arc jurassien offre un cadre idéal pour un tourisme durable : paysages ouverts et forestiers, reliefs favorables aux activités de plein air, patrimoine bâti et rural, et culture de la randonnée. Bellelay s’inscrit dans cette logique en proposant une destination où l’on vient pour marcher, observer, écouter, apprendre et prendre le temps. Le site peut ainsi devenir un point d’appui pour des séjours sobres, centrés sur la découverte, l’interprétation du territoire et la mise en valeur des ressources locales.",
+
+  "À L’INTERSECTION DES PARCS NATURELS DU DOUBS ET DU CHASSERAL\nBellelay se situe à l’intersection de deux dynamiques fortes : le Parc du Doubs et le Parc Chasseral, qui portent des initiatives en matière de restauration de milieux, de mise en récit des paysages, d’amélioration de l’accessibilité et de la qualité d’accueil. Cette proximité favorise des synergies : itinéraires et offres coordonnées, actions de médiation, signalétique et informations partagées, ainsi qu’un cadre d’exigence en matière de respect des milieux et de gestion des flux. Le site peut s’inscrire comme une porte d’entrée, un lieu-relais et un point d’interprétation du territoire.",
+
+  "LA VIA BERNA : UN AXE DE MARCHE AU LONG COURS\nLa présence de la Via Berna, itinéraire de randonnée de longue distance reconnu, inscrit Bellelay dans un réseau de mobilité douce à l’échelle nationale. Pour les marcheurs, le site peut fonctionner comme étape qualitative : pause, visite, restauration, voire hébergement selon les possibilités, avec une attention à l’accueil des randonneurs (information, eau, abri, services). Cet ancrage renforce une fréquentation étalée, compatible avec une approche durable, et favorise une relation directe et sensible au paysage jurassien.",
+
+  "VÉLO DE ROUTE ET VTT : CONNECTIVITÉS ET PRATIQUES DOUCES\nLe territoire autour de Bellelay est propice au cyclotourisme, que ce soit en vélo de route ou en VTT, grâce à la diversité des reliefs, des routes secondaires et des chemins. Cette proximité d’itinéraires ouvre des perspectives d’accueil ciblé : stationnement vélo, petites réparations, points d’eau, informations d’itinéraires, et articulation avec les transports publics. En favorisant ces pratiques, Bellelay peut contribuer à un tourisme à faible impact, qui valorise le déplacement comme expérience et non comme simple accès.",
+
+  "UN SITE MARÉCAGEUX D’EXCEPTION À PROXIMITÉ IMMÉDIATE\nÀ proximité immédiate se trouve un site marécageux remarquable, d’importance nationale, offrant un milieu rare et fragile. Le parcours didactique dédié aux libellules constitue un outil de sensibilisation exemplaire : il permet de découvrir la biodiversité, de comprendre les équilibres écologiques et de développer une culture du respect des habitats. Bellelay peut renforcer cette lecture en proposant un lien clair entre patrimoine et nature : un tourisme d’observation, d’éducation et de contemplation, attentif aux saisons et à la capacité d’accueil des milieux.",
+
+  "SAVOIR-FAIRE LOCAUX : LA MAISON DE LA TÊTE DE MOINE ET SON MUSÉE\nLa proximité de la Maison de la Tête de Moine et de son musée constitue un atout pour relier tourisme durable et transmission des savoir-faire. Ce lieu valorise des pratiques ancestrales respectueuses, l’histoire d’un produit emblématique et les liens entre territoire, agriculture et culture. En complément, Bellelay peut contribuer à une offre cohérente : parcours thématiques, médiations croisées et expériences qui associent patrimoine, paysage et traditions vivantes.",
+
+  "CONCLUSION\nBellelay réunit des ingrédients rares pour un tourisme durable de qualité : une situation centrale dans l’Arc jurassien, la proximité de dynamiques fortes portées par les Parcs du Doubs et du Chasseral, un ancrage sur des itinéraires de marche et de vélo, et l’accès à des milieux naturels remarquables et à des savoir-faire locaux. En privilégiant la mobilité douce, la médiation et l’attention aux milieux, le site peut proposer une hospitalité sobre, instructive et profondément ancrée dans le territoire."
+]
         },
         social: {
           title: "Social",
@@ -380,10 +392,22 @@
           title: "Nachhaltiger Tourismus",
           img: "assets/img/discipline-tourisme.jpg",
           paragraphs: [
-            "Tourismusstrategien mit Fokus auf Nachhaltigkeit: sanfte Mobilität, Kapazitätsfragen und Ökosystemschutz.",
-            "Projekte entwickeln verantwortungsvolle Besuchserfahrungen, lokale Routen und Beiträge zur regionalen Wirtschaft.",
-            "Werkzeuge zur Steuerung von Besucherströmen, Qualitätssteigerung und Verbindung von Tourismus und Erbe."
-          ]
+"EINLEITUNG\nIn Bellelay stützt sich nachhaltiger Tourismus auf eine besonders günstige geografische und landschaftliche Lage im Herzen des Jurabogens. Der Ort ermöglicht es, kulturelle Entdeckung, Naturerlebnis, sanfte Mobilität und Sensibilisierung zu verbinden – in einem Gebiet, das bereits ressourcenschonende Praktiken fördert: langsame Rhythmen, Saisonalität, Aufmerksamkeit für Lebensräume und die Verankerung in lokalem Wissen. Ziel ist eine gastfreundliche, wirkungsarme Form des Besuchs, die auf Qualität der Erfahrung und der Wege setzt – nicht auf Überfrequenz.",
+
+  "EIN GEBIET IM JURABOGEN, DAS SICH FÜR NACHHALTIGEN TOURISMUS EIGNET\nDer Jurabogen bietet ideale Voraussetzungen für nachhaltigen Tourismus: offene und bewaldete Landschaften, Reliefs, die Outdoor-Aktivitäten begünstigen, ein reiches Bau- und Kulturerbe sowie eine ausgeprägte Wanderkultur. Bellelay fügt sich darin als Ziel ein, das man besucht, um zu gehen, zu beobachten, zuzuhören, zu lernen und sich Zeit zu nehmen. Der Standort kann so zu einem Ankerpunkt für suffiziente Aufenthalte werden, die Entdeckung, Landschaftsinterpretation und die Wertschätzung lokaler Ressourcen verbinden.",
+
+  "AN DER SCHNITTSTELLE DER NATURPÄRKE DOUBS UND CHASSERAL\nBellelay liegt an der Schnittstelle zweier starker Dynamiken: des Parc du Doubs und des Parc Chasseral, die zahlreiche Initiativen zur Renaturierung von Lebensräumen, zur Vermittlung von Landschaften sowie zur Verbesserung von Zugänglichkeit und Gastqualität tragen. Diese Nähe begünstigt Synergien: abgestimmte Routen und Angebote, Vermittlungsformate, gemeinsame Signaletik und Informationen sowie ein hoher Anspruch an Lebensraumschutz und Besuchslenkung. Der Standort kann als Eingang, Relais und Interpretationspunkt für das Gebiet wirken.",
+
+  "DIE VIA BERNA: EIN ANERKANNTER WEITWANDERWEG\nDie Via Berna, ein anerkannter Weitwanderweg, verankert Bellelay in einem Netzwerk sanfter Mobilität auf nationaler Ebene. Für Wandernde kann der Ort eine qualitative Etappe sein: Pause, Besuch, Verpflegung und – je nach Möglichkeiten – Übernachtung, mit einer wanderfreundlichen Infrastruktur (Information, Wasser, Unterstand, Services). Diese Einbindung fördert eine zeitlich gestreute, nachhaltige Frequentierung und unterstützt eine direkte, sensible Beziehung zur Jurawelt.",
+
+  "RENNRAD UND MTB: ANBINDUNG UND SANFTE PRAXIS\nDie Umgebung von Bellelay eignet sich hervorragend für Velotourismus – sowohl mit dem Rennrad als auch mit dem Mountainbike – dank der Vielfalt an Reliefs, Nebenstrassen und Wegen. Die Nähe zu Routen eröffnet gezielte Empfangsangebote: Veloparkierung, kleine Reparaturen, Wasserpunkte, Routeninformationen und die Verbindung mit dem öffentlichen Verkehr. So kann Bellelay einen wirkungsarmen Tourismus fördern, bei dem die Fortbewegung selbst Teil der Erfahrung ist.",
+
+  "EIN AUSSERGEWÖHNLICHES MOORGEBIET IN UNMITTELBARER NÄHE\nIn unmittelbarer Nähe befindet sich ein bemerkenswertes Moorgebiet von nationaler Bedeutung – ein seltener und sensibler Lebensraum. Der didaktische Rundweg zu den Libellen ist ein vorbildliches Sensibilisierungsangebot: Er vermittelt Biodiversität, erklärt ökologische Gleichgewichte und fördert eine Kultur des Respekts gegenüber Lebensräumen. Bellelay kann diese Perspektive stärken, indem es den Zusammenhang zwischen Kulturerbe und Natur lesbar macht: ein Tourismus des Beobachtens, Lernens und der Kontemplation – orientiert an Jahreszeiten und Tragfähigkeit der Milieus.",
+
+  "LOKALES KÖNNEN: DAS HAUS DER TÊTE DE MOINE UND SEIN MUSEUM\nDie Nähe zum Haus der Tête de Moine und seinem Museum ist ein Pluspunkt, um nachhaltigen Tourismus mit der Vermittlung lokaler Handwerks- und Produktionsweisen zu verbinden. Der Ort macht respektvolle, überlieferte Praktiken sichtbar, erzählt die Geschichte eines emblematischen Produkts und zeigt die Verknüpfung von Territorium, Landwirtschaft und Kultur. Ergänzend kann Bellelay zu einem kohärenten Angebot beitragen: thematische Routen, vernetzte Vermittlung und Erlebnisse, die Kulturerbe, Landschaft und lebendige Traditionen zusammenführen.",
+
+  "SCHLUSSFOLGERUNG\nBellelay vereint seltene Voraussetzungen für hochwertigen nachhaltigen Tourismus: eine zentrale Lage im Jurabogen, die Nähe zu starken Dynamiken der Naturpärke Doubs und Chasseral, die Einbindung in Wander- und Velonetze sowie der Zugang zu bemerkenswerten Naturräumen und lokalem Wissen. Durch Förderung sanfter Mobilität, gute Vermittlung und einen respektvollen Umgang mit Lebensräumen kann der Standort eine suffiziente, lehrreiche und tief im Territorium verankerte Gastlichkeit anbieten."
+]
         },
         social: {
           title: "Soziales",
@@ -668,10 +692,22 @@
           title: "Sustainable tourism",
           img: "assets/img/discipline-tourisme.jpg",
           paragraphs: [
-            "Tourism strategies focused on sustainability: soft mobility, capacity and ecosystem respect.",
-            "Projects explore responsible visitor experiences, local circuits and contributions to regional economies.",
-            "Development of tools to manage flows, enhance quality and link tourism with heritage."
-          ]
+  "INTRODUCTION\nAt Bellelay, sustainable tourism builds on an exceptionally favourable geographic and landscape setting in the heart of the Jura Arc. The site makes it possible to combine cultural discovery, immersion in nature, low-impact mobility, and interpretation—within a territory that already values respectful practices: slower rhythms, seasonality, care for sensitive environments, and strong local know-how. The challenge is to develop low-impact hospitality based on the quality of experience and routes rather than on over-visitation.",
+
+  "A JURA ARC TERRITORY WELL-SUITED TO SUSTAINABLE TOURISM\nThe Jura Arc provides an ideal framework for sustainable tourism: open and forested landscapes, terrain well-suited to outdoor activities, a rich built and rural heritage, and a strong hiking culture. Bellelay fits naturally into this logic as a destination where visitors come to walk, observe, listen, learn, and take time. The site can become a base for sober stays focused on discovery, landscape interpretation, and the valorisation of local resources.",
+
+  "AT THE INTERSECTION OF THE DOUBS AND CHASSERAL REGIONAL NATURE PARKS\nBellelay sits at the crossroads of two strong regional dynamics: the Parc du Doubs and Parc Chasseral, both of which develop initiatives around habitat restoration, landscape interpretation, improved accessibility, and visitor experience. This proximity encourages synergies: coordinated routes and offers, shared mediation tools, wayfinding and information, and an ambitious approach to protecting environments and managing visitor flows. The site can operate as a gateway, a relay point, and a place for interpreting the territory.",
+
+  "THE VIA BERNA: A RECOGNISED LONG-DISTANCE HIKING ROUTE\nThe presence of the Via Berna, a recognised long-distance hiking route, anchors Bellelay within a national-scale network of low-impact mobility. For hikers, the site can function as a high-quality stop: rest, visit, food services, and—depending on possibilities—accommodation, with hiker-oriented amenities (information, water, shelter, basic services). This connection supports a more evenly distributed visitation pattern and fosters a direct, attentive relationship with the Jura landscape.",
+
+  "ROAD CYCLING AND MTB: CONNECTIVITY AND LOW-IMPACT PRACTICES\nThe territory around Bellelay is well-suited to cycle tourism—both road cycling and mountain biking—thanks to varied relief, secondary roads, and trails. Proximity to routes opens opportunities for targeted services: bicycle parking, minor repairs, water points, route information, and links to public transport. By supporting these practices, Bellelay can contribute to low-impact tourism where movement itself is part of the experience.",
+
+  "AN EXCEPTIONAL WETLAND SITE IN IMMEDIATE PROXIMITY\nIn immediate proximity lies a remarkable wetland of national importance—a rare and fragile habitat. The educational trail dedicated to dragonflies is an exemplary tool for awareness: it enables visitors to discover biodiversity, understand ecological balances, and develop a culture of respect for sensitive environments. Bellelay can reinforce this reading by linking heritage and nature in a clear way: a form of tourism centred on observation, learning, and contemplation, attentive to seasons and to the carrying capacity of the site.",
+
+  "LOCAL KNOW-HOW: THE TÊTE DE MOINE HOUSE AND ITS MUSEUM\nThe nearby Maison de la Tête de Moine and its museum are a major asset for connecting sustainable tourism with the transmission of local know-how. The site highlights respectful ancestral practices, the history of an emblematic product, and the ties between territory, agriculture, and culture. In complement, Bellelay can contribute to a coherent offer: thematic routes, cross-linked mediation, and experiences that bring together heritage, landscape, and living traditions.",
+
+  "CONCLUSION\nBellelay brings together rare ingredients for high-quality sustainable tourism: a central position in the Jura Arc, proximity to the strong initiatives of the Doubs and Chasseral nature parks, anchoring in hiking and cycling networks, and access to outstanding natural environments and local know-how. By prioritising low-impact mobility, interpretation, and care for sensitive habitats, the site can offer sober, meaningful hospitality deeply rooted in the territory."
+]
         },
         social: {
           title: "Social",

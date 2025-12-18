@@ -330,7 +330,7 @@ function onDocFocus(e){
         for(const [k,v] of data.entries()){
           body += `${k}: ${v}\n`;
         }
-        const mailto = `mailto:contact@abbayebellelay.example?subject=${subject}&body=${encodeURIComponent(body)}`;
+        const mailto = `mailto:denis.beer@jb-b.ch?subject=${subject}&body=${encodeURIComponent(body)}`;
         window.location.href = mailto;
         const msg = qs('#contact-msg');
         if(msg){

@@ -206,7 +206,8 @@
       /*disciplines de*/
        
       disciplines: {
-
+         title: "Disziplinen",
+         subtitle: "Erkundung nach Fachgebieten.",
          menu: {
            architecture: "Architektur",
            amenagement: "Raumplanung",
@@ -436,7 +437,9 @@
 
        
        /* disciplines.en */
-
+   disciplines: {   
+      title: "Disciplines",
+      subtitle: "Exploration by disciplinary fields.",
       menu: {
         architecture: "Architecture",
         amenagement: "Spatial Planning",
@@ -448,8 +451,6 @@
         paix: "Peace & War Reparations"
       },
 
-       
-      disciplines: {
         architecture: {
           title: "Architecture",
           img: "assets/img/discipline-architecture.jpg",

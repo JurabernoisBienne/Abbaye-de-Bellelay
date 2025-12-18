@@ -275,19 +275,42 @@
             "Workshops und Seminare zu Gedenken, transitionaler Gerechtigkeit und gemeinsamer Narrativbildung.",
             "Projekte fördern Zuhören, Erinnerungsarbeit und die Schaffung von Dialog- und Reparationsräumen."
           ]
-        }
-      },
+        },
+        },
+     
 
-      /* ... rest ... */
-      form: {
-        entite: "Einrichtung",
-        nom: "Name",
-        prenom: "Vorname",
-        tel: "Telefon",
-        email: "Email"
-      },
-      cta: { devis: "Angebot anfragen" }
+
+      /*tarifs de*/
+
+ tarifs: {
+    title: "Preise & individuelle Angebote",
+    subtitle: "CHF 90.- bis CHF 130.- / Person / Tag",
+    heading: "Angebotanfrage",
+    intro: {
+      p1: "Die Preise werden individuell erstellt und hängen insbesondere von der Art der Zimmer, der Qualität der Menüs sowie der Nutzung der Schulungs- und Arbeitsräume ab.",
+      p2: "Zur Orientierung: Die Preise liegen zwischen CHF 90.– und CHF 130.– pro Person und Tag, für ein All-inclusive-Angebot.",
+      p3: "Dies beinhaltet die Unterkunft vor Ort, die Verpflegung (Frühstück, Mittag- und Abendessen) sowie den Zugang zu den Schulungs- und Arbeitsräumen.",
+      p4: "Da jedes Projekt einzigartig ist, stellen wir Ihnen gerne ein individuelles Angebot über das untenstehende Formular aus."
+    }
+  },
+  form: {
+    entite: "Einrichtung",
+    nom: "Name",
+    prenom: "Vorname",
+    tel: "Telefon",
+    email: "E-Mail",
+    dates: "Daten",
+    nbpersonnes: "Personenzahl",
+    chambres: "Zimmeranzahl",
+    typeRepas: "Art der Verpflegung",
+    repas: {
+      complete: "Vollpension (Frühstück, Mittag-, Abendessen)",
+      demi: "Halbpension (Frühstück und Abendessen)",
+      unique: "Einzelverpflegung"
     },
+    submit: "Anfrage absenden"
+  }
+ },    
 
 /*ENGLISH*/
 
@@ -463,9 +486,37 @@
         }
       },
 
-      /* ... rest ... */
-      form: { entite: "Entity", nom: "Last name" },
-      cta: { devis: "Request a quote" }
+      /*tarifs en*/
+
+   tarifs: {
+    title: "Rates & Custom Quotes",
+    subtitle: "CHF 90.- to CHF 130.- / person / day",
+    heading: "Request a Quote",
+    intro: {
+      p1: "Rates are determined on a case-by-case basis, depending on the type of rooms, quality of meals, and training or working spaces used.",
+      p2: "As an indication, prices range between CHF 90.– and CHF 130.– per person per day for an all-inclusive service.",
+      p3: "This includes on-site accommodation, catering (breakfast, lunch, and dinner), as well as access to training and workspaces.",
+      p4: "Since each project is unique, we offer to provide a personalized quote using the form below."
+    }
+  },
+  form: {
+    entite: "Entity",
+    nom: "Last Name",
+    prenom: "First Name",
+    tel: "Phone Number",
+    email: "Email",
+    dates: "Dates",
+    nbpersonnes: "Number of People",
+    chambres: "Number of Rooms",
+    typeRepas: "Meal Type",
+    repas: {
+      complete: "Full Board (breakfast, lunch, dinner)",
+      demi: "Half Board (breakfast and dinner)",
+      unique: "Single Meal"
+    },
+    submit: "Send Request"
+  },
+       
     }
   };
 

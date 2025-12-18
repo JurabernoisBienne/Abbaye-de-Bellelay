@@ -104,26 +104,6 @@
         }
       },
 
-      /* ... rest of translations ... */
-      form: {
-        entite: "Entité",
-        nom: "Nom",
-        prenom: "Prénom",
-        tel: "Téléphone",
-        email: "Email",
-        dates: "Dates",
-        nbpersonnes: "Nombre de personnes",
-        nbchambres: "Nombre de chambres",
-        typeRepas: "Type de repas",
-        "repas.standard": "Standard",
-        "repas.veg": "Végétarien",
-        "repas.vegan": "Vegan",
-        submit: "Envoyer la demande",
-        message: "Message",
-        send: "Envoyer"
-      },
-      cta: { devis: "Demander un devis" }
-    },
 
 /*DEUTSCH*/
 

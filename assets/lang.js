@@ -189,15 +189,13 @@
        
 
       /*surplace de*/
-
-      surplace: {
-       title: "Alles für Ihren Aufenthalt",
-       subtitle: "Unterkunft, Verpflegung, Schulungsräume und Natur."
-     },
      title: {
        surplace: "Vor Ort — Abbaye de Bellelay"
      },
-     surplace: {
+       
+      surplace: {
+       title: "Alles für Ihren Aufenthalt",
+       subtitle: "Unterkunft, Verpflegung, Schulungsräume und Natur."
        heading: "Vor Ort",
        hebergement: "Unterkunft",
        hebergement: {
@@ -218,7 +216,7 @@
        alentours: {
          text: "Landschaft, Wanderungen und kulturelles Erbe in der Umgebung.",
          text2: "Empfohlene Spazier- oder Fahrradrouten, historische Sehenswürdigkeiten und Tagesausflugsvorschläge.<br><br> Möglichkeiten für Führungen durch die Abteikirche oder das Haus des Tête de Moine sowie für Outdoor-Team-Building-Aktivitäten.<br><br> Unser Team steht Ihnen zur Verfügung, um Sie zu beraten und einen Teil der Logistik zu übernehmen."
-       }
+       },
       },
 
        

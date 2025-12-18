@@ -82,10 +82,20 @@
           title: "Histoire",
           img: "assets/img/discipline-history.jpg",
           paragraphs: [
-            "Recherche historique et travail d’archives autour de l’abbaye : sources, mutations et récits locaux.",
-            "Séminaires et projets éditoriaux permettent de restituer les résultats au public et de questionner les narrations régionales.",
-            "Approches critiques qui mettent en lumière continuités, ruptures et usages politiques du patrimoine."
-          ]
+"INTRODUCTION\nAborder Bellelay par l’histoire, c’est considérer le site comme un document vivant : un ensemble bâti et paysager dont les formes, les usages et les récits se sont constitués par strates. L’étude historique vise moins l’accumulation d’érudition que la compréhension des continuités, des ruptures et des réaffectations qui ont façonné le lieu. Elle permet d’éclairer les choix contemporains—conservation, transformation, programmation—en replaçant le site dans les temporalités qui l’ont produit.",
+
+  "AXE 1 — LE SITE COMME ARCHIVE : TRACES MATÉRIELLES ET RÉCITS\nBellelay se prête à une lecture croisée des sources et des indices matériels : organisation des bâtiments, transformations, reprises constructives, inscriptions d’usage dans les espaces, relations au territoire. L’enjeu est de mettre en regard ce que racontent les documents (textes, plans, archives) et ce que révèle le bâti lui-même, afin d’identifier les grandes séquences de formation du site et les logiques qui ont orienté ses évolutions.",
+
+  "AXE 2 — GRANDES PÉRIODES ET MOMENTS DE TRANSITION\nL’étude historique s’intéresse aux périodes structurantes traversées par Bellelay et, surtout, aux moments de bascule : changements d’affectation, modifications institutionnelles, nouvelles pratiques, événements et décisions qui transforment les espaces et leur signification. Plutôt que d’énumérer une chronologie exhaustive, l’objectif est de dégager des “moments-clés” permettant de comprendre pourquoi certaines formes, certains parcours ou certains bâtiments existent tels qu’ils sont aujourd’hui.",
+
+  "AXE 3 — USAGES, COMMUNAUTÉS ET ÉCONOMIES DU LIEU\nL’histoire du site se lit aussi à travers ses usages et les communautés qui l’ont animé : modes d’habiter et de travailler, organisation quotidienne, accueil, production, rapports à la terre et aux ressources. Cet axe vise à relier l’évolution des espaces aux pratiques sociales et économiques, afin de saisir comment l’architecture répond à des fonctions changeantes et comment, inversement, elle influence les manières d’occuper le lieu.",
+
+  "AXE 4 — HISTOIRE ET PROJET : MÉTHODE POUR UNE TRANSFORMATION ÉCLAIRÉE\nL’histoire n’est pas un décor : elle constitue un outil de projet. En identifiant les valeurs, les invariants et les transformations antérieures, elle aide à décider de ce qui doit être préservé, révélé, interprété ou adapté. Cet axe propose une approche pragmatique : documenter, hiérarchiser les enjeux, expliciter les choix, et construire des interventions contemporaines qui restent lisibles et respectueuses des récits du site.",
+
+  "AXE 5 — REPÈRES ET RESSOURCES : SE RÉFÉRER À LA FRISE CHRONOLOGIQUE\nPour situer Bellelay dans ses principales étapes historiques, il est recommandé de se référer à la frise chronologique disponible sur ce site internet, dans la page « Patrimoine ». Elle offre des repères synthétiques sur les périodes importantes et facilite l’articulation entre lecture historique, visite du lieu et compréhension des transformations.",
+
+  "CONCLUSION\nÉtudier l’histoire de Bellelay, c’est se donner les moyens de comprendre un site en profondeur, sans figer son évolution. En éclairant les grandes phases, les transitions et les usages, l’approche historique nourrit une transformation plus juste : capable de respecter la mémoire du lieu tout en accompagnant des fonctions contemporaines. La frise chronologique de la page « Patrimoine » constitue un point d’entrée essentiel pour structurer cette lecture et orienter les approfondissements."
+]
         },
         culture_art: {
           title: "Culture et art",
@@ -301,10 +311,20 @@
           title: "Geschichte",
           img: "assets/img/discipline-history.jpg",
           paragraphs: [
-            "Historische Forschung und Archivarbeit zur Abtei: Quellen, Wandel und lokale Narrative.",
-            "Seminare und Publikationsprojekte geben Ergebnisse an die Öffentlichkeit weiter und hinterfragen regionale Erzählungen.",
-            "Kritische Ansätze beleuchten Kontinuitäten, Brüche und politische Nutzungen des Erbes über die Zeit."
-          ]
+"EINLEITUNG\nBellelay historisch zu betrachten bedeutet, den Ort als lebendiges Dokument zu verstehen: ein gebautes und landschaftliches Ensemble, dessen Formen, Nutzungen und Erzählungen sich in Schichten herausgebildet haben. Die historische Untersuchung zielt weniger auf die Anhäufung von Gelehrsamkeit als auf das Verständnis von Kontinuitäten, Brüchen und Umnutzungen, die den Ort geprägt haben. Sie hilft, heutige Entscheidungen—Erhaltung, Transformation, Programmierung—in den Zeitlichkeiten zu verorten, aus denen der Ort hervorgegangen ist.",
+
+  "ACHSE 1 — DER ORT ALS ARCHIV: MATERIELLE SPUREN UND ERZÄHLUNGEN\nBellelay eignet sich für eine kombinierte Lektüre von Quellen und baulichen Indizien: Anordnung der Gebäude, Umbauten, konstruktive Überformungen, Nutzungsspuren in Räumen sowie die Beziehungen zum Territorium. Ziel ist es, das, was Dokumente erzählen (Texte, Pläne, Archive), mit dem, was das Bauwerk selbst offenlegt, zusammenzuführen, um die grossen Formationsphasen des Ortes und die Logiken seiner Entwicklung zu identifizieren.",
+
+  "ACHSE 2 — PRÄGENDE ZEITABSCHNITTE UND WENDEPUNKTE\nDie historische Analyse richtet sich auf die prägenden Epochen, die Bellelay durchlaufen hat, und insbesondere auf die Übergänge: Nutzungswechsel, institutionelle Veränderungen, neue Praktiken, Ereignisse und Entscheidungen, die Räume und Bedeutungen transformieren. Statt eine vollständige Chronologie aufzuzählen, geht es darum, „Schlüsselmomente“ herauszuarbeiten, die erklären, warum bestimmte Formen, Wegeführungen oder Gebäude heute so sind, wie sie sind.",
+
+  "ACHSE 3 — NUTZUNGEN, GEMEINSCHAFTEN UND ÖKONOMIEN DES ORTES\nDie Geschichte des Areals lässt sich auch über seine Nutzungen und die Gemeinschaften lesen, die es belebt haben: Formen des Wohnens und Arbeitens, Alltagsorganisation, Empfang, Produktion sowie der Umgang mit Land und Ressourcen. Diese Achse verbindet räumliche Entwicklungen mit sozialen und wirtschaftlichen Praktiken, um zu verstehen, wie Architektur auf wechselnde Funktionen reagiert—und wie sie umgekehrt Nutzungen und Verhaltensweisen prägt.",
+
+  "ACHSE 4 — GESCHICHTE UND PROJEKT: METHODE FÜR EINE INFORMIERTE TRANSFORMATION\nGeschichte ist nicht Kulisse, sondern ein Projektinstrument. Indem Werte, Konstanten und frühere Transformationen sichtbar werden, unterstützt sie Entscheidungen darüber, was zu bewahren, freizulegen, zu interpretieren oder anzupassen ist. Diese Achse steht für einen pragmatischen Ansatz: dokumentieren, Prioritäten setzen, Entscheidungen begründen und zeitgenössische Eingriffe entwickeln, die lesbar bleiben und die Erzählungen des Ortes respektieren.",
+
+  "ACHSE 5 — ORIENTIERUNG UND RESSOURCEN: BEZUG AUF DIE ZEITLEISTE\nUm Bellelay innerhalb seiner wichtigsten historischen Etappen zu verorten, wird empfohlen, die Zeitleiste auf dieser Website in der Seite „Kulturerbe“ (Patrimoine) zu konsultieren. Sie bietet kompakte Bezugspunkte zu den zentralen Perioden und erleichtert die Verbindung zwischen historischer Lektüre, Ortsbegehung und Verständnis der Transformationen.",
+
+  "SCHLUSSFOLGERUNG\nDie Geschichte von Bellelay zu studieren bedeutet, die Voraussetzungen zu schaffen, um den Ort in seiner Tiefe zu verstehen, ohne seine Entwicklung zu erstarren. Indem Phasen, Übergänge und Nutzungen beleuchtet werden, trägt der historische Ansatz zu einer angemessenen Transformation bei: Er respektiert das Gedächtnis des Ortes und unterstützt zugleich zeitgenössische Funktionen. Die Zeitleiste auf der Seite „Kulturerbe“ ist ein zentraler Einstieg, um diese Lektüre zu strukturieren und Vertiefungen zu orientieren."
+]
         },
         culture_art: {
           title: "Kultur & Kunst",
@@ -563,10 +583,20 @@
           title: "History",
           img: "assets/img/discipline-history.jpg",
           paragraphs: [
-            "Historical research and archival work on the abbey: sources, transformations and local narratives.",
-            "Seminars and editorial projects share findings with the public and question regional storytelling.",
-            "Critical approaches highlight continuities, ruptures and political uses of heritage across time."
-          ]
+"INTRODUCTION\nApproaching Bellelay through history means reading the site as a living document: a built and landscape ensemble whose forms, uses, and narratives have been shaped layer by layer. The historical study is less about accumulating erudition than about understanding continuities, ruptures, and reassignments of use that have formed the place. It helps inform contemporary choices—conservation, transformation, programming—by situating the site within the timelines that produced it.",
+
+  "AXIS 1 — THE SITE AS AN ARCHIVE: MATERIAL TRACES AND NARRATIVES\nBellelay lends itself to a combined reading of sources and physical evidence: the organisation of buildings, successive alterations, constructive ‘overwrites’, traces of use inscribed in spaces, and relationships to the surrounding territory. The aim is to connect what documents convey (texts, plans, archives) with what the fabric itself reveals, in order to identify the site’s major phases of formation and the logics that guided its evolution.",
+
+  "AXIS 2 — KEY PERIODS AND MOMENTS OF TRANSITION\nHistorical research focuses on the periods that structured Bellelay and, above all, on turning points: changes of use, institutional shifts, emerging practices, events and decisions that transform spaces and their meaning. Rather than producing an exhaustive chronology, the goal is to highlight “key moments” that explain why certain forms, routes, or buildings appear as they do today.",
+
+  "AXIS 3 — USES, COMMUNITIES, AND THE SITE’S ECONOMIES\nThe site’s history can also be read through its uses and the communities that shaped it: ways of living and working, everyday organisation, hospitality, production, and relationships to land and resources. This axis links spatial evolution to social and economic practices, showing how architecture responds to changing functions—and how, in turn, it influences ways of occupying the place.",
+
+  "AXIS 4 — HISTORY AND DESIGN: A METHOD FOR INFORMED TRANSFORMATION\nHistory is not a backdrop; it is a design tool. By identifying values, invariants, and past transformations, it helps decide what should be preserved, revealed, interpreted, or adapted. This axis promotes a pragmatic approach: documenting, prioritising issues, making choices explicit, and developing contemporary interventions that remain legible and respectful of the site’s narratives.",
+
+  "AXIS 5 — REFERENCES AND RESOURCES: CONSULT THE TIMELINE\nTo situate Bellelay within its main historical stages, it is recommended to consult the timeline available on this website under the “Heritage” (Patrimoine) page. It provides concise reference points on key periods and helps connect historical reading, on-site visits, and an understanding of transformations.",
+
+  "CONCLUSION\nStudying the history of Bellelay is a way to understand the site in depth without freezing its evolution. By clarifying major phases, transitions, and uses, the historical approach supports a more accurate transformation—one that respects the site’s memory while enabling contemporary functions. The timeline on the “Heritage” page is an essential entry point for structuring this reading and guiding further research."
+]
         },
         culture_art: {
           title: "Culture & art",

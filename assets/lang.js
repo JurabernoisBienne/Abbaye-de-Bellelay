@@ -151,7 +151,9 @@
 
 
       /*programmes de*/
-       
+   programmes: {
+      heading: "Unsere Programme",
+   },  
    programs: {
       immersive: {
         title: "Immersive Wochen vor Ort",
@@ -298,7 +300,12 @@
         contact: "Contact — Abbaye de Bellelay"
       },
 
-       /* programmes.en */      
+       /* programmes.en */ 
+
+    programmes: {
+      heading: "Our programs",
+    },  
+       
     programs: {
       immersive: {
         title: "Immersive in-situ weeks",

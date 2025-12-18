@@ -120,10 +120,16 @@
           title: "Circularité",
           img: "assets/img/discipline-circularity.jpg",
           paragraphs: [
-            "Approches de circularité appliquées au bâtiment et aux pratiques : réemploi, cycles de matériaux et économie locale.",
-            "Ateliers pratiques testant stratégies de récupération, fabrication locale et chaînes courtes dans un contexte patrimonial.",
-            "Propositions visant à réduire déchets, valoriser matériaux et imaginer modèles économiques résilients."
-          ]
+"INTRODUCTION\nÀ Bellelay, la circularité n’est pas un concept plaqué : elle s’inscrit dans une logique de site, héritée d’un fonctionnement monastique et réactivée aujourd’hui par des pratiques concrètes. La configuration du lieu—bâtiments, extérieurs, ressources, savoir-faire, espaces de transformation—permet d’imaginer des boucles courtes et lisibles, où production, usage, entretien et réemploi s’organisent à l’échelle d’un même ensemble. L’ambition est de faire de Bellelay un écosystème opérationnel, démonstratif et durable, fondé sur le local, la sobriété et la transmission.",
+
+  "CIRCULARITÉ ALIMENTAIRE : DE LA PRODUCTION À LA CONSOMMATION\nLe site dispose d’atouts remarquables pour valoriser une circularité alimentaire complète. Les terrasses héritées de la période monastique constituent une base paysagère et productive rare ; elles accueillent déjà des cultures de légumes et de céréales, ainsi que des fruits issus d’anciens arbres palissés. Cette production locale peut être renforcée, diversifiée et articulée à des usages quotidiens, à l’éducation et à l’accueil. Surtout, Bellelay possède sur place des infrastructures de transformation et de consommation : de grandes cuisines capables de traiter les récoltes et une cafétéria au plafond voûté monumental, qui rend possible une chaîne courte, de la terre à l’assiette, dans un cadre architectural exceptionnel.",
+
+  "CIRCULARITÉ ARTISANALE : SAVOIR-FAIRE, RÉPARATION ET ENTRETIEN\nBellelay porte une tradition de métiers intégrés : historiquement, à chaque période, des corps de métiers étaient présents pour répondre aux besoins du site, notamment dans le domaine de la construction. Cette logique se prolonge aujourd’hui : un menuisier a repris les locaux d’une ancienne menuiserie et travaille le bois selon des pratiques anciennes et durables—choix de matière, gestes, temps long, et mise en œuvre attentive. Il coupe ses troncs dans les forêts alentours, les débite à la scie à main et privilégie des colles naturelles, inscrivant la production dans une économie de proximité et une maîtrise des impacts. En parallèle, une blanchisserie sur place répond aux besoins des utilisateurs et renforce une approche de service, de maintenance et de logistique interne, essentielle à la pérennité d’un site multi-usages.",
+
+  "UNE CIRCULARITÉ À L’ÉCHELLE DU SITE : BOUCLES COURTES, LOGISTIQUE ET QUALITÉ D’USAGE\nLa circularité à Bellelay se joue dans l’organisation : rendre les boucles visibles, efficaces et compatibles avec la vie quotidienne. Cela implique de penser les flux (récoltes, stockage, préparation, distribution, déchets organiques), les espaces (ateliers, réserves, zones de tri, lieux de réparation), et les règles d’usage (mutualisation, responsabilités, entretien). L’objectif est d’éviter une circularité “symbolique” et de construire une circularité praticable : simple à exploiter, mesurable, et suffisamment robuste pour fonctionner avec une diversité d’usagers et de rythmes.",
+
+  "CONCLUSION\nBellelay réunit des conditions rares pour incarner une circularité complète et crédible : une base productive agricole déjà active, des infrastructures de transformation et de consommation sur place, et une continuité artisanale concrète au service du site et de ses utilisateurs. En consolidant ces dynamiques—sans perdre la sobriété et l’ancrage local—le site peut devenir un exemple de circularité vécue : un modèle où l’alimentation, les métiers, l’entretien et la gestion quotidienne se répondent dans des boucles courtes, durables et transmissibles."
+]
         },
         tourisme: {
           title: "Tourisme durable",
@@ -359,10 +365,16 @@
           title: "Zirkularität",
           img: "assets/img/discipline-circularity.jpg",
           paragraphs: [
-            "Zirkuläre Ansätze für Gebäude und Praxis: Wiederverwendung, Materialkreisläufe und lokale Ökonomie.",
-            "Praktische Workshops erproben Rückbau-, Recycling- und lokale Produktionsstrategien im denkmalpflegerischen Kontext.",
-            "Vorschläge zielen auf Abfallreduktion, Materialwertschöpfung und resilientere Geschäftsmodelle."
-          ]
+  "EINLEITUNG\nIn Bellelay ist Zirkularität kein aufgesetztes Konzept: Sie entspricht einer standortbezogenen Logik, die aus der klösterlichen Betriebsweise hervorgeht und heute durch konkrete Praktiken wieder aktiviert wird. Die Anlage des Ortes—Gebäude, Aussenräume, Ressourcen, Handwerk, Verarbeitungsräume—ermöglicht kurze und gut nachvollziehbare Kreisläufe, in denen Produktion, Nutzung, Unterhalt und Wiederverwendung innerhalb desselben Ensembles organisiert werden. Ziel ist, Bellelay als operatives, anschauliches und dauerhaftes Ökosystem zu entwickeln – mit Fokus auf Regionalität, Suffizienz und Weitergabe von Wissen.",
+
+  "ERNÄHRUNGS-ZIRKULARITÄT: VON DER PRODUKTION BIS ZUM KONSUM\nDer Ort verfügt über aussergewöhnliche Voraussetzungen, um eine vollständige Ernährungskreislauf-Logik zu stärken. Die Terrassen aus der monastischen Epoche bilden eine seltene landschaftliche und produktive Grundlage; bereits heute werden dort Gemüse und Getreide angebaut, ebenso Früchte an alten Spalierbäumen. Diese lokale Produktion kann ausgebaut und diversifiziert werden und mit Alltag, Bildung und Gastlichkeit verknüpft werden. Entscheidend ist zudem, dass Bellelay über Infrastruktur für Verarbeitung und Konsum vor Ort verfügt: grosse Küchen, die Ernten verarbeiten können, und eine Cafeteria mit monumentaler Gewölbedecke, die eine kurze Kette von der Erde bis auf den Teller in einem aussergewöhnlichen architektonischen Rahmen ermöglicht.",
+
+  "HANDWERKLICHE ZIRKULARITÄT: KNOW-HOW, REPARATUR UND INSTANDHALTUNG\nBellelay trägt eine Tradition integrierter Gewerke: Historisch waren in jeder Epoche Handwerksbetriebe präsent, um die Bedürfnisse des Ortes zu decken – insbesondere im Bauwesen. Diese Logik setzt sich heute fort: Ein Schreiner hat die Räume einer ehemaligen Schreinerei übernommen und arbeitet Holz nach alten, nachhaltigen Methoden—Materialwahl, Handwerklichkeit, Zeitlichkeit und sorgfältige Ausführung. Er schlägt seine Stämme in den umliegenden Wäldern, sägt sie von Hand auf und setzt bevorzugt natürliche Leime ein. Damit verankert sich die Produktion in einer lokalen Ökonomie und in einer bewussten Kontrolle der Auswirkungen. Parallel dazu befindet sich eine Wäscherei vor Ort, die die Bedürfnisse der Nutzenden abdeckt und eine interne Dienstleistungs-, Unterhalts- und Logistikstruktur stärkt – zentral für die Dauerhaftigkeit eines Mehrnutzungsstandorts.",
+
+  "ZIRKULARITÄT AUF STANDORTEBENE: KURZE KREISLÄUFE, LOGISTIK UND NUTZUNGSQUALITÄT\nZirkularität in Bellelay entscheidet sich in der Organisation: Kreisläufe sichtbar, effizient und alltagstauglich zu machen. Das erfordert die Planung von Flüssen (Ernte, Lagerung, Verarbeitung, Ausgabe, organische Reststoffe), von Räumen (Werkstätten, Depots, Sortierbereiche, Reparaturorte) und von Nutzungsregeln (Gemeinschaftsnutzung, Verantwortlichkeiten, Pflege). Ziel ist, eine rein „symbolische“ Zirkularität zu vermeiden und eine praktikable zu schaffen: einfach im Betrieb, messbar und robust genug, um mit unterschiedlichen Nutzenden und Rhythmen zu funktionieren.",
+
+  "SCHLUSSFOLGERUNG\nBellelay vereint seltene Voraussetzungen, um eine vollständige und glaubwürdige Zirkularität zu verkörpern: eine bereits aktive landwirtschaftliche Produktionsbasis, Infrastruktur für Verarbeitung und Konsum vor Ort sowie eine konkrete handwerkliche Kontinuität im Dienst des Standortes und seiner Nutzenden. Durch die Stärkung dieser Dynamiken—ohne Suffizienz und regionale Verankerung zu verlieren—kann Bellelay zu einem Beispiel gelebter Zirkularität werden: ein Modell, in dem Ernährung, Gewerke, Unterhalt und Alltag in kurzen, dauerhaften und weitergebbaren Kreisläufen zusammenwirken."
+]
         },
         tourisme: {
           title: "Nachhaltiger Tourismus",
@@ -641,10 +653,16 @@
           title: "Circularity",
           img: "assets/img/discipline-circularity.jpg",
           paragraphs: [
-            "Circular approaches for buildings and practice: reuse, material cycles and local economies.",
-            "Hands-on workshops test recovery strategies, local making and short supply chains in a heritage context.",
-            "Proposals aim to reduce waste, valorize materials and design resilient economic models."
-          ]
+"INTRODUCTION\nAt Bellelay, circularity is not an applied concept; it is rooted in the site’s own logic—historically shaped by monastic organisation and reactivated today through tangible practices. The configuration of the place—buildings, outdoor areas, resources, skills, and spaces for transformation—makes it possible to build short, legible loops in which production, use, upkeep, and reuse are organised within a single ensemble. The ambition is to develop Bellelay as an operational, demonstrative, and durable ecosystem, grounded in local resources, sobriety, and knowledge transmission.",
+
+  "FOOD CIRCULARITY: FROM PRODUCTION TO CONSUMPTION\nThe site offers outstanding conditions for a complete local food loop. Terraces built during the monastic period provide a rare productive landscape base; vegetables and cereals are already cultivated there today, along with fruit from old trained (espaliered) trees. This local production can be strengthened and diversified, and linked to everyday uses, education, and hospitality. Crucially, Bellelay also has on-site infrastructure for processing and consumption: large kitchens that can transform harvests, and a cafeteria beneath a monumental vaulted ceiling—enabling a short chain from soil to plate within an exceptional architectural setting.",
+
+  "CRAFT-BASED CIRCULARITY: SKILLS, REPAIR, AND UPKEEP\nBellelay carries a tradition of integrated trades: historically, in each period, skilled crafts were present to meet the site’s needs, particularly in construction. That logic continues today. A joiner has taken over the existing premises of a former carpentry workshop and works wood through old, durable practices—careful material selection, time-honoured techniques, and attentive making. He cuts his logs in the surrounding forests, saws them by hand, and uses only natural glues, anchoring production in a local economy and in controlled environmental impacts. In parallel, an on-site laundry supports users’ needs and reinforces an internal service, maintenance, and logistics capacity—essential to the long-term viability of a multi-user site.",
+
+  "CIRCULARITY AT THE SCALE OF THE SITE: SHORT LOOPS, LOGISTICS, AND QUALITY OF USE\nAt Bellelay, circularity ultimately depends on organisation: making loops visible, efficient, and compatible with everyday operation. This means designing flows (harvest, storage, preparation, distribution, organic residues), spaces (workshops, stores, sorting areas, repair zones), and rules of use (shared resources, responsibilities, upkeep). The goal is to avoid “symbolic” circularity and instead build circularity that is practicable: easy to operate, measurable, and robust enough to work with diverse users and rhythms.",
+
+  "CONCLUSION\nBellelay brings together rare conditions for a complete and credible circular approach: an already active agricultural base, on-site facilities for processing and consumption, and a real continuity of craft practices serving the site and its users. By consolidating these dynamics—without losing sobriety and local anchoring—the site can become an example of lived circularity: a model where food, trades, upkeep, and daily management reinforce one another through short, durable, and transferable loops."
+]
         },
         tourisme: {
           title: "Sustainable tourism",

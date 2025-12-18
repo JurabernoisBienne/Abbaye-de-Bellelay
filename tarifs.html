@@ -72,25 +72,32 @@
 
         <label for="nbr" data-i18n="form.nbpersonnes">Nombre de personnes</label>
         <input id="nbr" name="nbr" type="number" min="1" value="1" />
-
+        
         <fieldset>
           <legend data-i18n="form.chambres">Nombre de chambres</legend>
-
+        
           <div>
-            <label for="chambres-indiv">Chambre individuelle avec salle de bain privative</label>
+            <label for="chambres-indiv" data-i18n="form.labels.chambre_indiv">
+              Chambre individuelle avec salle de bain privative
+            </label>
             <input id="chambres-indiv" name="chambres_indiv" type="number" min="0" value="0" />
           </div>
-
+        
           <div>
-            <label for="chambres-double">Chambre double</label>
+            <label for="chambres-double" data-i18n="form.labels.chambre_double">
+              Chambre double
+            </label>
             <input id="chambres-double" name="chambres_double" type="number" min="0" value="0" />
           </div>
-
+        
           <div>
-            <label for="chambres-quad">Chambre quadruple</label>
+            <label for="chambres-quad" data-i18n="form.labels.chambre_quad">
+              Chambre quadruple
+            </label>
             <input id="chambres-quad" name="chambres_quad" type="number" min="0" value="0" />
           </div>
         </fieldset>
+
 
         <label for="repas" data-i18n="form.typeRepas">Type de repas</label>
         <select id="repas" name="repas">

@@ -156,10 +156,18 @@
           title: "Social",
           img: "assets/img/discipline-social.jpg",
           paragraphs: [
-            "Approches sociales : inclusion, participation et dispositifs favorisant cohabitation et engagement local.",
-            "Programmes soutenant initiatives communautaires, médiation et formats participatifs sur site.",
-            "Axes de travail : accessibilité, accueil pour publics divers et collaborations intersectorielles."
-          ]
+  "INTRODUCTION\nÀ Bellelay, le volet social est une dimension structurante du projet de site : il ne s’agit pas seulement d’« accueillir » des activités, mais de créer des conditions de cohabitation, d’apprentissage et d’inclusion dans un cadre quotidien partagé. La diversité des usagers, la présence d’espaces communs intérieurs et extérieurs, et l’implantation de fonctions à forte valeur sociétale font du lieu un terrain particulièrement pertinent pour expérimenter des formes de vivre-ensemble, de gouvernance et de solidarité, à l’échelle d’un ensemble patrimonial.",
+
+  "INTÉGRATION : FORMER ET ACCOMPAGNER VERS L’EMPLOI\nBellelay accueille un centre de formation pour migrants, projet pilote en Suisse, qui forme sur place environ une centaine de personnes en vue de leur intégration au marché du travail, notamment comme assistants médico-sociaux. Cette présence ancre le site dans une mission sociale concrète : offrir un cadre stable, des parcours qualifiants et un accompagnement vers l’autonomie. Elle permet aussi de questionner l’architecture et l’organisation du lieu comme supports d’intégration : espaces d’apprentissage, conditions d’accueil, rythmes de vie, et articulation avec la région (stages, réseaux, mobilité).",
+
+  "VIVRE-ENSEMBLE : USAGES MULTIPLES ET ESPACES DE VIE COMMUNS\nLe site, par sa multiplicité d’usagers, génère des dynamiques sociales riches : croisements de temporalités, cohabitation de pratiques, et mise en commun de ressources. Les espaces partagés—salles, circulations, cours, jardins, cafétéria, lieux de travail—ne sont pas seulement des surfaces : ce sont des dispositifs sociaux qui influencent les rencontres, la coopération, mais aussi les frictions. Un enjeu central est d’identifier les conditions d’un vivre-ensemble durable : règles d’usage claires, hospitalité, sécurité, gestion des nuisances, et qualité des espaces communs pour favoriser une cohabitation sereine.",
+
+  "GOUVERNANCE D’UN LIEU DE PARTAGE : MODÈLES, RÔLES ET OUTILS\nBellelay pose une question essentielle : quels modèles de gouvernance pour un lieu à la fois partagé et multi-acteurs ? Au-delà des intentions, la gouvernance se traduit par des outils concrets : modalités de décision, responsabilités d’entretien, réservation et priorisation des espaces, gestion des conflits, communication interne, et principes de répartition des coûts. Ce volet explore des formes de gouvernance capables de tenir dans le temps, d’être comprises par tous, et de soutenir une mutualisation réelle plutôt qu’une simple juxtaposition d’usages.",
+
+  "INTERGÉNÉRATIONNEL ET INTERCULTUREL : UN LABORATOIRE À ÉCHELLE RÉELLE\nAvec ses nombreux usagers et la future implantation d’une école primaire partageant certains espaces communs, Bellelay est voué à devenir un laboratoire intergénérationnel et interculturel. La proximité entre enfants, adultes en formation, visiteurs, résidents et professionnels ouvre des opportunités uniques de liens et d’apprentissages réciproques, à condition d’être soigneusement organisée. L’enjeu est de concevoir des espaces et des temporalités compatibles : zones de rencontre et zones de retrait, parcours sécurisés, usages partagés cadrés, et médiations favorisant le respect, la curiosité et l’attention à l’autre.",
+
+  "CONCLUSION\nLe volet social de Bellelay se construit à partir d’actions déjà concrètes—comme le centre de formation pour migrants—et d’un potentiel fort lié à la diversité des usagers et aux espaces communs. En travaillant finement l’organisation, les règles et la gouvernance du lieu, Bellelay peut devenir une référence en matière d’intégration, de vivre-ensemble et d’expérimentation intergénérationnelle et interculturelle : un site capable de produire du lien social de manière durable, lisible et partagée."
+]
         },
         paix: {
           title: "Paix & réparations de guerre",
@@ -413,10 +421,18 @@
           title: "Soziales",
           img: "assets/img/discipline-social.jpg",
           paragraphs: [
-            "Soziale Ansätze: Inklusion, Partizipation und Maßnahmen für gemeinschaftliches Engagement.",
-            "Programme unterstützen lokale Initiativen, Vermittlung und partizipative Formate vor Ort.",
-            "Fokus: Barrierefreiheit, Aufnahmeformate für diverse Zielgruppen und intersektorale Kooperationen."
-          ]
+"EINLEITUNG\nIn Bellelay ist die soziale Dimension ein tragender Bestandteil des Standortprojekts: Es geht nicht nur darum, Aktivitäten „unterzubringen“, sondern Bedingungen für Zusammenleben, Lernen und Inklusion in einem geteilten Alltag zu schaffen. Die Vielfalt der Nutzenden, die gemeinsamen Innen- und Aussenräume sowie Funktionen mit hohem gesellschaftlichem Nutzen machen den Ort zu einem besonders geeigneten Feld, um Formen des Zusammenlebens, der Governance und der Solidarität im Massstab eines denkmalgeprägten Ensembles zu erproben.",
+
+  "INTEGRATION: QUALIFIZIEREN UND IN DEN ARBEITSMARKT BEGLEITEN\nBellelay beherbergt ein Ausbildungszentrum für Migrantinnen und Migranten – ein Pilotprojekt in der Schweiz –, das vor Ort rund hundert Personen ausbildet, mit dem Ziel der Integration in den Arbeitsmarkt, insbesondere als Assistenz in der Pflege und Betreuung (medizinisch-soziale Assistenz). Diese Präsenz verankert den Standort in einer konkreten sozialen Aufgabe: Stabilität bieten, Qualifizierungswege ermöglichen und den Weg in Selbstständigkeit unterstützen. Gleichzeitig stellt sie Fragen an Architektur und Organisation als Integrationsfaktoren: Lernräume, Rahmenbedingungen der Aufnahme, Tagesrhythmen sowie die Anbindung an die Region (Praktika, Netzwerke, Mobilität).",
+
+  "ZUSAMMENLEBEN: MEHRFACHNUTZUNGEN UND GEMEINSAME LEBENSRÄUME\nDie Vielzahl der Nutzenden erzeugt auf dem Areal reichhaltige soziale Dynamiken: unterschiedliche Zeitlichkeiten, Koexistenz verschiedener Praktiken und die gemeinsame Nutzung von Ressourcen. Geteilte Räume—Säle, Erschliessungen, Höfe, Gärten, Cafeteria, Arbeitsorte—sind nicht nur Flächen, sondern soziale Dispositive, die Begegnung, Kooperation, aber auch Reibung beeinflussen. Zentral ist, Bedingungen für ein dauerhaft tragfähiges Zusammenleben zu klären: verständliche Nutzungsregeln, Gastlichkeit, Sicherheit, Umgang mit Immissionen sowie eine hohe Qualität der gemeinsamen Räume, die ein ruhiges Miteinander unterstützt.",
+
+  "GOVERNANCE EINES GETEILTEN ORTES: MODELLE, ROLLEN UND INSTRUMENTE\nBellelay stellt eine Kernfrage: Welche Governance-Modelle eignen sich für einen geteilten, multi-aktiven Ort? Jenseits von Absichten braucht es konkrete Werkzeuge: Entscheidungswege, Verantwortlichkeiten für Unterhalt, Reservation und Priorisierung von Räumen, Konfliktbearbeitung, interne Kommunikation sowie Prinzipien zur Kostenverteilung. Dieser Bereich untersucht Governance-Formen, die langfristig funktionieren, für alle verständlich sind und echte gemeinsame Nutzung ermöglichen – statt bloss einer Nebeneinanderstellung von Angeboten.",
+
+  "INTERGENERATIONELL UND INTERKULTURELL: EIN LABOR IM REALMASSSTAB\nMit den vielen Nutzenden und der geplanten Ansiedlung einer Primarschule, die bestimmte Gemeinschaftsflächen mitnutzt, ist Bellelay prädestiniert, ein intergenerationelles und interkulturelles Labor zu werden. Die Nähe von Kindern, Erwachsenen in Ausbildung, Besuchenden, Bewohnenden und Fachpersonen eröffnet einzigartige Chancen für Beziehungen und gegenseitiges Lernen – vorausgesetzt, sie wird sorgfältig organisiert. Entscheidend sind kompatible Räume und Zeitfenster: Zonen der Begegnung und des Rückzugs, sichere Wegführungen, klar gerahmte geteilte Nutzungen sowie Vermittlungsformate, die Respekt, Neugier und Aufmerksamkeit fördern.",
+
+  "SCHLUSSFOLGERUNG\nDie soziale Dimension von Bellelay beruht auf bereits konkreten Aktivitäten—wie dem Ausbildungszentrum für Migrantinnen und Migranten—und auf einem starken Potenzial, das aus der Vielfalt der Nutzenden und den gemeinschaftlichen Räumen entsteht. Durch eine präzise Organisation sowie klare Regeln und Governance kann Bellelay zu einer Referenz für Integration, Zusammenleben und intergenerationelles wie interkulturelles Experimentieren werden: ein Ort, der sozialen Zusammenhalt dauerhaft, nachvollziehbar und gemeinsam getragen hervorbringt."
+]
         },
         paix: {
           title: "Frieden & Wiedergutmachung",
@@ -713,10 +729,18 @@
           title: "Social",
           img: "assets/img/discipline-social.jpg",
           paragraphs: [
-            "Social approaches: inclusion, participation and measures that foster cohabitation and local engagement.",
-            "Programs support community initiatives, mediation and participatory formats on site.",
-            "Focus areas: accessibility, welcoming diverse publics and intersectoral collaborations."
-          ]
+"INTRODUCTION\nAt Bellelay, the social dimension is a structural component of the site project: it is not only about “hosting” activities, but about creating conditions for coexistence, learning, and inclusion within a shared everyday life. The diversity of users, the presence of shared indoor and outdoor living spaces, and functions with strong societal value make the site a particularly relevant field for experimenting with models of living together, governance, and solidarity at the scale of a heritage ensemble.",
+
+  "INTEGRATION: TRAINING AND PATHWAYS INTO EMPLOYMENT\nBellelay hosts a training centre for migrants—a pilot project in Switzerland—which welcomes and trains around one hundred people on site, supporting their integration into the labour market, notably as medico-social assistants. This anchors the site in a concrete social mission: providing stability, qualification pathways, and support towards autonomy. It also invites reflection on architecture and organisation as vectors of integration: learning spaces, hosting conditions, daily rhythms, and connections to the region (internships, networks, mobility).",
+
+  "LIVING TOGETHER: MULTIPLE USERS AND SHARED LIVING SPACES\nBecause of its multiple user groups, the site generates rich social dynamics: overlapping timeframes, coexistence of practices, and shared resources. Shared spaces—rooms, circulation areas, courtyards, gardens, cafeteria, workspaces—are not merely surfaces; they are social devices that shape encounters, cooperation, and also friction. A key challenge is to define the conditions for lasting coexistence: clear rules of use, hospitality, safety, management of nuisances, and the quality of common spaces to support calm, respectful cohabitation.",
+
+  "GOVERNANCE OF A SHARED PLACE: MODELS, ROLES, AND TOOLS\nBellelay raises an essential question: what governance models can support a shared, multi-actor place? Beyond intentions, governance is expressed through practical tools: decision-making processes, maintenance responsibilities, booking and prioritisation of spaces, conflict management, internal communication, and principles for sharing costs. This component explores governance approaches that can endure over time, be understood by all, and enable real sharing rather than a simple juxtaposition of uses.",
+
+  "INTERGENERATIONAL AND INTERCULTURAL: A FULL-SCALE LABORATORY\nWith its many users and the future implantation of a primary school that will share certain common spaces, Bellelay is set to become a full-scale intergenerational and intercultural laboratory. Proximity between children, adults in training, visitors, residents, and professionals creates unique opportunities for connection and reciprocal learning—provided it is carefully organised. The challenge is to design compatible spaces and timeframes: areas for meeting and for retreat, safe routes, clearly framed shared uses, and mediation that fosters respect, curiosity, and attentiveness to others.",
+
+  "CONCLUSION\nBellelay’s social component builds on already concrete actions—such as the migrant training centre—and on strong potential generated by diverse users and shared spaces. By carefully shaping organisation, rules, and governance, Bellelay can become a reference for integration, living together, and intergenerational and intercultural experimentation: a site capable of producing social cohesion in a durable, legible, and collectively supported way."
+]
         },
         paix: {
           title: "Peace & war reparations",

@@ -372,7 +372,7 @@
         title: "Exhibitions and Concerts",
         text: "Public events and cultural evenings, both indoors and outdoors.",
         text2: "Openings, concerts, exhibitions, meetings, and public mediations throughout the year.",
-      },
+      }
     },       
        
 
@@ -515,7 +515,7 @@
       unique: "Single Meal"
     },
     submit: "Send Request"
-  },
+  }
        
     }
   };

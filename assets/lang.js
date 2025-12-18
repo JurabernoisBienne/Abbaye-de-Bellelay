@@ -308,7 +308,6 @@
       demi: "Halbpension (Frühstück und Abendessen)",
       unique: "Einzelverpflegung"
     },
-    submit: "Anfrage absenden"
   }
  },    
 
@@ -514,7 +513,6 @@
       demi: "Half Board (breakfast and dinner)",
       unique: "Single Meal"
     },
-    submit: "Send Request"
   }
        
     }

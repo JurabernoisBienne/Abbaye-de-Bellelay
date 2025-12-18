@@ -314,8 +314,8 @@
       demi: "Halbpension (Frühstück und Abendessen)",
       unique: "Einzelverpflegung"
     },
+     submit: "Anfrage absenden"
   },
-  submit: "Anfrage absenden"
  },    
 
 /*ENGLISH*/
@@ -525,8 +525,8 @@
       demi: "Half Board (breakfast and dinner)",
       unique: "Single Meal"
     },
-  },
    submit: "Send request"
+  },
     }
   };
 

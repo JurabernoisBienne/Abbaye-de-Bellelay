@@ -201,10 +201,23 @@
       title: {
        surplace: "Vor Ort — Abbaye de Bellelay"
      },
+
        
       /*disciplines de*/
        
       disciplines: {
+
+         menu: {
+           architecture: "Architektur",
+           amenagement: "Raumplanung",
+           histoire: "Geschichte",
+           culture_art: "Kultur und Kunst",
+           circularity: "Zirkularität",
+           tourisme: "Nachhaltiger Tourismus",
+           social: "Soziales",
+           paix: "Frieden & Wiedergutmachung"
+         },
+         
         architecture: {
           title: "Architektur",
           img: "assets/img/discipline-architecture.jpg",
@@ -424,6 +437,18 @@
        
        /* disciplines.en */
 
+      menu: {
+        architecture: "Architecture",
+        amenagement: "Spatial Planning",
+        histoire: "History",
+        culture_art: "Culture and Art",
+        circularity: "Circularity",
+        tourisme: "Sustainable Tourism",
+        social: "Social",
+        paix: "Peace & War Reparations"
+      },
+
+       
       disciplines: {
         architecture: {
           title: "Architecture",

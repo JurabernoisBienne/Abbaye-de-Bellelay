@@ -52,7 +52,6 @@
          
            "CONCLUSION\nTravailler sur Bellelay, c’est aborder l’architecture comme une discipline de précision : comprendre un ensemble complexe, protéger ce qui fait sa valeur, et organiser sa transformation pour des usages multiples et durables. L’ambition est de produire des scénarios d’intervention sobres, réversibles et opérationnels, capables de renforcer la cohérence du site tout en ouvrant de nouvelles possibilités d’occupation, de mutualisation et d’expérimentation."
          ]
-          ]
         },
         amenagement: {
           title: "Aménagement du territoire",

@@ -101,10 +101,20 @@
           title: "Culture et art",
           img: "assets/img/discipline-art.jpg",
           paragraphs: [
-            "Programmes artistiques et expositions : création in-situ, dialogues interdisciplinaires et médiation culturelle.",
-            "Résidences favorisant collaborations entre artistes et chercheurs pour produire œuvres et dispositifs contextuels.",
-            "Actions publiques (vernissages, performances, ateliers) ancrent le projet sur le territoire et le rendent accessible."
-          ]
+"INTRODUCTION\nÀ Bellelay, culture et art ne s’ajoutent pas au site : ils s’y inscrivent naturellement, tant l’architecture, l’acoustique, la lumière et le paysage constituent déjà une scène. Le lieu offre un cadre rare où diffusion culturelle, création artistique et production peuvent coexister : des espaces monumentaux et intimes, des ambiances très différenciées, et une atmosphère de tranquillité propice au travail de fond. L’enjeu est de valoriser ces qualités sans les surexploiter, en construisant une programmation sensible, cohérente et respectueuse du site.",
+
+  "UNE DYNAMIQUE CULTURELLE DÉJÀ ACTIVE\nBellelay accueille déjà des activités culturelles et artistiques, notamment grâce à la Fondation de l’Abbatiale de Bellelay, qui organise des concerts et des expositions d’art. Cet ancrage existant constitue une base solide : il permet de s’appuyer sur des expériences éprouvées, des publics, et une compréhension fine des contraintes d’accueil. L’objectif est de renforcer cette dynamique, de la diversifier, et de mieux articuler diffusion (événements, expositions) et création (résidences, production).",
+
+  "PRODUCTION SONORE ET EXPÉRIENCE ACOUSTIQUE\nLe site se prête particulièrement à la création sonore. L’abbatiale, avec son écho et sa résonance hors du commun, offre un contexte exceptionnel pour la musique, l’expérimentation acoustique, la voix, les ensembles et la spatialisation du son. Au-delà des concerts, cette dimension ouvre des possibilités de recherche et de production : prises de son, compositions in situ, dispositifs immersifs, dialogues entre architecture et son, ainsi que des formats hybrides mêlant performance, installation et médiation.",
+
+  "ESPACES UNIQUES POUR EXPOSITIONS ET INSTALLATIONS\nBellelay propose des lieux d’exposition rares, capables d’accueillir des œuvres et des formats très variés dans un cadre exceptionnel. Des combles remarquables, une crypte unique, et des jardins magnifiques composent une diversité d’ambiances—verticalités, pénombres, vues, textures—qui invitent à des expositions in situ, des installations, des parcours curatoriaux et des interventions sensibles. L’enjeu est de travailler l’adéquation entre œuvre et lieu, en valorisant la singularité des espaces plutôt qu’une neutralité muséale.",
+
+  "TRANQUILLITÉ, VASTES ESPACES ET CONDITIONS DE CRÉATION\nLa tranquillité du site, la présence d’espaces vastes et la qualité du paysage offrent des conditions précieuses pour l’inspiration et la création. Bellelay permet des temporalités longues : recherche, esquisses, répétitions, prototypage, écriture, montage. Cette approche met l’accent sur l’hospitalité de travail : rythmes compatibles avec le lieu, cohabitation respectueuse des usages, et mise en place de conditions favorables à la concentration comme au partage.",
+
+  "PROGRAMMATION : COHÉRENCE, QUALITÉ ET RESPECT DU SITE\nDévelopper culture et art à Bellelay implique une programmation pensée comme un équilibre : intensités maîtrisées, formats adaptés, gestion des flux et des impacts, et attention à la conservation du site. L’objectif est de construire une offre culturelle exigeante, ouverte et ancrée, qui associe événements, expositions et résidences, tout en préservant ce qui fait la force du lieu : ses ambiances, ses silences, et sa qualité d’expérience.",
+
+  "CONCLUSION\nBellelay réunit des conditions rarement réunies : une vie culturelle déjà active, une acoustique remarquable, des espaces singuliers pour exposer et installer, et une tranquillité propice à la création. En articulant diffusion et production, et en développant une programmation respectueuse de l’architecture et du paysage, le site peut devenir un cadre de référence pour des projets culturels et artistiques à la fois ambitieux, sensibles et durablement inscrits dans le lieu."
+]
         },
         circularity: {
           title: "Circularité",
@@ -330,10 +340,20 @@
           title: "Kultur & Kunst",
           img: "assets/img/discipline-art.jpg",
           paragraphs: [
-            "Kunstprogramme und Ausstellungen: ortsbezogene Schaffensprozesse, interdisziplinäre Dialoge und Vermittlung.",
-            "Residenzen fördern Kooperationen zwischen Künstler*innen und Wissenschaft, führend zu kontextbezogenen Arbeiten.",
-            "Öffentliche Formate (Vernissagen, Performances, Workshops) verankern das Projekt lokal und machen es zugänglich."
-          ]
+"EINLEITUNG\nIn Bellelay sind Kultur und Kunst keine Ergänzung zum Ort – sie ergeben sich aus ihm selbst, denn Architektur, Akustik, Licht und Landschaft bilden bereits eine Bühne. Der Standort bietet einen seltenen Rahmen, in dem kulturelle Vermittlung, künstlerische Praxis und Produktion zusammenfinden können: monumentale wie intime Räume, stark differenzierte Atmosphären und eine Ruhe, die konzentriertes Arbeiten begünstigt. Entscheidend ist, diese Qualitäten zu stärken, ohne sie zu übernutzen – durch eine sensible, kohärente und ortsgerechte Programmierung.",
+
+  "EINE BEREITS AKTIVE KULTURELLE DYNAMIK\nBellelay beherbergt bereits kulturelle und künstlerische Aktivitäten, insbesondere durch die Fondation de l’Abbatiale de Bellelay, die Konzerte und Kunstausstellungen organisiert. Diese bestehende Verankerung ist eine solide Basis: Sie baut auf erprobten Erfahrungen, einem Publikum und einem feinen Verständnis der Rahmenbedingungen für den Betrieb auf. Ziel ist es, diese Dynamik zu stärken, zu diversifizieren und Vermittlung (Veranstaltungen, Ausstellungen) besser mit Kreation (Residenzen, Produktion) zu verzahnen.",
+
+  "KLANGPRODUKTION UND AKUSTISCHE ERFAHRUNG\nDer Ort eignet sich in besonderer Weise für klangbezogene Praxis. Die Abteikirche, mit ihrem aussergewöhnlichen Echo und Resonanzraum, bietet einen einzigartigen Kontext für Musik, akustische Experimente, Stimme, Ensembles und räumliche Klanggestaltung. Über Konzerte hinaus eröffnet dies Möglichkeiten für Forschung und Produktion: Aufnahmen, ortsspezifische Kompositionen, immersive Set-ups, Dialoge zwischen Architektur und Klang sowie hybride Formate zwischen Performance, Installation und Vermittlung.",
+
+  "EINZIGARTIGE RÄUME FÜR AUSSTELLUNGEN UND INSTALLATIONEN\nBellelay bietet seltene Ausstellungsorte, die sehr unterschiedliche Werke und Formate in einem aussergewöhnlichen Rahmen aufnehmen können. Beeindruckende Dachräume, eine einzigartige Krypta und grossartige Gärten schaffen vielfältige Atmosphären—Höhen, Halbdunkel, Ausblicke, Texturen—und laden zu ortsspezifischen Ausstellungen, Installationen, kuratierten Parcours und sensiblen Interventionen ein. Im Zentrum steht die Passung zwischen Werk und Ort, nicht eine neutrale White-Cube-Logik.",
+
+  "RUHE, GROSSZÜGIGE RÄUME UND BEDINGUNGEN FÜR KREATION\nDie Ruhe des Ortes, die grosszügigen Räume und die Qualität der Landschaft schaffen wertvolle Bedingungen für Inspiration und künstlerische Arbeit. Bellelay ermöglicht lange Zeitlichkeiten: Recherche, Skizzen, Proben, Prototyping, Schreiben und Montage. Im Fokus steht eine Arbeits-Hospitalität: Rhythmen, die zum Ort passen, respektvolle Koexistenz der Nutzungen sowie Bedingungen, die Konzentration und Austausch gleichermassen fördern.",
+
+  "PROGRAMMIERUNG: KOHÄRENZ, QUALITÄT UND RESPEKT VOR DEM ORT\nKultur und Kunst in Bellelay weiterzuentwickeln erfordert eine Programmierung als Balance: kontrollierte Intensitäten, passende Formate, Steuerung von Flüssen und Auswirkungen sowie Aufmerksamkeit für den Erhalt des Ortes. Ziel ist ein anspruchsvolles, offenes und verankertes kulturelles Angebot, das Veranstaltungen, Ausstellungen und Residenzen verbindet und zugleich bewahrt, was Bellelay auszeichnet: Atmosphären, Stille und die Qualität der Erfahrung.",
+
+  "SCHLUSSFOLGERUNG\nBellelay vereint selten zusammenkommende Voraussetzungen: ein bereits aktives Kulturleben, eine bemerkenswerte Akustik, einzigartige Räume für Ausstellungen und Installationen sowie eine Ruhe, die Kreation begünstigt. Durch die Verbindung von Vermittlung und Produktion und eine Programmierung, die Architektur und Landschaft respektiert, kann der Ort zu einem Referenzrahmen für kulturelle und künstlerische Projekte werden—ambitioniert, sensibel und nachhaltig im Ort verankert."
+]
         },
         circularity: {
           title: "Zirkularität",
@@ -602,10 +622,20 @@
           title: "Culture & art",
           img: "assets/img/discipline-art.jpg",
           paragraphs: [
-            "Artistic programmes and exhibitions: on-site creation, interdisciplinary dialogue and cultural mediation.",
-            "Residencies encourage artist–researcher collaborations, producing context-sensitive works and formats.",
-            "Public actions (openings, performances, workshops) anchor the project in the territory and make it accessible."
-          ]
+"INTRODUCTION\nAt Bellelay, culture and art are not added onto the site; they arise naturally from it, as architecture, acoustics, light, and landscape already form a stage. The place offers a rare setting where cultural presentation, artistic practice, and production can coexist: monumental and intimate spaces, strongly differentiated atmospheres, and a sense of calm that supports deep work. The challenge is to enhance these qualities without overexploiting them, through programming that is sensitive, coherent, and respectful of the site.",
+
+  "AN ALREADY ACTIVE CULTURAL DYNAMIC\nBellelay already hosts cultural and artistic activities, notably through the Fondation de l’Abbatiale de Bellelay, which organises concerts and art exhibitions. This existing foundation provides a solid base: proven experience, established audiences, and a nuanced understanding of hosting and operational constraints. The aim is to strengthen and diversify this dynamic, and to better connect presentation (events, exhibitions) with creation (residencies, production).",
+
+  "SOUND PRODUCTION AND ACOUSTIC EXPERIENCE\nThe site is particularly suited to sound-based practice. The abbey church, with its exceptional echo and resonance, offers a unique context for music, acoustic experimentation, voice, ensembles, and spatialised sound. Beyond concerts, this opens opportunities for research and production: recording sessions, site-specific compositions, immersive set-ups, dialogues between architecture and sound, and hybrid formats combining performance, installation, and mediation.",
+
+  "UNIQUE SPACES FOR EXHIBITIONS AND INSTALLATIONS\nBellelay offers rare exhibition settings capable of hosting a wide range of works and formats within an exceptional framework. Remarkable attic spaces, a unique crypt, and magnificent gardens create diverse atmospheres—verticality, penumbra, views, textures—inviting in situ exhibitions, installations, curated routes, and sensitive interventions. The focus is on the fit between work and place, rather than on a neutral “white cube” approach.",
+
+  "CALM, GENEROUS SPACES, AND CONDITIONS FOR CREATION\nThe site’s tranquillity, its generous spaces, and the quality of the surrounding landscape provide precious conditions for inspiration and creation. Bellelay supports long timeframes: research, sketching, rehearsals, prototyping, writing, and production. This approach emphasises working hospitality: rhythms that align with the place, respectful coexistence of uses, and conditions that foster both concentration and exchange.",
+
+  "PROGRAMMING: COHERENCE, QUALITY, AND RESPECT FOR THE SITE\nDeveloping culture and art at Bellelay calls for programming conceived as a balance: managed intensities, appropriate formats, control of flows and impacts, and attention to conservation. The goal is to build a demanding, open, and locally anchored cultural offer that brings together events, exhibitions, and residencies, while preserving what makes the place distinctive: its atmospheres, its silences, and the quality of the experience.",
+
+  "CONCLUSION\nBellelay brings together conditions that rarely coincide: an already active cultural life, remarkable acoustics, singular spaces for exhibitions and installations, and a calm environment conducive to creation. By connecting presentation and production, and by developing programming that respects architecture and landscape, the site can become a reference setting for cultural and artistic projects—ambitious, sensitive, and durably rooted in the place."
+]
         },
         circularity: {
           title: "Circularity",

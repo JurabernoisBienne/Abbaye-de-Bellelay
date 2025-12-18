@@ -278,7 +278,14 @@
           ]
         },
         },
-     
+
+
+      /*contact de*/
+       contact: {
+    title: "Ein Projekt, eine Frage? Sprechen wir darüber.",
+    subtitle: "Kontaktinformationen und Anfahrtsbeschreibung",
+    heading: "Kontaktieren Sie uns"
+  },
 
 
       /*tarifs de*/
@@ -492,6 +499,16 @@
         }
       },
 
+
+      /*contact en*/
+      en: {
+        contact: {
+          title: "A project, a question? Let’s talk about it.",
+          subtitle: "Contact details and access information",
+          heading: "Contact us"
+        },
+
+       
       /*tarifs en*/
 
    tarifs: {

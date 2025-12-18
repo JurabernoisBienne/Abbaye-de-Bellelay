@@ -254,7 +254,44 @@
       },
     },
        
+      /*patrimoine de*/
 
+patrimoine: {
+  title: "Geschichte von Bellelay in Kürze",
+  subtitle: "Eine Zeitleiste der Erinnerung",
+  heading: "Chronologische Zeitleiste"
+},
+
+pat: {
+  p1: {
+    years: "Seit 2022",
+    title: "Umnutzung",
+    brief: "Standort in Entwicklung, mit Fokus auf Bildungs-, Kultur- und Kunstprojekte sowie zirkuläre Innovation."
+  },
+  p2: {
+    years: "1890–2022",
+    title: "Psychiatrische Klinik",
+    brief: "Erwerb des Areals durch den Kanton Bern und Betrieb einer psychiatrischen Klinik."
+  },
+  p3: {
+    years: "1797–1890",
+    title: "Säkularisierung und vielfältige Nutzungen",
+    brief: "Entsakralisierung durch die Besetzung französischer Truppen während der Revolution. Danach Uhrenfabrik, Brauerei, Glashütte und weitere Nutzungen."
+  },
+  p4: {
+    years: "1714–1797",
+    title: "Monastische Blütezeit",
+    brief: "Barocker Wiederaufbau der Abteikirche und Ausbildungsinternat für europäische Adelige."
+  },
+  p5: {
+    years: "1136–1714",
+    title: "Gründung und mittelalterliche Zeit",
+    brief: "Kloster mit Fokus auf Einkehr, Aufnahme von Pilgern und zirkuläre Aktivitäten."
+  }
+},
+
+
+       
       /*surplace de*/
      
       surplace: {
@@ -575,6 +612,43 @@
     },       
        
 
+         /*patrimoine en*/
+
+patrimoine: {
+  title: "A brief history of Bellelay",
+  subtitle: "A timeline of memory",
+  heading: "Chronological timeline"
+},
+
+pat: {
+  p1: {
+    years: "Since 2022",
+    title: "Adaptive reuse",
+    brief: "Site under development, focusing on educational, cultural and artistic projects, as well as circular innovation."
+  },
+  p2: {
+    years: "1890–2022",
+    title: "Psychiatric clinic",
+    brief: "Acquisition of the site by the Canton of Bern and operation of a psychiatric clinic."
+  },
+  p3: {
+    years: "1797–1890",
+    title: "Secularisation and various uses",
+    brief: "Desacralisation following the occupation by French troops during the Revolution. Later: watchmaking factory, brewery, glassworks and other uses."
+  },
+  p4: {
+    years: "1714–1797",
+    title: "Monastic peak",
+    brief: "Baroque reconstruction of the abbey church and a boarding school for the education of European nobles."
+  },
+  p5: {
+    years: "1136–1714",
+    title: "Foundation and medieval period",
+    brief: "Monastery dedicated to retreat, welcoming pilgrims and circular activities."
+  }
+},
+
+       
       /*surplace en*/
 
       surplace : {

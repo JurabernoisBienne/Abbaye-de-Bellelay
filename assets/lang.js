@@ -303,6 +303,11 @@
     dates: "Daten",
     nbpersonnes: "Personenzahl",
     chambres: "Zimmeranzahl",
+    labels: {
+      chambre_indiv: "Einzelzimmer mit eigenem Bad",
+      chambre_double: "Doppelzimmer",
+      chambre_quad: "Vierbettzimmer"
+    },
     typeRepas: "Art der Verpflegung",
     repas: {
       complete: "Vollpension (Frühstück, Mittag-, Abendessen)",
@@ -310,7 +315,7 @@
       unique: "Einzelverpflegung"
     },
   },
-    submit: "Anfrage absenden"
+  submit: "Anfrage absenden"
  },    
 
 /*ENGLISH*/
@@ -509,6 +514,10 @@
     dates: "Dates",
     nbpersonnes: "Number of People",
     chambres: "Number of Rooms",
+    labels: {
+      chambre_indiv: "Single room with private bathroom",
+      chambre_double: "Double room",
+      chambre_quad: "Quadruple room",
     typeRepas: "Meal Type",
     repas: {
       complete: "Full Board (breakfast, lunch, dinner)",

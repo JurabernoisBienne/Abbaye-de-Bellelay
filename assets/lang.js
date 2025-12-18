@@ -194,23 +194,23 @@
        title: "Alles für Ihren Aufenthalt",
        subtitle: "Unterkunft, Verpflegung, Schulungsräume und Natur.",
        heading: "Vor Ort",
-       hebergement: "Unterkunft",
        hebergement: {
+         title: "Unterkunft",
          text: "Komfortable und preiswerte Gemeinschaftsunterkünfte.",
          text2: "Ob für eine Übernachtung oder einen längeren Aufenthalt, wir passen die Konfiguration an Ihre Bedürfnisse an (Einzel-, Doppel- oder Vierbettzimmer).<br><br> Einige Zimmer verfügen über eigene Badezimmer. Das Unterkunftsgebäude, das die Abtei überblickt, umfasst auch Gemeinschaftsräume mit einer kleinen Küche auf jeder Etage."
        },
-       restauration: "Verpflegung",
        restauration: {
+         title: "Verpflegung",
          text: "Buffet mit regionaler Küche.",
          text2: "Individuelle Menüs: von einer Mahlzeit bis zur Vollpension, von leichtem Frühstück bis hin zu opulentem Brunch, von einem schlichten Tellergericht bis zu einem Drei-Gänge-Menü.<br><br> Wir gehen auf Ihre Bedürfnisse (Zeitpläne, spezielle Diäten) ein und stellen lokale Produkte (im Umkreis von 35 km) in den Vordergrund, ergänzt durch eine kreative und zeitgenössische Note."
        },
-       espaces: "Schulungs-/Arbeitsräume",
        espaces: {
+         title: "Schulungs-/Arbeitsräume",
          text: "Flexible und ausgestattete Räume.",
          text2: "Für 10 bis 250 Personen: mit mehreren Tagungsräumen, zahlreichen Klassenzimmern, Werkstätten und informellen Innen- und Außenbereichen sind Gruppen jeglicher Art willkommen.<br><br> Audiovisuelle Ausrüstung ist vor Ort verfügbar, und das Mobiliar kann nach Ihren Bedürfnissen angepasst werden."
        },
-       alentours: "Umgebung",
        alentours: {
+         title: "Umgebung",
          text: "Landschaft, Wanderungen und kulturelles Erbe in der Umgebung.",
          text2: "Empfohlene Spazier- oder Fahrradrouten, historische Sehenswürdigkeiten und Tagesausflugsvorschläge.<br><br> Möglichkeiten für Führungen durch die Abteikirche oder das Haus des Tête de Moine sowie für Outdoor-Team-Building-Aktivitäten.<br><br> Unser Team steht Ihnen zur Verfügung, um Sie zu beraten und einen Teil der Logistik zu übernehmen."
        },
@@ -379,23 +379,23 @@
        title: "Everything for your stay",
        subtitle: "Accommodation, catering, training spaces, and natural surroundings.",
        heading: "On-site",
-       hebergement: "Accommodation",
        hebergement: {
+         title: "Accommodation",
          text: "Comfortable and affordable group accommodations.",
          text2: "Whether for a single night or an extended stay, we adapt rooms to your needs (single, double, or quadruple rooms).<br><br>Some rooms include private bathrooms. The accommodation building overlooking the abbey also includes communal areas with small kitchens on each floor."
        },
-       restauration: "Catering",
        restauration: {
+         title: "Catering",
          text: "Local cuisine served buffet-style.",
          text2: "Custom menus: from one meal to full board, from light breakfast to elaborate brunch, and from simple dishes to three-course meals.<br><br>We adapt our services to your needs (timings, special diets), highlighting local products (within 35 km), with a creative and contemporary touch."
        },
-       espaces: "Training or workspaces",
        espaces: {
+         title: "Training or workspaces",
          text: "Flexible and equipped rooms.",
          text2: "From 10 to 250 people: with several plenary rooms, numerous classrooms, workshops, and informal indoor and outdoor spaces, all types of groups are welcome.<br><br>Audio-visual equipment is available on-site, and the furniture can be configured based on your needs."
        },
-       alentours: "Surroundings",
        alentours: {
+         title: "Surroundings",
          text: "Scenery, hikes, and heritage sites nearby.",
          text2: "Recommended walking or cycling routes, historic landmarks, and day trip suggestions.<br><br>Opportunities for guided tours of the Abbey Church or the Tête de Moine House, as well as outdoor team-building activities.<br><br>Our team is available to advise and assist with a portion of the logistics."
        }

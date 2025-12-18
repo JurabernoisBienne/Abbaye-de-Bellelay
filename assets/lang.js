@@ -377,12 +377,7 @@
 
       surplace : {
        title: "Everything for your stay",
-       subtitle: "Accommodation, catering, training spaces, and natural surroundings."
-     },
-     title: {
-       surplace: "On-site — Abbaye de Bellelay"
-     },
-     surplace: {
+       subtitle: "Accommodation, catering, training spaces, and natural surroundings.",
        heading: "On-site",
        hebergement: "Accommodation",
        hebergement: {
@@ -405,6 +400,11 @@
          text2: "Recommended walking or cycling routes, historic landmarks, and day trip suggestions.<br><br>Opportunities for guided tours of the Abbey Church or the Tête de Moine House, as well as outdoor team-building activities.<br><br>Our team is available to advise and assist with a portion of the logistics."
        }
      },
+
+     title: {
+       surplace: "On-site — Abbaye de Bellelay"
+     },
+
        
        /* disciplines.en */
 

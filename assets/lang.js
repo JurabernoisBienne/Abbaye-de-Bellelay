@@ -34,9 +34,24 @@
           title: "Architecture",
           img: "assets/img/discipline-architecture.jpg",
           paragraphs: [
-            "À Bellelay l’architecture étudie le rapport entre formes historiques et interventions contemporaines : relevés, analyses matériaux, et discussions sur la conservation.",
-            "Les ateliers combinent pratique et réflexion : relevés, maquettes, propositions de réaffectation et restitution publique.",
-            "Les résidences favorisent l’expérimentation in-situ et la production d’outils documentaires liés au patrimoine bâti."
+           "INTRODUCTION\nBellelay est un terrain d’étude architectural rare : un ensemble bâti étendu, historiquement stratifié, et porteur d’une forte valeur patrimoniale. La coexistence de bâtiments et d’éléments construits issus de périodes différentes, conjuguée à des exigences contemporaines d’usage et de gestion, en fait un cas d’école pour analyser, documenter et transformer un site sans en altérer la cohérence.",
+         
+           "AXE 1 — PATRIMOINE ET PROTECTIONS : DOCTRINE D’INTERVENTION\nLes protections et la valeur patrimoniale imposent une méthode : diagnostic, compatibilité des matériaux, réversibilité et lisibilité des interventions. Il s’agit de concevoir des transformations contemporaines justes, discrètes et argumentées, capables d’intégrer les contraintes actuelles (sécurité, accessibilité, confort) sans banaliser l’existant.",
+         
+           "AXE 2 — DIAGNOSTIC CONSTRUCTIF : MATÉRIALITÉS ET PATHOLOGIES\nBellelay permet une analyse fine des systèmes constructifs (maçonneries, charpentes, enveloppes, menuiseries) et de leurs vulnérabilités : humidité, vieillissement, reprises, points singuliers. L’enjeu est de relier l’auscultation à des choix de projet robustes, réparables et durables.",
+         
+           "AXE 3 — GRANDEUR ET COMPLEXITÉ : PROGRAMMATION ET PHASAGE\nLa multiplicité des bâtiments et des séquences d’espaces appelle une programmation par unités fonctionnelles et par temporalités. On y travaille les compatibilités d’usage, les flux, la logistique et un phasage réaliste, pour permettre une évolution progressive du site sans rupture d’exploitation.",
+         
+           "AXE 4 — ESPACES COMMUNS : MUTUALISATION ET GOUVERNANCE\nBellelay pose un enjeu central de gestion : organiser des espaces communs pour une pluralité d’utilisateurs, avec des règles d’usage traduites en spatialité. Gradients public/privé, zones tampon, accueil, stockage, circulation et sécurité doivent soutenir une mutualisation efficace et pérenne.",
+         
+           "AXE 5 — AMÉNAGEMENT DU TERRITOIRE ET RÉALITÉS DU TERRAIN\nLe projet s’inscrit dans des contraintes territoriales concrètes : accès, livraisons, stationnement, réseaux, topographie, paysage et voisinage. Cet axe étudie l’interface entre bâti et territoire pour concevoir des solutions cohérentes, sobres et adaptées au contexte.",
+         
+           "AXE 6 — CIRCULARITÉ ET ÉCOSYSTÈME DU SITE\nLe site offre un cadre pertinent pour une approche circulaire : réemploi, dépose sélective, maintenance et boucles locales de matériaux. Les extérieurs peuvent contribuer à un écosystème complet — loisirs, production, gestion écologique — en cohérence avec les usages et la gouvernance du lieu.",
+         
+           "AXE 7 — USAGES CONTEMPORAINS ET INTÉGRATION DES DISPOSITIFS\nRésidences, travail, événements et accueil exigent confort et mise aux normes (acoustique, thermique, qualité de l’air, accessibilité, incendie). Sur un site patrimonial, ces dispositifs doivent être intégrés avec tact : interventions minimales, solutions réversibles et respect de la lecture architecturale.",
+         
+           "CONCLUSION\nTravailler sur Bellelay, c’est aborder l’architecture comme une discipline de précision : comprendre un ensemble complexe, protéger ce qui fait sa valeur, et organiser sa transformation pour des usages multiples et durables. L’ambition est de produire des scénarios d’intervention sobres, réversibles et opérationnels, capables de renforcer la cohérence du site tout en ouvrant de nouvelles possibilités d’occupation, de mutualisation et d’expérimentation."
+         ]
           ]
         },
         amenagement: {

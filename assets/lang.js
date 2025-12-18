@@ -190,7 +190,7 @@
 
       /*surplace de*/
 
-      hero: {
+      surplace: {
        title: "Alles für Ihren Aufenthalt",
        subtitle: "Unterkunft, Verpflegung, Schulungsräume und Natur."
      },
@@ -376,7 +376,7 @@
 
       /*surplace en*/
 
-      hero: {
+      surplace : {
        title: "Everything for your stay",
        subtitle: "Accommodation, catering, training spaces, and natural surroundings."
      },

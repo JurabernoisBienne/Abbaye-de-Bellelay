@@ -237,9 +237,23 @@
           title: "Architektur",
           img: "assets/img/discipline-architecture.jpg",
           paragraphs: [
-            "In Bellelay untersucht die Architektur das Verhältnis von historischer Form und zeitgenössischer Intervention: Vermessung, Materialanalyse und Erhaltungsdiskurse.",
-            "Workshops verbinden Praxis und Theorie: Vermessung, Modellbau, Umnutzungsvorschläge und öffentliche Präsentationen.",
-            "Residencies ermöglichen ortsbezogene Experimente und die Erstellung dokumentarischer Werkzeuge zum gebauten Erbe."
+"EINLEITUNG\nBellelay ist ein seltenes architektonisches Untersuchungsfeld: ein weitläufiges, historisch geschichtetes Bauensemble von hohem denkmalpflegerischem Wert. Das Nebeneinander von Gebäuden und Bauteilen aus unterschiedlichen Epochen, verbunden mit heutigen Anforderungen an Nutzung und Betrieb, macht den Ort zu einem Referenzfall, um ein Ensemble zu analysieren, zu dokumentieren und weiterzuentwickeln, ohne seine Kohärenz zu beeinträchtigen.",
+
+  "ACHSE 1 — DENKMALWERT UND SCHUTZSTATUS: INTERVENTIONSLEITBILD\nSchutzbestimmungen und Denkmalwert erfordern eine klare Methodik: Diagnose, Materialverträglichkeit, Reversibilität und Lesbarkeit der Eingriffe. Ziel sind präzise, zurückhaltende und begründete zeitgenössische Transformationen, die aktuelle Anforderungen (Sicherheit, Barrierefreiheit, Komfort) integrieren, ohne das Bestehende zu trivialisieren.",
+
+  "ACHSE 2 — BAUTECHNISCHE DIAGNOSE: MATERIALITÄTEN UND SCHADENSBILDER\nBellelay ermöglicht eine differenzierte Analyse der Konstruktionen (Mauerwerk, Tragwerke und Dachstühle, Gebäudehülle, Fenster und Türen) sowie ihrer Vulnerabilitäten: Feuchtigkeit, Alterung, Eingriffe und Reparaturen, kritische Detailpunkte. Entscheidend ist, die Befundaufnahme mit robusten, reparierbaren und dauerhaften Projektentscheidungen zu verknüpfen.",
+
+  "ACHSE 3 — GRÖSSE UND KOMPLEXITÄT: PROGRAMMIERUNG UND ETAPPIERUNG\nDie Vielzahl der Gebäude und Raumsequenzen verlangt eine Programmierung nach Funktionsbausteinen und zeitlichen Etappen. Im Fokus stehen Nutzungskompatibilitäten, Wege- und Betriebsabläufe, Logistik sowie eine realistische Etappierung, um eine schrittweise Entwicklung des Areals ohne Unterbruch des Betriebs zu ermöglichen.",
+
+  "ACHSE 4 — GEMEINSCHAFTSRÄUME: GEMEINSAME NUTZUNG UND GOVERNANCE\nBellelay stellt eine zentrale Betriebsfrage: Gemeinschaftsflächen für eine Vielzahl von Nutzerinnen und Nutzern zu organisieren und Nutzungsregeln räumlich zu übersetzen. Öffentlich/privat-Gradienten, Pufferzonen, Empfang, Lagerung, Zirkulation und Sicherheit müssen eine effiziente und langfristig tragfähige gemeinsame Nutzung unterstützen.",
+
+  "ACHSE 5 — RAUMPLANUNG UND ÖRTLICHE REALITÄTEN\nDas Projekt ist in konkrete räumliche Rahmenbedingungen eingebettet: Erschliessung, Anlieferung, Parkierung, Infrastrukturnetze, Topografie, Landschaft und Nachbarschaft. Diese Achse untersucht die Schnittstelle zwischen Bauensemble und Territorium, um kohärente, zurückhaltende und kontextgerechte Lösungen zu entwickeln.",
+
+  "ACHSE 6 — ZIRKULARITÄT UND ÖKOSYSTEM DES AREALS\nDer Ort bietet einen geeigneten Rahmen für eine zirkuläre Herangehensweise: Wiederverwendung, selektiver Rückbau, Instandhaltung und lokale Materialkreisläufe. Aussenräume können zu einem ganzheitlichen Ökosystem beitragen — Freizeit, Produktion, ökologische Bewirtschaftung — im Einklang mit den Nutzungen und der Governance des Ortes.",
+
+  "ACHSE 7 — ZEITGENÖSSISCHE NUTZUNGEN UND INTEGRATION DER SYSTEME\nResidenzen, Arbeit, Veranstaltungen und Empfang erfordern Komfort und Normenkonformität (Akustik, Thermik, Luftqualität, Barrierefreiheit, Brandschutz). In einem denkmalgeschützten Kontext müssen diese Systeme mit Feingefühl integriert werden: minimale Eingriffe, reversible Lösungen und Respekt vor der architektonischen Lesbarkeit.",
+
+  "SCHLUSSFOLGERUNG\nAn Bellelay zu arbeiten bedeutet, Architektur als Disziplin der Präzision zu verstehen: ein komplexes Ensemble lesen, das Wertvolle schützen und seine Transformation für vielfältige und dauerhafte Nutzungen organisieren. Ziel ist es, zurückhaltende, reversible und betriebstaugliche Interventionsszenarien zu entwickeln, die die Kohärenz des Ortes stärken und zugleich neue Möglichkeiten der Nutzung, gemeinsamen Bewirtschaftung und Erprobung eröffnen."
           ]
         },
         amenagement: {
@@ -469,10 +483,24 @@
           title: "Architecture",
           img: "assets/img/discipline-architecture.jpg",
           paragraphs: [
-            "At Bellelay architecture explores the relation between historic form and contemporary interventions: surveys, material analysis and conservation debates.",
-            "Workshops mix practice and reflection: surveying, model-making, adaptive-reuse proposals and public outcomes.",
-            "Residencies support on-site experimentation and production of documentary tools linked to the built heritage."
-          ]
+"INTRODUCTION\nBellelay is a rare architectural field of study: an extensive, historically layered built ensemble with significant heritage value. The coexistence of buildings and components from different periods, combined with contemporary requirements for use and management, makes it an exemplary case for analysing, documenting, and transforming a site without compromising its overall coherence.",
+
+  "AXIS 1 — HERITAGE VALUE AND PROTECTIONS: AN INTERVENTION DOCTRINE\nHeritage protections and cultural value call for a clear methodology: diagnosis, material compatibility, reversibility, and legibility of interventions. The goal is to design accurate, restrained, and well-argued contemporary transformations that integrate current constraints (safety, accessibility, comfort) without trivialising the existing fabric.",
+
+  "AXIS 2 — BUILDING DIAGNOSIS: MATERIALS AND PATHOLOGIES\nBellelay enables a precise analysis of construction systems (masonry, roof and timber structures, envelope, joinery) and their vulnerabilities: moisture, ageing, alterations and repairs, critical details. The challenge is to connect on-site assessment to robust, repairable, and durable design decisions.",
+
+  "AXIS 3 — SCALE AND COMPLEXITY: PROGRAMMING AND PHASING\nThe multiplicity of buildings and spatial sequences requires programming by functional units and time-based phases. Work focuses on use compatibility, flows, operations and logistics, and a realistic phasing strategy, enabling gradual evolution of the site without disrupting ongoing operation.",
+
+  "AXIS 4 — SHARED SPACES: RESOURCE SHARING AND GOVERNANCE\nBellelay raises a central operational issue: organising shared spaces for a diversity of users, with rules of use translated into spatial terms. Public/private gradients, buffer zones, reception, storage, circulation, and safety must support efficient and long-term shared use.",
+
+  "AXIS 5 — SPATIAL PLANNING AND ON-THE-GROUND REALITIES\nThe project is embedded in tangible territorial constraints: access, deliveries, parking, utilities and networks, topography, landscape, and neighbouring contexts. This axis examines the interface between the built ensemble and its territory to develop coherent, understated, and context-responsive solutions.",
+
+  "AXIS 6 — CIRCULARITY AND THE SITE ECOSYSTEM\nThe site offers a strong framework for a circular approach: reuse, selective deconstruction, maintenance, and local material loops. Outdoor spaces can contribute to a complete ecosystem—leisure, production, ecological management—aligned with uses and the site’s governance.",
+
+  "AXIS 7 — CONTEMPORARY USES AND INTEGRATION OF SYSTEMS\nResidencies, work, events, and reception require comfort and compliance (acoustics, thermal performance, indoor air quality, accessibility, fire safety). In a heritage context, these systems must be integrated with care: minimal interventions, reversible solutions, and respect for architectural legibility.",
+
+  "CONCLUSION\nWorking on Bellelay means approaching architecture as a discipline of precision: understanding a complex ensemble, protecting what gives it value, and organising its transformation for multiple and lasting uses. The ambition is to produce restrained, reversible, and operational intervention scenarios that reinforce the site’s coherence while opening new possibilities for occupation, shared use, and experimentation."
+]
         },
         amenagement: {
           title: "Spatial planning",

@@ -518,6 +518,7 @@
       chambre_indiv: "Single room with private bathroom",
       chambre_double: "Double room",
       chambre_quad: "Quadruple room",
+    },
     typeRepas: "Meal Type",
     repas: {
       complete: "Full Board (breakfast, lunch, dinner)",

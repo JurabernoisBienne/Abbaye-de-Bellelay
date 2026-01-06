@@ -200,6 +200,13 @@ body{
   box-shadow:0 10px 24px rgba(16,24,40,0.06);
 }
 
+.subtitle.surplace {
+  font-size: 1.1rem; /* Taille légèrement supérieure au standard */
+  font-style: italic;
+  color: var(--muted); /* Couleur déjà utilisée pour la lisibilité */
+  line-height: 1.6; /* Ligne confortable pour le texte */
+}
+
 /* DISCIPLINE */
 .disciplines-page{
   display:flex;

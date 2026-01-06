@@ -506,7 +506,7 @@ pat: {
       /*contact de*/
    contact: {
     title: "Ein Projekt, eine Frage? Sprechen wir darüber.",
-    subtitle: "Kontaktinformationen und Anfahrtsbeschreibung",
+    subtitle: "Kontakt und Anfahrt",
     heading: "Kontaktieren Sie uns"
   },
 
@@ -861,7 +861,7 @@ pat: {
       /*contact en*/
        contact: {
           title: "A project, a question? Let’s talk about it.",
-          subtitle: "Contact details and access information",
+          subtitle: "Contact and access",
           heading: "Contact us"
         },
 

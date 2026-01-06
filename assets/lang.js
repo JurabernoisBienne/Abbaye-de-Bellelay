@@ -240,7 +240,7 @@
       seminars: {
         title: "Seminare und Tagungen",
         text: "Räumlichkeiten für Konferenzen, Seminare, Kongresse oder Preisverleihungen.",
-        text2: "Vollständige Organisation, einschließlich Logistik und Dienstleistungen für die Teilnehmer.",
+        text2: "Die großzügigen Außenbereiche, Verkehrsflächen und Säle ermöglichen es, mehrere hundert Personen komfortabel aufzunehmen.",
       },
       residences: {
         title: "Künstlerische oder Wissenschaftliche Residenzen",
@@ -597,7 +597,7 @@ pat: {
       seminars: {
         title: "Seminars and Conferences",
         text: "Spaces for conferences, seminars, congresses, or award ceremonies.",
-        text2: "Full organization, including logistics and services for participants.",
+        text2: "The generous outdoor areas, circulation spaces, and halls can comfortably accommodate several hundred people.",
       },
       residences: {
         title: "Artistic or Scientific Residencies",

@@ -259,7 +259,7 @@
 patrimoine: {
   title: "Geschichte von Bellelay in Kürze",
   subtitle: "Eine Zeitleiste der Erinnerung",
-  heading: "Chronologische Zeitleiste"
+  heading: "Chronologie"
 },
 
 pat: {
@@ -617,7 +617,7 @@ pat: {
 patrimoine: {
   title: "A brief history of Bellelay",
   subtitle: "A timeline of memory",
-  heading: "Chronological timeline"
+  heading: "Chronology"
 },
 
 pat: {

@@ -311,7 +311,7 @@ pat: {
        espaces: {
          title: "Schulungs-/Arbeitsräume",
          text: "Flexible und ausgestattete Räume.",
-         text2: "Für 10 bis 250 Personen: mit mehreren Tagungsräumen, zahlreichen Klassenzimmern, Werkstätten und informellen Innen- und Außenbereichen sind Gruppen jeglicher Art willkommen.<br><br> Audiovisuelle Ausrüstung ist vor Ort verfügbar, und das Mobiliar kann nach Ihren Bedürfnissen angepasst werden.<br><br>Über die Einrichtung hinaus steht Ihnen während Ihres gesamten Aufenthalts jederzeit technischer Support zur Verfügung, um auf Ihre Bedürfnisse einzugehen."
+         text2: "Für 10 bis 150 Personen: mit mehreren Tagungsräumen, zahlreichen Klassenzimmern, Werkstätten und informellen Innen- und Außenbereichen sind Gruppen jeglicher Art willkommen.<br><br> Audiovisuelle Ausrüstung ist vor Ort verfügbar, und das Mobiliar kann nach Ihren Bedürfnissen angepasst werden.<br><br>Über die Einrichtung hinaus steht Ihnen während Ihres gesamten Aufenthalts jederzeit technischer Support zur Verfügung, um auf Ihre Bedürfnisse einzugehen."
        },
        alentours: {
          title: "Umgebung",
@@ -668,7 +668,7 @@ pat: {
        espaces: {
          title: "Training or workspaces",
          text: "Flexible and equipped rooms.",
-         text2: "From 10 to 250 people: with several plenary rooms, numerous classrooms, workshops, and informal indoor and outdoor spaces, all types of groups are welcome.<br><br>Audio-visual equipment is available on-site, and the furniture can be configured based on your needs.<br><br>Beyond the setup, technical support is available at all times to meet your needs throughout your stay."
+         text2: "From 10 to 150 people: with several plenary rooms, numerous classrooms, workshops, and informal indoor and outdoor spaces, all types of groups are welcome.<br><br>Audio-visual equipment is available on-site, and the furniture can be configured based on your needs.<br><br>Beyond the setup, technical support is available at all times to meet your needs throughout your stay."
        },
        alentours: {
          title: "Surroundings",

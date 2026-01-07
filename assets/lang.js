@@ -16,7 +16,7 @@
         patrimoine: "Patrimoine",
         contact: "Contact"
       },
-      hero: { title: "Un lieu pour penser, créer et se rencontrer", subtitle: "Programmes culturels, résidences, formations et événements." },
+      hero: { title: "Un lieu de Formation et de Culture", subtitle: "pour apprendre, créer ou partager" },
       title: {
         programmes: "Programmes — Abbaye de Bellelay",
         surplace: "Sur place — Abbaye de Bellelay",
@@ -206,7 +206,7 @@
         patrimoine: "Erbe",
         contact: "Kontakt"
       },
-      hero: { title: "Ein Ort zum Denken, Schaffen und Begegnen", subtitle: "Kulturelle Programme, Residenzen, Ausbildungen und Veranstaltungen." },
+      hero: { title: "Ein Ort für Bildung und Kultur", subtitle: "zum Lernen, Gestalten und Teilen" },
       title: {
         programmes: "Programme — Abbaye de Bellelay",
         surplace: "Vor Ort — Abbaye de Bellelay",
@@ -562,7 +562,7 @@ pat: {
         patrimoine: "Heritage",
         contact: "Contact"
       },
-      hero: { title: "A place to think, create and meet", subtitle: "Cultural programmes, residencies, trainings and events." },
+      hero: { title: "A place for Education and Culture", subtitle: "to learn, create, or share" },
       title: {
         programmes: "Programs — Abbaye de Bellelay",
         surplace: "On-site — Abbaye de Bellelay",

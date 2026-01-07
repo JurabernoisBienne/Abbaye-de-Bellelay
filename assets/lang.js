@@ -250,7 +250,7 @@
       expositions: {
         title: "Ausstellungen und Konzerte",
         text: "Öffentliche Veranstaltungen und kulturelle Abende, sowohl drinnen als auch draußen.",
-        text2: "Vernissagen, Konzerte, Ausstellungen, Treffen und öffentliche Vermittlungen das ganze Jahr über. Die Website der '<a href="https://www.abbatialebellelay.ch/" target="_blank">Fondation de l\'Abbatiale de Bellelay</a>' bietet ein reichhaltiges Kulturprogramm in der Abteikirche.",
+        text2: "Vernissagen, Konzerte, Ausstellungen, Treffen und öffentliche Vermittlungen das ganze Jahr über. Die Website der "<a href="https://www.abbatialebellelay.ch/" target="_blank">Fondation de l\'Abbatiale de Bellelay</a>" bietet ein reichhaltiges Kulturprogramm in der Abteikirche.",
       },
     },
        
@@ -607,7 +607,7 @@ pat: {
       expositions: {
         title: "Exhibitions and Concerts",
         text: "Public events and cultural evenings, both indoors and outdoors.",
-        text2: "Openings, concerts, exhibitions, meetings, and public mediations throughout the year. The website of the '<a href="https://www.abbatialebellelay.ch/" target="_blank">Fondation de l\'Abbatiale de Bellelay</a>' offers a rich cultural program within the Abbey Church.",
+        text2: "Openings, concerts, exhibitions, meetings, and public mediations throughout the year. The website of the "<a href="https://www.abbatialebellelay.ch/" target="_blank">Fondation de l\'Abbatiale de Bellelay</a>" offers a rich cultural program within the Abbey Church.",
       }
     },       
        

@@ -308,7 +308,7 @@ function onDocFocus(e){
         }
         body += `\nTarif indicatif: 90.- à 130.- / personne / jour\n`;
 
-        const mailto = `mailto:contact@abbayebellelay.example?subject=${subject}&body=${encodeURIComponent(body)}`;
+        const mailto = `mailto:denis.beer@jb-b.ch?subject=${subject}&body=${encodeURIComponent(body)}`;
         // open mailto
         window.location.href = mailto;
         // show confirmation message

@@ -943,19 +943,23 @@ pat: {
 
    
 function applyLang(lang) {
-  
-   
-   // Gestion spécifique pour la langue "fr"
+
+     // Gestion spécifique pour la langue "fr"
   if (lang === 'fr') {
     document.querySelectorAll('[data-i18n]').forEach(el => {
-      // Restaurer le contenu par défaut à partir de l'attribut 'data-original'
+      // Sauvegarder le contenu par défaut dans "data-original" (une seule fois)
+      if (!el.hasAttribute('data-original')) {
+        el.setAttribute('data-original', el.textContent.trim());
+      }
+
+      // Restaurer le contenu par défaut à partir de l'attribut "data-original"
       const originalContent = el.getAttribute('data-original');
       if (originalContent !== null) {
         el.textContent = originalContent;
       }
     });
 
-    // Titre de la page (français)
+    // Mise à jour du titre pour le français
     const path = location.pathname.split('/').pop();
     const map = {
       'programmes.html': 'programmes',
@@ -971,11 +975,12 @@ function applyLang(lang) {
 
     // Mettre à jour la valeur du sélecteur de langue
     const sel = document.getElementById('lang');
-    if(sel) sel.value = lang;
+    if (sel) sel.value = lang;
 
     return; // Quitter ici, aucun traitement supplémentaire requis pour le français
   }
    
+// Gestion pour les autres langues (traductions dynamiques avec "translations" et "lookup")
    
    const dict = translations[lang] || translations.fr;
 
@@ -993,7 +998,7 @@ function applyLang(lang) {
     }
   });
 
-    // update title mapping
+  // Mise à jour du titre pour les autres langues
     const path = location.pathname.split('/').pop();
     const map = {
       'programmes.html': 'programmes',
@@ -1009,6 +1014,7 @@ function applyLang(lang) {
       document.title = dict.title[key];
     }
 
+    // Mettre à jour les liens de navigation avec le paramètre "lang"
     const sel = document.getElementById('lang');
     if(sel) sel.value = lang;
 
@@ -1023,6 +1029,8 @@ function applyLang(lang) {
     });
   }
 
+
+   
   function updateUrlLangParam(newLang){
     try{
       const u = new URL(location.href);

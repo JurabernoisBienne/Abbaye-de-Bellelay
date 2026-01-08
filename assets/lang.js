@@ -250,7 +250,7 @@
       expositions: {
         title: "Ausstellungen und Konzerte",
         text: "Öffentliche Veranstaltungen und kulturelle Abende, sowohl drinnen als auch draußen.",
-        text2: "Vernissagen, Konzerte, Ausstellungen, Treffen und öffentliche Vermittlungen das ganze Jahr über. <a href='https://www.architecture.com' target='_blank'>l'architecture</a>",
+        text2: "Vernissagen, Konzerte, Ausstellungen, Treffen und öffentliche Vermittlungen das ganze Jahr über. Auf der Website der <a href='https://www.abbatialebellelay.ch/' target='_blank'>Fondation de l'Abbatiale de Bellelay</a> wird ein vielfältiges Kulturprogramm in der Abbatiale vorgestellt",
       },
     },
        

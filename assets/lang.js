@@ -943,7 +943,41 @@ pat: {
 
    
 function applyLang(lang) {
-  const dict = translations[lang] || translations.fr;
+  
+   
+   // Gestion spécifique pour la langue "fr"
+  if (lang === 'fr') {
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      // Restaurer le contenu par défaut à partir de l'attribut 'data-original'
+      const originalContent = el.getAttribute('data-original');
+      if (originalContent !== null) {
+        el.textContent = originalContent;
+      }
+    });
+
+    // Titre de la page (français)
+    const path = location.pathname.split('/').pop();
+    const map = {
+      'programmes.html': 'programmes',
+      'surplace.html': 'surplace',
+      'disciplines.html': 'disciplines',
+      'tarifs.html': 'tarifs',
+      'patrimoine.html': 'patrimoine',
+      'contact.html': 'contact',
+      '': 'programmes'
+    };
+    const key = map[path] || null;
+    document.title = key ? key.charAt(0).toUpperCase() + key.slice(1) : document.title;
+
+    // Mettre à jour la valeur du sélecteur de langue
+    const sel = document.getElementById('lang');
+    if(sel) sel.value = lang;
+
+    return; // Quitter ici, aucun traitement supplémentaire requis pour le français
+  }
+   
+   
+   const dict = translations[lang] || translations.fr;
 
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.getAttribute('data-i18n');

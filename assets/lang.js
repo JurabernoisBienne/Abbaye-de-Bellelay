@@ -943,45 +943,6 @@ pat: {
 
    
 function applyLang(lang) {
-
-     // Gestion spécifique pour la langue "fr"
-  if (lang === 'fr') {
-    document.querySelectorAll('[data-i18n]').forEach(el => {
-      // Sauvegarder le contenu par défaut dans "data-original" (une seule fois)
-      if (!el.hasAttribute('data-original')) {
-        el.setAttribute('data-original', el.textContent.trim());
-      }
-
-      // Restaurer le contenu par défaut à partir de l'attribut "data-original"
-      const originalContent = el.getAttribute('data-original');
-      if (originalContent !== null) {
-        el.textContent = originalContent;
-      }
-    });
-
-    // Mise à jour du titre pour le français
-    const path = location.pathname.split('/').pop();
-    const map = {
-      'programmes.html': 'programmes',
-      'surplace.html': 'surplace',
-      'disciplines.html': 'disciplines',
-      'tarifs.html': 'tarifs',
-      'patrimoine.html': 'patrimoine',
-      'contact.html': 'contact',
-      '': 'programmes'
-    };
-    const key = map[path] || null;
-    document.title = key ? key.charAt(0).toUpperCase() + key.slice(1) : document.title;
-
-    // Mettre à jour la valeur du sélecteur de langue
-    const sel = document.getElementById('lang');
-    if (sel) sel.value = lang;
-
-    return; // Quitter ici, aucun traitement supplémentaire requis pour le français
-  }
-   
-// Gestion pour les autres langues (traductions dynamiques avec "translations" et "lookup")
-   
    const dict = translations[lang] || translations.fr;
 
   document.querySelectorAll('[data-i18n]').forEach(el => {
@@ -998,7 +959,7 @@ function applyLang(lang) {
     }
   });
 
-  // Mise à jour du titre pour les autres langues
+  // Mise à jour les titres
     const path = location.pathname.split('/').pop();
     const map = {
       'programmes.html': 'programmes',

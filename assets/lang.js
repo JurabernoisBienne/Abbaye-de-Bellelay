@@ -250,7 +250,7 @@
       expositions: {
         title: "Ausstellungen und Konzerte",
         text: "Öffentliche Veranstaltungen und kulturelle Abende, sowohl drinnen als auch draußen.",
-        text2: "Vernissagen, Konzerte, Ausstellungen, Treffen und öffentliche Vermittlungen das ganze Jahr über.",
+        text2: "Vernissagen, Konzerte, Ausstellungen, Treffen und öffentliche Vermittlungen das ganze Jahr über. <a href='https://www.architecture.com' target='_blank'>l'architecture</a>",
       },
     },
        

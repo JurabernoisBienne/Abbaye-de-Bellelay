@@ -219,23 +219,23 @@
 
       /*programmes de*/
    programmes: {
-      heading: "Unsere Programme",
+      heading: "Ihre möglichen Aufenthaltsformate",
    },  
    programs: {
       immersive: {
         title: "Immersive Wochen vor Ort",
-        text: "Themenaufenthalte mit Workshops und Besichtigungen.",
-        text2: "Praktische Vertiefungen durch die Untersuchung ortsbezogener Attribute mit öffentlichen Präsentationen am Ende des Aufenthalts.",
+        text: "Der Zugang zu zahlreichen Gebäuden und Außenbereichen bietet eine Vielzahl von Untersuchungs- und Studienobjekten.",
+        text2: "Zahlreiche Möglichkeiten zur praktischen Vertiefung durch die Untersuchung von standortbezogenen Merkmalen oder Elementen der näheren Umgebung, mit öffentlichen Präsentationen der Ergebnisse am Ende des Aufenthalts.",
       },
       summer: {
         title: "Sommerkurse",
-        text: "Intensivkurse von ein bis drei Wochen.",
-        text2: "Praxisorientierte Module, externe Referenten oder kollaborative Arbeitssitzungen. Mit Möglichkeiten für Outdoor-Aktivitäten und Sightseeing.",
+        text: "Dienstleistungen und Orte von Interesse, die sich besonders für intensive Ausbildungsformate von ein bis drei Wochen eignen.",
+        text2: "Über die Arbeitsräume und die Vollpension hinaus bietet die natürliche Umgebung sowie die nahegelegenen Orte von Interesse vielfältige und attraktive Möglichkeiten für begleitende Aktivitäten.",
       },
       ateliers: {
         title: "Workshops und Projekte",
-        text: "Partizipative Projekte und praktische Workshops.",
-        text2: "Prototyping, Experimente oder Schulungen in speziellen Handwerkswerkstätten.",
+        text: "PArbeitsräume, die sich für partizipative Projekte und praxisorientierte Workshops eignen.",
+        text2: "Räume, die eher Werkstätten als klassischen Unterrichtsräumen entsprechen und sich für experimentelle Tätigkeiten oder handwerkliche bzw. künstlerische Produktionen eignen.",
       },
       seminars: {
         title: "Seminare und Tagungen",
@@ -575,24 +575,24 @@ pat: {
        /* programmes.en */ 
 
     programmes: {
-      heading: "Our programs",
+      heading: "Your possible Stay Formats",
     },  
        
     programs: {
       immersive: {
         title: "Immersive in-situ weeks",
-        text: "Thematic stays with workshops and visits.",
-        text2: "Practical deep dives through the study of site-related attributes, with public presentations at the end of the stay.",
+        text: "Access to numerous buildings and outdoor areas offers a wide range of study and research subjects.",
+        text2: "Many opportunities for in-depth practical learning through the study of site-specific features or elements of the surrounding area, with public presentations of outcomes at the end of the stay.",
       },
       summer: {
         title: "Summer schools",
-        text: "Intensive courses from one to three weeks.",
-        text2: "Practice modules, external speakers, or collaborative work sessions. With opportunities for outdoor activities and sightseeing.",
+        text: "Services and points of interest that are well suited to intensive training programs lasting from one to three weeks.",
+        text2: "Beyond workspaces and full-board accommodation, the natural environment and nearby places of interest provide attractive opportunities for complementary activities.",
       },
       ateliers: {
         title: "Workshops and Projects",
-        text: "Participatory projects and practical workshops.",
-        text2: "Prototyping, experimentation, or training in dedicated artisan workshops.",
+        text: "Workspaces adapted to participatory projects and hands-on workshops.",
+        text2: "Spaces that are closer to workshops than traditional classrooms, suitable for experimental activities or for artisanal and artistic production.",
       },
       seminars: {
         title: "Seminars and Conferences",

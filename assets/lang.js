@@ -316,7 +316,7 @@ pat: {
        alentours: {
          title: "Umgebung",
          text: "Landschaft, Wanderungen und kulturelles Erbe in der Umgebung.",
-         text2: "Empfohlene Routen zu Fuss oder mit dem Fahrrad, historische Sehenswürdigkeiten und Vorschläge für Tagesausflüge.<br><br>Möglichkeiten für <a href='https://www.j3l.ch/fr/P32737/a-faire/culture-musees/visite-guidee/visite-guidee-abbatiale-de-bellelay/' target='_blank'>individuelle oder geführte Besichtigungen der Abbatiale</a> oder <a href='https://maisondelatetedemoine.ch/fr/musee' target='_blank'>des Maison de la Tête de Moine</a>.<br><br>Das Team von <a href='https://www.j3l.ch/fr/Z10490/grand-chasseral-tourisme' target='_blank'>Grand Chasseral Tourisme</a> steht Ihnen gerne beratend zur Verfügung."
+         text2: "Empfohlene Routen zu Fuss oder mit dem Fahrrad, historische Sehenswürdigkeiten und Vorschläge für Tagesausflüge.<br><br>Möglichkeiten für <a href='https://www.j3l.ch/de/P32737/erlebnisse/kultur-museen/fuehrung/fuehrung-der-abteikirche' target='_blank'>individuelle oder geführte Besichtigungen der Abbatiale</a> oder <a href='https://maisondelatetedemoine.ch/de/museum' target='_blank'>des Maison de la Tête de Moine</a>.<br><br>Das Team von <a href='https://www.j3l.ch/de/Z10490/grand-chasseral-tourismus?regionFilters[]=3e' target='_blank'>Grand Chasseral Tourisme</a> steht Ihnen gerne beratend zur Verfügung."
        },
       },
 
@@ -673,7 +673,7 @@ pat: {
        alentours: {
          title: "Surroundings",
          text: "Scenery, hikes, and heritage sites nearby.",
-         text2: "Recommended walking or cycling routes, historical points of interest, and suggestions for day trips.<br><br>Opportunities for <a href='https://www.j3l.ch/fr/P32737/a-faire/culture-musees/visite-guidee/visite-guidee-abbatiale-de-bellelay/' target='_blank'>individual or guided visits to the Abbatiale</a> or <a href='https://maisondelatetedemoine.ch/fr/musee' target='_blank'>the Maison de la Tête de Moine</a>.<br><br>The team at <a href='https://www.j3l.ch/fr/Z10490/grand-chasseral-tourisme' target='_blank'>Grand Chasseral Tourisme</a> is available to provide advice."
+         text2: "Recommended walking or cycling routes, historical points of interest, and suggestions for day trips.<br><br>Opportunities for <a href='https://www.j3l.ch/en/P32737/things-to-do/culture-museums/guided-city-tour/guided-tour-of-the-abbey-of-bellelay/' target='_blank'>individual or guided visits to the Abbatiale</a> or <a href='https://maisondelatetedemoine.ch/en/museum' target='_blank'>the Maison de la Tête de Moine</a>.<br><br>The team at <a href='https://www.j3l.ch/en/Z10490/grand-chasseral-tourism?regionFilters%5B0%5D=3&regionFilters[]=3' target='_blank'>Grand Chasseral Tourisme</a> is available to provide advice."
        }
      },
 

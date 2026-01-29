@@ -316,7 +316,7 @@ pat: {
        alentours: {
          title: "Umgebung",
          text: "Landschaft, Wanderungen und kulturelles Erbe in der Umgebung.",
-         text2: "Empfohlene Spazier- oder Fahrradrouten, historische Sehenswürdigkeiten und Tagesausflugsvorschläge.<br><br> Möglichkeiten für Führungen durch die Abteikirche oder das Haus des Tête de Moine sowie für Outdoor-Team-Building-Aktivitäten.<br><br> Unser Team steht Ihnen zur Verfügung, um Sie zu beraten und einen Teil der Logistik zu übernehmen."
+         text2: "Empfohlene Routen zu Fuss oder mit dem Fahrrad, historische Sehenswürdigkeiten und Vorschläge für Tagesausflüge.<br><br>Möglichkeiten für <a href='https://www.j3l.ch/fr/P32737/a-faire/culture-musees/visite-guidee/visite-guidee-abbatiale-de-bellelay/' target='_blank'>individuelle oder geführte Besichtigungen der Abbatiale</a> oder <a href='https://maisondelatetedemoine.ch/fr/musee' target='_blank'>des Maison de la Tête de Moine</a>.<br><br>Das Team von <a href='https://www.j3l.ch/fr/Z10490/grand-chasseral-tourisme' target='_blank'>Grand Chasseral Tourisme</a> steht Ihnen gerne beratend zur Verfügung."
        },
       },
 
@@ -673,7 +673,7 @@ pat: {
        alentours: {
          title: "Surroundings",
          text: "Scenery, hikes, and heritage sites nearby.",
-         text2: "Recommended walking or cycling routes, historic landmarks, and day trip suggestions.<br><br>Opportunities for guided tours of the Abbey Church or the Tête de Moine House, as well as outdoor team-building activities.<br><br>Our team is available to advise and assist with a portion of the logistics."
+         text2: "Recommended walking or cycling routes, historical points of interest, and suggestions for day trips.<br><br>Opportunities for <a href='https://www.j3l.ch/fr/P32737/a-faire/culture-musees/visite-guidee/visite-guidee-abbatiale-de-bellelay/' target='_blank'>individual or guided visits to the Abbatiale</a> or <a href='https://maisondelatetedemoine.ch/fr/musee' target='_blank'>the Maison de la Tête de Moine</a>.<br><br>The team at <a href='https://www.j3l.ch/fr/Z10490/grand-chasseral-tourisme' target='_blank'>Grand Chasseral Tourisme</a> is available to provide advice."
        }
      },
 

@@ -113,16 +113,16 @@
     if (Array.isArray(entry.paragraphs)) {
       entry.paragraphs.forEach(p => {
         const pEl = document.createElement('p');
-        pEl.textContent = p;
+        pEl.innerHTML = p;
         textEl.appendChild(pEl);
       });
     } else if (typeof entry.paragraphs === 'string') {
       const pEl = document.createElement('p');
-      pEl.textContent = entry.paragraphs;
+      pEl.innerHTML = entry.paragraphs;
       textEl.appendChild(pEl);
     } else if (entry.text) { // Legacy support
       const pEl = document.createElement('p');
-      pEl.textContent = entry.text;
+      pEl.innerHTML = entry.text;
       textEl.appendChild(pEl);
     }
   }

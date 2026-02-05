@@ -34,7 +34,7 @@
           title: "Architecture",
           img: "assets/img/discipline-architecture.jpg",
           paragraphs: [
-           "<a href='https://jurabernois-bienne.ch/index.php/s/sDVO8UnYC7EDWK2' target='_blank'>Sous ce lien de partage</a>, vous trouverez des extraits anonymisés et non exhaustifs d’études dont l’Abbaye de Bellelay était l’objet principal. Ces études ont été réalisées en partie sur site, par des visites et des ateliers terrain.",
+           "<a href=\"https://jurabernois-bienne.ch/index.php/s/sDVO8UnYC7EDWK2\" target=\"_blank\">Sous ce lien de partage</a>, vous trouverez des extraits anonymisés et non exhaustifs d’études dont l’Abbaye de Bellelay était l’objet principal. Ces études ont été réalisées en partie sur site, par des visites et des ateliers terrain.",
                       
             "INTRODUCTION\nBellelay est un terrain d’étude architectural rare : un ensemble bâti étendu, historiquement stratifié, et porteur d’une forte valeur patrimoniale (bien culturel d'importance nationale). La coexistence de bâtiments et d’éléments construits issus de périodes différentes, conjuguée à des exigences contemporaines d’usage et de gestion, en fait un cas d’école pour analyser, documenter et transformer un site sans en altérer la valeur et la cohérence.",
          

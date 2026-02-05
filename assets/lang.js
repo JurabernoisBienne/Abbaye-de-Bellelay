@@ -953,7 +953,7 @@ function applyLang(lang) {
 
     if (val !== null && typeof val === 'string') {
       // Si la valeur contient des balises HTML, on utilise innerHTML
-      if (val.includes('<br>') || val.includes('</')) {
+      if (val.includes('<br>') || val.includes('<a ') || val.includes('</')) {
         el.innerHTML = val;
       } else {
         el.textContent = val;

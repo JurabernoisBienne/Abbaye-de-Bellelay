@@ -35,7 +35,9 @@
           img: "assets/img/discipline-architecture.jpg",
           paragraphs: [
            "<a href=\"https://jurabernois-bienne.ch/index.php/s/sDVO8UnYC7EDWK2\" target=\"_blank\">Sous ce lien de partage</a>, vous trouverez des extraits anonymisés et non exhaustifs d’études dont l’Abbaye de Bellelay était l’objet principal. Ces études ont été réalisées en partie sur site, par des visites et des ateliers terrain.",
-                      
+
+            "<a href=\"https://www.abbatialebellelay.ch/abbatiale/fondation/\" target=\"_blank\">Le site web de la Fondation de l'Abbatiale</a>, au-delà de leur programme artistique et culturel, contient également des informations historiques et architecturales.",
+             
             "INTRODUCTION\nBellelay est un terrain d’étude architectural rare : un ensemble bâti étendu, historiquement stratifié, et porteur d’une forte valeur patrimoniale (bien culturel d'importance nationale). La coexistence de bâtiments et d’éléments construits issus de périodes différentes, conjuguée à des exigences contemporaines d’usage et de gestion, en fait un cas d’école pour analyser, documenter et transformer un site sans en altérer la valeur et la cohérence.",
          
            "PATRIMOINE ET PROTECTIONS : DOCTRINE D’INTERVENTION\nLes protections et la valeur patrimoniale imposent une méthode : diagnostic, compatibilité des matériaux, réversibilité et lisibilité des interventions. Il s’agit de concevoir des transformations contemporaines justes, discrètes et argumentées, capables d’intégrer les contraintes actuelles (sécurité, accessibilité, confort) sans banaliser l’existant.",
@@ -324,7 +326,7 @@ pat: {
        alentours: {
          title: "Umgebung",
          text: "Landschaft, Wanderungen und kulturelles Erbe in der Umgebung.",
-         text2: "Empfohlene Routen zu Fuss oder mit dem Fahrrad, historische Sehenswürdigkeiten und Vorschläge für Tagesausflüge.<br><br>Möglichkeiten für <a href='https://www.j3l.ch/de/P32737/erlebnisse/kultur-museen/fuehrung/fuehrung-der-abteikirche' target='_blank'>individuelle oder geführte Besichtigungen der Abbatiale</a> oder <a href='https://maisondelatetedemoine.ch/de/museum' target='_blank'>des Maison de la Tête de Moine</a>.<br><br>Das Team von <a href='https://www.j3l.ch/de/Z10490/grand-chasseral-tourismus?regionFilters[]=3e' target='_blank'>Grand Chasseral Tourisme</a> steht Ihnen gerne beratend zur Verfügung."
+         text2: "Empfohlene Routen zu Fuss oder mit dem Fahrrad, historische Sehenswürdigkeiten und Vorschläge für Tagesausflüge.<br><br>Möglichkeiten für <a href='https://www.j3l.ch/de/P32737/erlebnisse/kultur-museen/fuehrung/fuehrung-der-abteikirche' target='_blank'>individuelle oder geführte Besichtigungen der Abbatiale</a> oder <a href='https://maisondelatetedemoine.ch/de/museum' target='_blank'>des Maison de la Tête de Moine</a>.<br><br>Das Team von <a href='https://www.j3l.ch/de/Z10490/grand-chasseral-tourismus?regionFilters[]=3e' target='_blank'>Grand Chasseral Tourisme</a> steht Ihnen gerne beratend zur Verfügung.<br><br><a href='https://www.abbatialebellelay.ch/abbatiale/fondation/' target='_blank'>Die Website der Stiftung der Abbatiale</a> enthält neben ihrem künstlerischen und kulturellen Programm auch historische und architektonische Informationen."
        },
       },
 
@@ -355,6 +357,8 @@ pat: {
           img: "assets/img/discipline-architecture.jpg",
           paragraphs: [
   "<a href=\"https://jurabernois-bienne.ch/index.php/s/sDVO8UnYC7EDWK2\" target=\"_blank\">Unter diesem Link</a> finden Sie anonymisierte und nicht erschöpfende Auszüge aus Studien, deren Hauptgegenstand die Abbaye de Bellelay war. Diese Studien wurden teilweise vor Ort durch Besuche und Feldworkshops durchgeführt.",
+
+    "<a href=\"https://www.abbatialebellelay.ch/abbatiale/fondation/\" target=\"_blank\">Die Website der Stiftung der Abbatiale</a> enthält neben ihrem künstlerischen und kulturellen Programm auch historische und architektonische Informationen.",
              
    "EINLEITUNG\nBellelay ist ein seltenes architektonisches Untersuchungsfeld: ein weitläufiges, historisch geschichtetes Bauensemble von hohem denkmalpflegerischem Wert (Kulturgut von nationaler Bedeutung). Das Nebeneinander von Gebäuden und Bauteilen aus unterschiedlichen Epochen, verbunden mit heutigen Anforderungen an Nutzung und Betrieb, macht den Ort zu einem Referenzfall, um ein Ensemble zu analysieren, zu dokumentieren und weiterzuentwickeln, ohne seine Kohärenz oder seinem Wert zu beeinträchtigen.",
 
@@ -689,7 +693,7 @@ pat: {
        alentours: {
          title: "Surroundings",
          text: "Scenery, hikes, and heritage sites nearby.",
-         text2: "Recommended walking or cycling routes, historical points of interest, and suggestions for day trips.<br><br>Opportunities for <a href='https://www.j3l.ch/en/P32737/things-to-do/culture-museums/guided-city-tour/guided-tour-of-the-abbey-of-bellelay/' target='_blank'>individual or guided visits to the Abbatiale</a> or <a href='https://maisondelatetedemoine.ch/en/museum' target='_blank'>the Maison de la Tête de Moine</a>.<br><br>The team at <a href='https://www.j3l.ch/en/Z10490/grand-chasseral-tourism?regionFilters%5B0%5D=3&regionFilters[]=3' target='_blank'>Grand Chasseral Tourisme</a> is available to provide advice."
+         text2: "Recommended walking or cycling routes, historical points of interest, and suggestions for day trips.<br><br>Opportunities for <a href='https://www.j3l.ch/en/P32737/things-to-do/culture-museums/guided-city-tour/guided-tour-of-the-abbey-of-bellelay/' target='_blank'>individual or guided visits to the Abbatiale</a> or <a href='https://maisondelatetedemoine.ch/en/museum' target='_blank'>the Maison de la Tête de Moine</a>.<br><br>The team at <a href='https://www.j3l.ch/en/Z10490/grand-chasseral-tourism?regionFilters%5B0%5D=3&regionFilters[]=3' target='_blank'>Grand Chasseral Tourisme</a> is available to provide advice.<br><br><a href='https://www.abbatialebellelay.ch/abbatiale/fondation/' target='_blank'>The website of the Fondation de l'Abbatiale</a>, beyond their artistic and cultural program, also contains historical and architectural information."
        }
      },
 
@@ -718,6 +722,8 @@ pat: {
           img: "assets/img/discipline-architecture.jpg",
           paragraphs: [
    "<a href=\"https://jurabernois-bienne.ch/index.php/s/sDVO8UnYC7EDWK2\" target=\"_blank\">Under this link</a>, you will find anonymized and non-exhaustive extracts from studies in which the Abbaye de Bellelay was the main subject. These studies were partly carried out on site, through visits and field workshops.",
+
+   "<a href=\"https://www.abbatialebellelay.ch/abbatiale/fondation/\" target=\"_blank\">The website of the Fondation de l'Abbatiale</a>, beyond their artistic and cultural program, also contains historical and architectural information.",
              
    "INTRODUCTION\nBellelay is a rare architectural field of study: an extensive, historically layered built ensemble with significant heritage value (cultural property of national significance). The coexistence of buildings and components from different periods, combined with contemporary requirements for use and management, makes it an exemplary case for analysing, documenting, and transforming a site without compromising its value and its overall coherence.",
 

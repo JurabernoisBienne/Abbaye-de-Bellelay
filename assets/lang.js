@@ -84,7 +84,9 @@
           title: "Histoire",
           img: "assets/img/discipline-history.jpg",
           paragraphs: [
-"INTRODUCTION\nAborder Bellelay par l’histoire, c’est considérer le site comme un document vivant : un ensemble bâti et paysager dont les formes, les usages et les récits se sont constitués par strates. L’étude historique vise moins l’accumulation d’érudition que la compréhension des continuités, des ruptures et des réaffectations qui ont façonné le lieu. Elle permet d’éclairer les choix contemporains—conservation, transformation, programmation—en replaçant le site dans les temporalités qui l’ont produit.",
+   "<a href=\"https://www.abbatialebellelay.ch/abbatiale/fondation/\" target=\"_blank\">Le site web de la Fondation de l'Abbatiale</a>, au-delà de leur programme artistique et culturel, contient également des informations historiques et architecturales.",
+             
+   "INTRODUCTION\nAborder Bellelay par l’histoire, c’est considérer le site comme un document vivant : un ensemble bâti et paysager dont les formes, les usages et les récits se sont constitués par strates. L’étude historique vise moins l’accumulation d’érudition que la compréhension des continuités, des ruptures et des réaffectations qui ont façonné le lieu. Elle permet d’éclairer les choix contemporains—conservation, transformation, programmation—en replaçant le site dans les temporalités qui l’ont produit.",
 
   "LE SITE COMME ARCHIVE : TRACES MATÉRIELLES ET RÉCITS\nBellelay se prête à une lecture croisée des sources et des indices matériels : organisation des bâtiments, transformations, reprises constructives, inscriptions d’usage dans les espaces, relations au territoire. L’enjeu est de mettre en regard ce que racontent les documents (textes, plans, archives) et ce que révèle le bâti lui-même, afin d’identifier les grandes séquences de formation du site et les logiques qui ont orienté ses évolutions.",
 
@@ -103,7 +105,9 @@
           title: "Culture et art",
           img: "assets/img/discipline-art.jpg",
           paragraphs: [
-"INTRODUCTION\nÀ Bellelay, culture et art ne s’ajoutent pas au site : ils s’y inscrivent naturellement, tant l’architecture, l’acoustique, la lumière et le paysage constituent déjà une scène. Le lieu offre un cadre rare où diffusion culturelle, création artistique et production peuvent coexister : des espaces monumentaux et intimes, des ambiances très différenciées, et une atmosphère de tranquillité propice au travail de fond. L’enjeu est de valoriser ces qualités sans les surexploiter, en construisant une programmation sensible, cohérente et respectueuse du site.",
+   "<a href=\"https://www.abbatialebellelay.ch/abbatiale/fondation/\" target=\"_blank\">Le site web de la Fondation de l'Abbatiale</a>, au-delà de leur programme artistique et culturel, contient également des informations historiques et architecturales.",
+             
+   "INTRODUCTION\nÀ Bellelay, culture et art ne s’ajoutent pas au site : ils s’y inscrivent naturellement, tant l’architecture, l’acoustique, la lumière et le paysage constituent déjà une scène. Le lieu offre un cadre rare où diffusion culturelle, création artistique et production peuvent coexister : des espaces monumentaux et intimes, des ambiances très différenciées, et une atmosphère de tranquillité propice au travail de fond. L’enjeu est de valoriser ces qualités sans les surexploiter, en construisant une programmation sensible, cohérente et respectueuse du site.",
 
   "UNE DYNAMIQUE CULTURELLE DÉJÀ ACTIVE\nBellelay accueille déjà des activités culturelles et artistiques, notamment grâce à la Fondation de l’Abbatiale de Bellelay, qui organise des concerts et des expositions d’art. Cet ancrage existant constitue une base solide : il permet de s’appuyer sur des expériences éprouvées, des publics, et une compréhension fine des contraintes d’accueil. L’objectif est de renforcer cette dynamique, de la diversifier, et de mieux articuler diffusion (événements, expositions) et création (résidences, production).",
 
@@ -400,7 +404,9 @@ pat: {
           title: "Geschichte",
           img: "assets/img/discipline-history.jpg",
           paragraphs: [
-"EINLEITUNG\nBellelay historisch zu betrachten bedeutet, den Ort als lebendiges Dokument zu verstehen: ein gebautes und landschaftliches Ensemble, dessen Formen, Nutzungen und Erzählungen sich in Schichten herausgebildet haben. Die historische Untersuchung zielt weniger auf die Anhäufung von Gelehrsamkeit als auf das Verständnis von Kontinuitäten, Brüchen und Umnutzungen, die den Ort geprägt haben. Sie hilft, heutige Entscheidungen—Erhaltung, Transformation, Programmierung—in den Zeitlichkeiten zu verorten, aus denen der Ort hervorgegangen ist.",
+   "<a href=\"https://www.abbatialebellelay.ch/abbatiale/fondation/\" target=\"_blank\">Die Website der Stiftung der Abbatiale</a> enthält neben ihrem künstlerischen und kulturellen Programm auch historische und architektonische Informationen.",
+             
+   "EINLEITUNG\nBellelay historisch zu betrachten bedeutet, den Ort als lebendiges Dokument zu verstehen: ein gebautes und landschaftliches Ensemble, dessen Formen, Nutzungen und Erzählungen sich in Schichten herausgebildet haben. Die historische Untersuchung zielt weniger auf die Anhäufung von Gelehrsamkeit als auf das Verständnis von Kontinuitäten, Brüchen und Umnutzungen, die den Ort geprägt haben. Sie hilft, heutige Entscheidungen—Erhaltung, Transformation, Programmierung—in den Zeitlichkeiten zu verorten, aus denen der Ort hervorgegangen ist.",
 
   "DER ORT ALS ARCHIV: MATERIELLE SPUREN UND ERZÄHLUNGEN\nBellelay eignet sich für eine kombinierte Lektüre von Quellen und baulichen Indizien: Anordnung der Gebäude, Umbauten, konstruktive Überformungen, Nutzungsspuren in Räumen sowie die Beziehungen zum Territorium. Ziel ist es, das, was Dokumente erzählen (Texte, Pläne, Archive), mit dem, was das Bauwerk selbst offenlegt, zusammenzuführen, um die grossen Formationsphasen des Ortes und die Logiken seiner Entwicklung zu identifizieren.",
 
@@ -419,7 +425,9 @@ pat: {
           title: "Kultur & Kunst",
           img: "assets/img/discipline-art.jpg",
           paragraphs: [
-"EINLEITUNG\nIn Bellelay sind Kultur und Kunst keine Ergänzung zum Ort – sie ergeben sich aus ihm selbst, denn Architektur, Akustik, Licht und Landschaft bilden bereits eine Bühne. Der Standort bietet einen seltenen Rahmen, in dem kulturelle Vermittlung, künstlerische Praxis und Produktion zusammenfinden können: monumentale wie intime Räume, stark differenzierte Atmosphären und eine Ruhe, die konzentriertes Arbeiten begünstigt. Entscheidend ist, diese Qualitäten zu stärken, ohne sie zu übernutzen – durch eine sensible, kohärente und ortsgerechte Programmierung.",
+   "<a href=\"https://www.abbatialebellelay.ch/abbatiale/fondation/\" target=\"_blank\">Die Website der Stiftung der Abbatiale</a> enthält neben ihrem künstlerischen und kulturellen Programm auch historische und architektonische Informationen.",
+             
+   "EINLEITUNG\nIn Bellelay sind Kultur und Kunst keine Ergänzung zum Ort – sie ergeben sich aus ihm selbst, denn Architektur, Akustik, Licht und Landschaft bilden bereits eine Bühne. Der Standort bietet einen seltenen Rahmen, in dem kulturelle Vermittlung, künstlerische Praxis und Produktion zusammenfinden können: monumentale wie intime Räume, stark differenzierte Atmosphären und eine Ruhe, die konzentriertes Arbeiten begünstigt. Entscheidend ist, diese Qualitäten zu stärken, ohne sie zu übernutzen – durch eine sensible, kohärente und ortsgerechte Programmierung.",
 
   "EINE BEREITS AKTIVE KULTURELLE DYNAMIK\nBellelay beherbergt bereits kulturelle und künstlerische Aktivitäten, insbesondere durch die Fondation de l’Abbatiale de Bellelay, die Konzerte und Kunstausstellungen organisiert. Diese bestehende Verankerung ist eine solide Basis: Sie baut auf erprobten Erfahrungen, einem Publikum und einem feinen Verständnis der Rahmenbedingungen für den Betrieb auf. Ziel ist es, diese Dynamik zu stärken, zu diversifizieren und Vermittlung (Veranstaltungen, Ausstellungen) besser mit Kreation (Residenzen, Produktion) zu verzahnen.",
 
@@ -759,7 +767,9 @@ pat: {
           title: "History",
           img: "assets/img/discipline-history.jpg",
           paragraphs: [
-"INTRODUCTION\nApproaching Bellelay through history means reading the site as a living document: a built and landscape ensemble whose forms, uses, and narratives have been shaped layer by layer. The historical study is less about accumulating erudition than about understanding continuities, ruptures, and reassignments of use that have formed the place. It helps inform contemporary choices—conservation, transformation, programming—by situating the site within the timelines that produced it.",
+   "<a href=\"https://www.abbatialebellelay.ch/abbatiale/fondation/\" target=\"_blank\">The website of the Fondation de l'Abbatiale</a>, beyond their artistic and cultural program, also contains historical and architectural information.",
+             
+   "INTRODUCTION\nApproaching Bellelay through history means reading the site as a living document: a built and landscape ensemble whose forms, uses, and narratives have been shaped layer by layer. The historical study is less about accumulating erudition than about understanding continuities, ruptures, and reassignments of use that have formed the place. It helps inform contemporary choices—conservation, transformation, programming—by situating the site within the timelines that produced it.",
 
   "THE SITE AS AN ARCHIVE: MATERIAL TRACES AND NARRATIVES\nBellelay lends itself to a combined reading of sources and physical evidence: the organisation of buildings, successive alterations, constructive ‘overwrites’, traces of use inscribed in spaces, and relationships to the surrounding territory. The aim is to connect what documents convey (texts, plans, archives) with what the fabric itself reveals, in order to identify the site’s major phases of formation and the logics that guided its evolution.",
 
@@ -778,7 +788,9 @@ pat: {
           title: "Culture & art",
           img: "assets/img/discipline-art.jpg",
           paragraphs: [
-"INTRODUCTION\nAt Bellelay, culture and art are not added onto the site; they arise naturally from it, as architecture, acoustics, light, and landscape already form a stage. The place offers a rare setting where cultural presentation, artistic practice, and production can coexist: monumental and intimate spaces, strongly differentiated atmospheres, and a sense of calm that supports deep work. The challenge is to enhance these qualities without overexploiting them, through programming that is sensitive, coherent, and respectful of the site.",
+   "<a href=\"https://www.abbatialebellelay.ch/abbatiale/fondation/\" target=\"_blank\">The website of the Fondation de l'Abbatiale</a>, beyond their artistic and cultural program, also contains historical and architectural information.",
+             
+   "INTRODUCTION\nAt Bellelay, culture and art are not added onto the site; they arise naturally from it, as architecture, acoustics, light, and landscape already form a stage. The place offers a rare setting where cultural presentation, artistic practice, and production can coexist: monumental and intimate spaces, strongly differentiated atmospheres, and a sense of calm that supports deep work. The challenge is to enhance these qualities without overexploiting them, through programming that is sensitive, coherent, and respectful of the site.",
 
   "AN ALREADY ACTIVE CULTURAL DYNAMIC\nBellelay already hosts cultural and artistic activities, notably through the Fondation de l’Abbatiale de Bellelay, which organises concerts and art exhibitions. This existing foundation provides a solid base: proven experience, established audiences, and a nuanced understanding of hosting and operational constraints. The aim is to strengthen and diversify this dynamic, and to better connect presentation (events, exhibitions) with creation (residencies, production).",
 

@@ -368,6 +368,14 @@ body{
   color:#123;
 }
 
+@media (max-width: 900px) {
+  .side-menu ul#disc-list{
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  }
+}
+
 /* Content area */
 .disc-content{
   flex:1;

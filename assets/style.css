@@ -82,21 +82,36 @@ body{
 
 /* --- Mobile nav toggle button (hamburger) --- */
 .nav-toggle{
-  display:none;            /* visible only on mobile */
-  margin-left:auto;        /* pushes it to the right (desktop ignored) */
+  display:none;          /* visible only on mobile */
+  margin-left:auto;      /* pushes it to the right (desktop ignored) */
   width:44px;
   height:44px;
   border:1px solid rgba(0,0,0,0.12);
   background:#fff;
   border-radius:10px;
-  padding:10px;
+  position:relative;
 }
-.nav-toggle-bar{
-  display:block;
+
+/* top & bottom lines */
+.nav-toggle::before,
+.nav-toggle::after{
+  content:"";
+  position:absolute;
+  left:10px;
+  right:10px;
   height:2px;
   background:#123;
-  margin:5px 0;
   border-radius:2px;
+}
+.nav-toggle::before{ top:14px; }
+.nav-toggle::after{ bottom:14px; }
+
+/* middle line */
+.nav-toggle{
+  background-image: linear-gradient(#123,#123);
+  background-repeat:no-repeat;
+  background-size: calc(100% - 20px) 2px;
+  background-position: center;
 }
 
 /* Make logo image behave nicely */
@@ -141,7 +156,19 @@ body{
   }
 }
 
-
+/* Optional: turn hamburger into X when open */
+.site-header.nav-open .nav-toggle{
+  background-image:none;
+}
+.site-header.nav-open .nav-toggle::before{
+  top:50%;
+  transform:translateY(-50%) rotate(45deg);
+}
+.site-header.nav-open .nav-toggle::after{
+  bottom:auto;
+  top:50%;
+  transform:translateY(-50%) rotate(-45deg);
+}
 
 
 /* Hero */

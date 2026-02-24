@@ -244,7 +244,7 @@
       },
       ateliers: {
         title: "Workshops und Projekte",
-        text: "PArbeitsräume, die sich für partizipative Projekte und praxisorientierte Workshops eignen.",
+        text: "Arbeitsräume, die sich für partizipative Projekte und praxisorientierte Workshops eignen.",
         text2: "Räume, die eher Werkstätten als klassischen Unterrichtsräumen entsprechen und sich für experimentelle Tätigkeiten oder handwerkliche bzw. künstlerische Produktionen eignen.",
       },
       seminars: {

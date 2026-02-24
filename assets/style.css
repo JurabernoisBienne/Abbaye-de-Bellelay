@@ -80,6 +80,70 @@ body{
 .lang-select{margin-left:auto}
 .lang-select select{padding:6px;border-radius:6px;border:1px solid rgba(0,0,0,0.1)}
 
+/* --- Mobile nav toggle button (hamburger) --- */
+.nav-toggle{
+  display:none;            /* visible only on mobile */
+  margin-left:auto;        /* pushes it to the right (desktop ignored) */
+  width:44px;
+  height:44px;
+  border:1px solid rgba(0,0,0,0.12);
+  background:#fff;
+  border-radius:10px;
+  padding:10px;
+}
+.nav-toggle-bar{
+  display:block;
+  height:2px;
+  background:#123;
+  margin:5px 0;
+  border-radius:2px;
+}
+
+/* Make logo image behave nicely */
+.brand img{
+  display:block;
+  height:40px;
+  width:auto;
+}
+
+/* --- Responsive header layout --- */
+@media (max-width: 768px){
+  .header-inner{
+    flex-wrap:wrap;
+    gap:10px;
+  }
+
+  /* show hamburger */
+  .nav-toggle{ display:inline-flex; align-items:center; justify-content:center; }
+
+  /* keep lang select visible next to toggle */
+  .lang-select{ margin-left:0; }
+  
+  /* nav becomes dropdown panel */
+  .main-nav{
+    order:10;
+    width:100%;
+    flex:0 0 100%;
+    display:none;
+    flex-direction:column;
+    align-items:stretch;
+    margin-left:0;
+    padding:8px 0;
+    border-top:1px solid rgba(0,0,0,0.08);
+  }
+  .main-nav a{
+    padding:12px 10px;
+  }
+
+  /* when open */
+  .site-header.nav-open .main-nav{
+    display:flex;
+  }
+}
+
+
+
+
 /* Hero */
 .hero{
   position:relative;

@@ -368,11 +368,23 @@ body{
   color:#123;
 }
 
-@media (max-width: 900px) {
+@media (max-width:900px){
+  .disciplines-page{flex-direction:column}
+  .side-menu{position:relative;width:auto;top:0}
+  .disc-content img{height:220px}
+
+  /* Mobile: menu disciplines en grille responsive */
   .side-menu ul#disc-list{
     display: grid;
     gap: 10px;
     grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  }
+
+  /* Les boutons prennent toute la largeur de leur cellule */
+  .side-menu ul#disc-list .disc-item{
+    width: 100%;
+    text-align: center;   /* optionnel: plus “boutons” sur mobile */
+    white-space: normal;  /* autorise retour à la ligne */
   }
 }
 

@@ -17,6 +17,7 @@
     initDisciplines();
     initTimeline();
     initForms(lang);
+    initMobileNav();
     updateNavLinksWithLang(lang);
   });
 

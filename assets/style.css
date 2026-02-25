@@ -377,7 +377,7 @@ body{
   .side-menu ul#disc-list{
     display: grid;
     gap: 10px;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
   }
 
   /* Les boutons prennent toute la largeur de leur cellule */

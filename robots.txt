@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://abbaye-de-bellelay.ch/sitemap.xml

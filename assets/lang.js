@@ -311,7 +311,7 @@ pat: {
        hebergement: {
          title: "Unterkunft",
          text: "Komfortable und preiswerte Gemeinschaftsunterkünfte.",
-         text2: "Ob für eine Übernachtung oder einen längeren Aufenthalt, wir passen die Konfiguration an Ihre Bedürfnisse an (Einzel-, Doppel- oder Vierbettzimmer).<br><br> Einige Zimmer verfügen über eigene Badezimmer. Das Unterkunftsgebäude, das die Abtei überblickt, umfasst auch Gemeinschaftsräume mit einer kleinen Küche auf jeder Etage."
+         text2: "Mit einer sofortigen Kapazität von 45 Personen (8 Vierbettzimmer, 6 Einzelzimmer und 2 Doppelzimmer mit privatem Bad) bietet unsere Unterkunft die Möglichkeit, je nach Bedarf auf bis zu 85 Personen erweitert zu werden. Diese Erweiterung erfolgt durch das Hinzufügen weiterer Vierbettzimmer und das Aufteilen der Einzelzimmer in Doppelzimmer.<br><br>Das Unterkunftsgebäude, das die Abtei überblickt, umfasst auch Gemeinschaftsräume mit einer kleinen Küche auf jeder Etage."
        },
        restauration: {
          title: "Verpflegung",
@@ -678,7 +678,7 @@ pat: {
        hebergement: {
          title: "Accommodation",
          text: "Comfortable and affordable group accommodations.",
-         text2: "Whether for a single night or an extended stay, we adapt rooms to your needs (single, double, or quadruple rooms).<br><br>Some rooms include private bathrooms. The accommodation building overlooking the abbey also includes communal areas with small kitchens on each floor."
+         text2: "With an immediate capacity of 45 people (8 quadruple rooms, 6 single rooms, and 2 double rooms with private bathrooms), our accommodation can be extended to host up to 85 people. This expansion is flexible and achieved by adding more quadruple rooms and converting single rooms into double rooms, according to your needs.<br><br>The accommodation building overlooking the abbey also includes communal areas with small kitchens on each floor."
        },
        restauration: {
          title: "Catering",

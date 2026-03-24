@@ -268,7 +268,7 @@
 
 patrimoine: {
   title: "Geschichte von Bellelay in Kürze",
-  subtitle: "Eine Zeitleiste der Erinnerung",
+  subtitle: "Eine Zeitschiene der Erinnerung",
   heading: "Chronologie"
 },
 
@@ -536,16 +536,16 @@ pat: {
  tarifs: {
     title: "Preise & individuelle Angebote",
     subtitle: "CHF 90.- bis CHF 130.- / Person / Tag",
-    heading: "Angebotanfrage",
+    heading: "Angebot anfragen",
     intro: {
-      p1: "Die Preise werden individuell erstellt und hängen insbesondere von der Art der Zimmer, der Qualität der Menüs sowie der Nutzung der Schulungs- und Arbeitsräume ab.",
+      p1: "Die Preise werden individuell festgelegt und hängen vom Zimmertyp (Unterkunft), der Essensauswahl sowie den benötigten Schulungs- und Arbeitsräumen ab.",
       p2: "Zur Orientierung: Die Preise liegen zwischen CHF 90.– und CHF 130.– pro Person und Tag, für ein All-inclusive-Angebot.",
       p3: "Dies beinhaltet die Unterkunft vor Ort, die Verpflegung (Frühstück, Mittag- und Abendessen) sowie den Zugang zu den Schulungs- und Arbeitsräumen.",
       p4: "Da jedes Projekt einzigartig ist, stellen wir Ihnen gerne ein individuelles Angebot über das untenstehende Formular aus."
     }
   },
   form: {
-    entite: "Einrichtung",
+    entite: "Organisation",
     nom: "Name",
     prenom: "Vorname",
     tel: "Telefon",

@@ -211,7 +211,7 @@
       nav: {
         programmes: "Programme",
         surplace: "Vor Ort",
-        disciplines: "Disziplinen",
+        disciplines: "Fachgebiete",
         tarifs: "Preise",
         patrimoine: "Erbe",
         contact: "Kontakt"
@@ -220,7 +220,7 @@
       title: {
         programmes: "Programme — Abbaye de Bellelay",
         surplace: "Vor Ort — Abbaye de Bellelay",
-        disciplines: "Disziplinen — Abbaye de Bellelay",
+        disciplines: "Fachgebiete — Abbaye de Bellelay",
         tarifs: "Preise — Abbaye de Bellelay",
         patrimoine: "Erbe — Abbaye de Bellelay",
         contact: "Kontakt — Abbaye de Bellelay"
@@ -339,7 +339,7 @@ pat: {
       /*disciplines de*/
        
       disciplines: {
-         title: "Disziplinen",
+         title: "Fachgebiete",
          subtitle: "Erkundung nach Fachgebieten.",
          menu: {
            architecture: "Architektur",

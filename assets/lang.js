@@ -209,7 +209,7 @@
       brand: "Abbaye de Bellelay",
       aria: { lang: "Sprache" },
       nav: {
-        programmes: "Programme",
+        programmes: "Aufenthaltsformate",
         surplace: "Vor Ort",
         disciplines: "Fachgebiete",
         tarifs: "Preise",
@@ -218,7 +218,7 @@
       },
       hero: { title: "Ein Ort für Bildung und Kultur", subtitle: "zum Lernen, Gestalten und Teilen" },
       title: {
-        programmes: "Programme — Abbaye de Bellelay",
+        programmes: "Aufenthaltsformate — Abbaye de Bellelay",
         surplace: "Vor Ort — Abbaye de Bellelay",
         disciplines: "Fachgebiete — Abbaye de Bellelay",
         tarifs: "Preise — Abbaye de Bellelay",

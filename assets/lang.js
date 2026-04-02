@@ -837,7 +837,7 @@ pat: {
           title: "Sustainable tourism",
           img: "assets/img/discipline-tourisme.jpg",
           paragraphs: [
-  "INTRODUCTION\nAt Bellelay, sustainable tourism builds on an exceptionally favourable geographic and landscape setting in the heart of the Jura Arc. The site makes it possible to combine cultural discovery, immersion in nature, low-impact mobility, and interpretation—within a territory that already values respectful practices: slower rhythms, seasonality, care for sensitive environments, and strong local know-how. The challenge is to develop low-impact hospitality based on the quality of experience and routes rather than on over-visitation.",
+  "INTRODUCTION\nAt Bellelay, sustainable tourism builds on an exceptionally favourable geographic and landscape setting in the heart of the Jura Arc. The site makes it possible to combine cultural discovery, immersion in nature and low-impact mobility — within a territory that already values respectful practices: slower rhythms, seasonality, care for sensitive environments, and strong local know-how. The challenge is to develop low-impact hospitality based on the quality of experience and routes rather than on over-visitation.",
 
   "A JURA ARC TERRITORY WELL-SUITED TO SUSTAINABLE TOURISM\nThe Jura Arc provides an ideal framework for sustainable tourism: open and forested landscapes, terrain well-suited to outdoor activities, a rich built and rural heritage, and a strong hiking culture. Bellelay fits naturally into this logic as a destination where visitors come to walk, observe, listen, learn, and take time. The site can become a base for sober stays focused on discovery, landscape interpretation, and the valorisation of local resources.",
 

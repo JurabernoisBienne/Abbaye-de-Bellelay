@@ -4,8 +4,11 @@
    - Added a `disciplines` section per language for the disciplines page content (title + paragraphs + image)
 */
 (function(){
-  const translations = {
-    fr: {
+  const translations = { 
+
+/* FRANCAIS*/
+     
+     fr: {
       brand: "Abbaye de Bellelay",
       aria: { lang: "Langue" },
       nav: {
@@ -26,6 +29,8 @@
         contact: "Contact — Abbaye de Bellelay"
       },
 
+
+        
       /* ... other translations kept unchanged (programs, surplace, tarifs, patrimoine, etc.) ... */
 
       /* Disciplines content: titles, image paths and paragraphs in FR */

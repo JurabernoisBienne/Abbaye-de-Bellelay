@@ -1,11 +1,14 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Galerie Photos - Abbaye de Bellelay</title>
-  <link rel="stylesheet" href="assets/css/style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Galerie Photos — Abbaye de Bellelay</title>
+  <link rel="stylesheet" href="assets/style.css" />
+  <script src="assets/lang.js" defer></script>
+  <script src="assets/main.js" defer></script>
   <style>
+    /* Styles pour la grille de photos et les légendes */
     .gallery-container {
       max-width: 1200px;
       margin: 40px auto;
@@ -46,25 +49,28 @@
   </style>
 </head>
 <body>
-
-  <!-- EN-TÊTE -->
-  <header role="banner">
-    <div>
-      <a href="surplace.html">
-        <img alt="Abbaye de Bellelay" src="assets/img/logo.jpg">
-      </a>
-      <nav aria-label="Main menu" role="navigation">
-        <a href="programmes.html">Programmes</a>
-        <a href="surplace.html">Sur place</a>
-        <a href="disciplines.html">Disciplines</a>
-        <a href="tarifs.html">Tarifs</a>
-        <a href="patrimoine.html">Patrimoine</a>
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <a class="brand" href="surplace.html">
+        <img src="assets/img/logo.jpg" alt="Abbaye de Bellelay" />
+      </a>     
+      <nav class="main-nav" id="site-nav" role="navigation" aria-label="Main menu">
+        <a href="programmes.html" data-i18n="nav.programmes">Programmes</a>
+        <a href="surplace.html" data-i18n="nav.surplace">Sur place</a>
+        <a href="disciplines.html" data-i18n="nav.disciplines">Disciplines</a>
+        <a href="tarifs.html" data-i18n="nav.tarifs">Tarifs</a>
+        <a href="patrimoine.html" data-i18n="nav.patrimoine">Patrimoine</a>
         <a href="photos.html">Galerie</a>
-        <a href="contact.html">Contact</a>
+        <a href="contact.html" data-i18n="nav.contact">Contact</a>
       </nav>
-      
-      <div>
-        <select aria-label="Langue">
+      <button class="nav-toggle" type="button"
+        aria-label="Ouvrir le menu"
+        aria-controls="site-nav"
+        aria-expanded="false">
+      </button>
+      <div class="lang-select">
+        <label for="lang" class="visually-hidden" data-i18n="aria.lang">Langue</label>
+        <select id="lang" aria-label="Langue">
           <option value="fr">FR</option>
           <option value="de">DE</option>
           <option value="en">EN</option>

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galerie Photos - Abbaye de Bellelay</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    .gallery-container {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    .gallery-title {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 25px;
+    }
+    .gallery-card {
+      background: #ffffff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      display: flex;
+      flex-direction: column;
+    }
+    .gallery-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      display: block;
+    }
+    .gallery-caption {
+      padding: 15px;
+      font-size: 0.95rem;
+      color: #333333;
+      text-align: center;
+      background-color: #fafafa;
+      border-top: 1px solid #eee;
+      flex-grow: 1;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- EN-TÊTE -->
+  <header role="banner">
+    <div>
+      <a href="surplace.html">
+        <img alt="Abbaye de Bellelay" src="assets/img/logo.jpg">
+      </a>
+      <nav aria-label="Main menu" role="navigation">
+        <a href="programmes.html">Programmes</a>
+        <a href="surplace.html">Sur place</a>
+        <a href="disciplines.html">Disciplines</a>
+        <a href="tarifs.html">Tarifs</a>
+        <a href="patrimoine.html">Patrimoine</a>
+        <a href="photos.html">Galerie</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      
+      <div>
+        <select aria-label="Langue">
+          <option value="fr">FR</option>
+          <option value="de">DE</option>
+          <option value="en">EN</option>
+        </select>
+      </div>
+    </div>
+  </header>
+
+  <!-- GALERIE -->
+  <main>
+    <section class="gallery-container">
+      <div class="gallery-title">
+        <h1>Galerie Photos</h1>
+        <p>Découvrez les espaces, le foyer et les jardins de l'Abbaye de Bellelay.</p>
+      </div>
+
+      <div class="gallery-grid">
+
+        <!-- Abbatiale -->
+        <article class="gallery-card">
+          <img src="assets/img/abbatiale.jpeg" alt="L'Abbatiale">
+          <div class="gallery-caption">Vue intérieure de l'Abbatiale</div>
+        </article>
+
+        <article class="gallery-card">
+          <img src="assets/img/abbatiale-1.jpeg" alt="L'Abbatiale">
+          <div class="gallery-caption">Vue intérieure de l'Abbatiale</div>
+        </article>
+
+        <article class="gallery-card">
+          <img src="assets/img/abbatiale-2.jpeg" alt="L'Abbatiale">
+          <div class="gallery-caption">Vue intérieure de l'Abbatiale</div>
+        </article>
+
+        <article class="gallery-card">
+          <img src="assets/img/abbatiale_intérieur.jpg" alt="Intérieur de l'Abbatiale">
+          <div class="gallery-caption">Vue intérieure de l'Abbatiale</div>
+        </article>
+
+        <!-- Jardins -->
+        <article class="gallery-card">
+          <img src="assets/img/jardins-abbatiale.jpeg" alt="Jardins de l'Abbatiale">
+          <div class="gallery-caption">Les jardins de l'Abbatiale</div>
+        </article>
+
+        <article class="gallery-card">
+          <img src="assets/img/jardins-abbatiale-1.jpeg" alt="Jardins">
+          <div class="gallery-caption">Les jardins de l'Abbatiale</div>
+        </article>
+
+        <article class="gallery-card">
+          <img src="assets/img/jardins-abbatiale-2.jpeg" alt="Jardins">
+          <div class="gallery-caption">Les jardins de l'Abbatiale</div>
+        </article>
+
+        <article class="gallery-card">
+          <img src="assets/img/jardins-abbatiale-3.jpeg" alt="Jardins">
+          <div class="gallery-caption">Les jardins de l'Abbatiale</div>
+        </article>
+
+        <!-- Espace de Luce -->
+        <article class="gallery-card">
+          <img src="assets/img/espace-de-Luce.jpeg" alt="Espace de Luce">
+          <div class="gallery-caption">Espace de Luce</div>
+        </article>
+
+        <article class="gallery-card">
+          <img src="assets/img/espace-de-Luce-1.jpeg" alt="Espace de Luce">
+          <div class="gallery-caption">Espace de Luce</div>
+        </article>
+
+        <article class="gallery-card">
+          <img src="assets/img/espace-de-Luce-2.jpeg" alt="Espace de Luce">
+          <div class="gallery-caption">Espace de Luce</div>
+        </article>
+
+        <article class="gallery-card">
+          <img src="assets/img/Espace-de-Luce-3.jpeg" alt="Espace de Luce">
+          <div class="gallery-caption">Espace de Luce</div>
+        </article>
+
+        <article class="gallery-card">
+          <img src="assets/img/espace-de-Luce-4.jpeg" alt="Espace de Luce">
+          <div class="gallery-caption">Espace de Luce</div>
+        </article>
+
+        <!-- Foyer -->
+        <article class="gallery-card">
+          <img src="assets/img/foyer-exterieur.jpeg" alt="Extérieur du foyer">
+          <div class="gallery-caption">Vue extérieure du bâtiment d'hébergement</div>
+        </article>
+
+        <article class="gallery-card">
+          <img src="assets/img/foyer-lounge.jpeg" alt="Espace lounge du foyer">
+          <div class="gallery-caption">Espace détente du foyer</div>
+        </article>
+
+        <article class="gallery-card">
+          <img src="assets/img/foyer-chambre-simple.jpeg" alt="Chambre simple">
+          <div class="gallery-caption">Chambre individuelle</div>
+        </article>
+
+        <article class="gallery-card">
+          <img src="assets/img/foyer-chambre-multiple.jpeg" alt="Chambre multiple">
+          <div class="gallery-caption">Chambre multiple</div>
+        </article>
+
+        <article class="gallery-card">
+          <img src="assets/img/foyer-cuisine.jpeg" alt="Cuisine du foyer">
+          <div class="gallery-caption">Espace cuisine commune</div>
+        </article>
+
+        <article class="gallery-card">
+          <img src="assets/img/foyer-sdb.jpeg" alt="Salle de bain du foyer">
+          <div class="gallery-caption">Sanitaires / Salle de bain</div>
+        </article>
+
+        <!-- Cafétéria & Bâtiment Conventuel -->
+        <article class="gallery-card">
+          <img src="assets/img/cafeteria.jpeg" alt="Cafétéria">
+          <div class="gallery-caption">La cafétéria</div>
+        </article>
+
+        <article class="gallery-card">
+          <img src="assets/img/cafeteria-1.jpeg" alt="Espace cafétéria">
+          <div class="gallery-caption">La cafétéria</div>
+        </article>
+
+        <article class="gallery-card">
+          <img src="assets/img/conventuel_sud.jpeg" alt="Bâtiment conventuel sud">
+          <div class="gallery-caption">Aile sud du bâtiment conventuel</div>
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- PIED DE PAGE -->
+  <footer role="contentinfo">
+    <div>
+      <a href="tarifs.html">Demander un devis</a>
+      <p>Abbaye de Bellelay</p>
+    </div>
+  </footer>
+
+</body>
+</html>
